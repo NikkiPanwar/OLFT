@@ -1,0 +1,26 @@
+.navbar-brand {
+  display: flex;
+  flex-direction: column; /* Stack brand text and subtext */
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.brand-text {
+
+  font-size: 0.75rem; /* Adjust size as needed */
+  color: yellow;/* Subtle color for the text */
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link {
+  transition: background-color 0.3s, color 0.3s;
+  color:green;
+  font-size:20px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color:aqua; /* Hover effect */
+  color:blue;/* Change text color on hover */
+
+}

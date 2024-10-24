@@ -1,0 +1,22 @@
+.flex-container {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+    width:80%;
+    margin-left:10%;
+  }
+  
+  .flex-item {
+    background-color:white; /* Background color */
+    padding:20px; /* Padding */
+    border: 1px solid gray; /* Border */
+    flex: 1; /* Grow to fill space */
+    margin:0px; /* Space between items */
+    text-align-last: left; /* Center text */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:10px;
+    <span><i class="fab fa-twitter-square"></i></span>
+    
+  }
+  
