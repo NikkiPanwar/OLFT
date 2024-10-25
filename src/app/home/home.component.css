@@ -1,10 +1,10 @@
 .flex-container {
     display: flex; /* Enable Flexbox */
     justify-content: space-around; /* Distribute space around items */
-    align-items: center; /* Center items vertically */
-    height: 100vh; /* Full viewport height */
     width:80%;
     margin-left:10%;
+    justify-content: center; 
+    align-items: center;
   }
   
   .flex-item {
@@ -17,9 +17,33 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width:10px;
   }
-  .button 
-  {
-    height:20px;
-    width:20px;
-  }
+
   
+.last-button {
+  display: block; /* Makes the button a block element */
+  margin: 0 auto; /* Centers the button */
+
+}
+
+.last-button:hover
+ {
+color:#FECC4E;
+background-color: black;
+}
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Width of the circle */
+  height: 40px; /* Height of the circle */
+  border: 2px solid #FECC4E; /* Yellow outline */
+  border-radius: 50%; /* Makes the shape circular */
+  color:#FECC4E;/* Icon color */
+  margin: 0 5px; /* Space between icons */
+  background-color:forestgreen; /* Background color */
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color:black; /* Light yellow on hover */
+}

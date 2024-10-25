@@ -1,39 +1,49 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">OLFT
-    <span class="brand-text"><b>ONE LIFE FOR TRAVEL</b></span>
-  </a>
+    <span class="brand-text"><b>ONE LIFE FOR TRAVEL</b></span></a>
  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav me-auto mb-2 mb-lg-2">
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav me-auto mb-2 mb-lg-2 mx-auto">
+   
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link active me-4" aria-current="page" routerLink="/">Home</a></li>
 
 <li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/">Home</a></li>
+<a class="nav-link active me-4" aria-current="page" routerLink="/about">About Us</a></li>
+  
+<li class="nav-item">
+<a class="nav-link active me-4" aria-current="page" routerLink="/destination">Destination</a></li>
 
 <li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/about">About Us</a></li>
+<a class="nav-link active me-4" aria-current="page" routerLink="/tour">Tour</a></li>
   
 <li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/destination">Destination</a></li>
-
-<li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/tour">Tour</a></li>
+<a class="nav-link active me-4" aria-current="page" routerLink="/blogs">Blogs</a></li>
   
 <li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/blogs">Blogs</a></li>
-  
-<li class="nav-item">
-<a class="nav-link active" aria-current="page" routerLink="/contact">Contact Us</a></li>
+<a class="nav-link active me-4" aria-current="page" routerLink="/contact">Contact Us</a></li>
 </ul>
-      
-<form class="form-inline my-2 my-lg-0">
-<button class="btn btn-outline-light  my-sm-0" type="submit">
-<i class="fas fa-search"></i>    
 
-</button></form>
+<div class="ms-5"> <!-- Add margin-start to the div -->
+  <button class="seacrh btn btn-outline-light my-sm-0" type="submit">
+      <i class="fas fa-search"></i>
+  </button>
+</div>
+</ul>
 </div>
 </div>
 </nav>
+</body>
+</html>
 <router-outlet></router-outlet>
