@@ -12,6 +12,8 @@
  {
   display: block; /* Makes the button a block element */
   margin:auto;
+  border:2px solid black;
+  border-radius:40px;
 }
 
 .center-button:hover
@@ -62,10 +64,93 @@ background-color: black;
   display: flex;
   justify-content: space-between; /* Adjusts space between items */
   align-items: center; /* Centers items vertically */
-  margin: 20px;
+  
+  
+}
+.flex-item{
+  width:350px;
+  height:100px;
 }
 
 .input-field {
   flex: 1; /* Makes the input fields take equal space */
   margin: 0 10px; /* Adds horizontal spacing */
+}
+
+.bg 
+{
+  background-color:rgb(87, 87, 10);
+  height:730px;
+  width:100%;
+}
+.card-container {
+  display: flex;
+  text-align: center;
+  justify-content:space-around;
+  padding:40px;
+  flex-wrap:wrap;
+  margin-top:30px;
+  font-family:'Poppins', sans-serif;
+  transition:0.3s;
+}
+.card {
+  overflow:hidden;
+  transition:0.2s; 
+  height:440px;
+  background-color:white;
+  border-radius:8px;
+  width:350px;
+  border-radius:20px;
+  
+  margin:10px 0;
+}
+
+
+.carousel-item {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.carousel-item-next, .carousel-item-prev {
+  opacity: 0;
+  position: absolute;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.view-button
+ {
+  display: block; /* Makes the button a block element */
+  margin:auto;
+  border:2px solid black;
+  text-align: center;
+height:40px;
+  width:150px;
+}
+
+.view-button:hover
+ {
+color:#FECC4E;
+background-color: black;
+}
+
+.box
+{
+  height:350px;
+  width:100%;
+  background-color:grey;
+  font-family: 'Outfit', sans-serif;
+  font-size:40px;
+  color:aliceblue;
+    font-weight: bold;
+    padding:60px;
+}
+
+.top 
+{
+  height:400px;
+  width:100%;
+  color:whitesmoke;
+  background-color: #FECC4E;
 }

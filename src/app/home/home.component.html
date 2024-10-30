@@ -1,24 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
 <body>
+  
 <div class="background">
 <button class="btn btn-warning center-button">EXPLORE NOW</button>
 </div>
 
 <div class="flex-container">
-<div class="flex-item"> 
-<span><i class="fas fa-flag-checkered"> Destination</i></span>
 
-<div class="flex-container">
-  <input type="text" class="text-field" placeholder="where are you going ?" />
-  <select class="dropdown"> 
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
-  </select>
+  <div class="flex-item"> 
+<span><i class="fas fa-flag-checkered"> Destination</i></span>
+<select>
+  <option value="" disabled selected>where are you going ?</option>
+  <option value="Belgium">Belgium</option>
+  <option value="Cambodia">Cambodia</option>
+  <option value="China">China</option>
+  <option value="Cuba">Cuba</option>
+  <option value="England">England</option>
+  <option value="Grand Canyon">Grand Canyon</option>
+  <option value="India">India</option>
+  <option value="New Zealand">New Zealand</option>
+  <option value="Paris">Paris</option>
+  <option value="America">United State of AMerica</option>
+
+</select></div>
+
+
+<div class="flex-item">
+<span><i class="fas fa-suitcase"> Travel Type </i></span>
+<select>
+  <option value="" disabled selected>All Activity  </option>
+  <option value="Adventure">Adventure</option>
+  <option value="City Tour">City Tour</option>
+  <option value="Couple">Couple</option>
+  <option value="Escorted Tour">Escorted Tour</option>
+  <option value="Family">Family</option>
+  <option value="Hill Town">Hill Town</option>
+</select></div>
+
+
+<div class="flex-item">
+<span><i class="fas fa-clock"> Duration</i></span>
+<input type="text"  class="form-control" placeholder="Please Type Duration">
+</div>
+
+
+
+
+<div class="flex-item">
+<span><i class="fas fa-calendar-alt"> Journey Date</i></span>
+<input type="date" #date class="form-control" placeholder="Select your date">
+</div>
+
+
+<div class="flex-item">
+  <a href="#" class="btn btn-warning find-button">
+     <span><i class="fas fa-search"></i></span> FIND NOW</a>
+     <br>
+</div>
+</div>
+<br><br>
+
+
+<div class="bg"> 
+    
+<div class="row">
+ <div class="col-md-4"></div>
+<div class="col-md-4" style="color:aliceblue;font-size:40px; font-family: 'Outfit', sans-serif;">
+  Upcoming Tour</div>
+<div class="col-md-row">
+
+<div class="col-md-12"  style="color:aliceblue;font-size:25px;font-family:
+ 'Outfit', sans-serif;text-align: center;">
+
+  Unleash the Wanderlust Within You Crafting Dreams into Unforgettable Journeys.</div>
+</div>
+</div>
+
+<div class="row align-items-center justify-content-center">
+
+
+<div id="travelCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+
+<div class="card-container d-flex justify-content-between">
+  <div class="card">
+    <img src="assets/images/11.jpg" alt="tour 1"  class="card-img-top">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+         3 days 4 Nights</button><br>
+      <h2>Vinales Valley</h2>
+      <p><a href="#" class="btn btn-warning">Book Now</a>                         
+          <br><br> Starting From Per Person
+      </div>
+  </div>
+
+    <div class="card">
+      <img src="assets/images/f.jpg" alt="tour 2" class="card-img-top">
+      <div class="card-content">
+        <button class="btn btn-warning  center-button">
+          <span><i class="fas fa-clock"></i></span>
+           3 days 4 Nights</button><br>
+        <h2>Vinales Valley</h2>
+        <p><a href="#" class="btn btn-warning">Book Now</a>                         
+            <br><br> Starting From Per Person
+      </div>
+    </div>
+
+  <div class="card">
+    <img src="assets/images/b.jpg" alt="tour 3">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button>
+<br>
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>   
+        <br>                      
+          <br> Starting From Per Person
+    </div>
+  </div>
 </div></div>
 
+<div class="carousel-item">
+  <div class="card-container">
+
+  <div class="card">
+    <img src="assets/images/g.jpg" alt="tour 4">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>                         
+        <br> Starting From Per Person
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="assets/images/a.jpg" alt="tour 5">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>                         
+          <br> Starting From Per Person
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="assets/images/h.jpg" alt="tour 6">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>                         
+          <br>Starting From Per Person
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="carousel-item">
+  <div class="card-container">
+  <div class="card">
+    <img src="assets/images/3.jpg" alt="tour 7">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>                         
+        <br>  <br>Starting From Per Person
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="assets/images/e.jpg" alt="tour 8">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button>                         
+          <br><br> Starting From Per Person
+    </div>
+  </div> 
+
+  <div class="card">
+    <img src="assets/images/9.jpg" alt="tour 9">
+    <div class="card-content">
+      <button class="btn btn-warning  center-button">
+        <span><i class="fas fa-clock"></i></span>
+        3 days 4 Nights</button><br>
+
+      <h2>Vinales Valley</h2>
+      <p><button class="btn btn-warning">Book Now</button> <br><br>                        
+          Starting From Per Person
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+  <a class="carousel-control-prev" href="#travelCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#travelCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span></a>
+
+      <a href="#" class="btn btn-warning view-button">View All Offer</a>
+</div>
+</div>
+</div>
 
 
 
@@ -26,34 +237,33 @@
 
 
 
+<!--  box -->
+
+<div class="box">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-6 mt-5"> JOIN US FOR MORE UPDATE
+<h6>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus.
+      Suspendissendt blandit interdum.</h6>
+</div>
+<div class="col-md-4 mt-5">
+  <a href="#" class="btn btn-warning view-button">Join Now</a>
+</div>
+</div>
+</div>
 
 
-
-
-
-
-
-
-
-<div class="flex-item">
-<span><i class="fas fa-suitcase"> Travel Type </i></span></div>
+<div class="top">
   
-<div class="flex-item">
-<span><i class="fas fa-clock"> Duration</i></span></div>
-   
-<div class="flex-item">
-<span><i class="fas fa-calendar-alt"> Journey Date</i></span></div>
-   
-<div class="flex-item">
-<span><i class="fas fa-search"></i> </span>
-  <button class="btn btn-warning find-button"> FIND NOW</button>
 </div>
-</div>
-    
-<!-- Main Content of the Website -->
-<div class="container">
-  <h1>Welcome to Our Website</h1></div>
 
+
+
+
+
+
+
+<!-- Main Content of the Website -->
 <!-- Footer Section -->
 <footer class="bg-dark text-light py-4">
   <div class="container">
