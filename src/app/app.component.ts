@@ -13,4 +13,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'OLFT';
+  imagePath: string = 'assets/images/e.jpg'; // Ensure path is correct
+
 }
