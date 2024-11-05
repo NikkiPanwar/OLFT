@@ -9,15 +9,16 @@
   margin-bottom: 40px;
 }
 
-.explore-button
+.center-button
  {
   display: block; /* Makes the button a block element */
   margin:auto;
-  border:2px solid black;
-  border-radius:40px;
+  border:2px solid transparent;
+  text-align: center;
+
 }
 
-.explore-button:hover
+.center-button:hover
  {
 color:#FECC4E;
 background-color: black;
@@ -86,16 +87,7 @@ background-color: black;
   color:black;
   font-family: 'Outfit', sans-serif;
 }
-/*.card-container {
-  display: flex;
-  text-align: center;
-  justify-content:space-around;
-  padding:30px;
-  flex-wrap:wrap;
-  margin-top:30px;
-  font-family:'Poppins', sans-serif;
-  transition:0.3s;
-}*/
+
 
 .card {
   overflow:hidden;
@@ -121,7 +113,7 @@ background-color: black;
  {
   display: block; /* Makes the button a block element */
   margin-left:40%;
-  border:2px solid black;
+  border:2px solid transparent;
   text-align: center;
 height:40px;
   width:150px;
@@ -159,7 +151,7 @@ background-color: black;
 }
 .tour-button
  {
-border:2px solid black;
+border:2px solid transparent;
 height:40px;
   width:150px;
   position: relative;
@@ -191,7 +183,7 @@ background-color: black;
   background-repeat: repeat-x; /* Repeat images horizontally */
   background-size: cover;
   gap:20px;
-  
+  cursor: pointer;
 }
 
 @keyframes slide-horizontal {
@@ -244,32 +236,11 @@ width:400px;
   font-size: 1.2em;
 }
 
-
-
-
-/*
-button {  
-  position: absolute;
-  top: 50%;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
-*/
 .card1:hover
  {
 color:black;
 background-color: aliceblue;
 }
-
-button:hover {
-  background-color: #0056b3;
-}
-
 
 
 .container1 {
@@ -313,86 +284,245 @@ background-color: transparent;
   overflow: hidden;
 }
 
-.imgCont 
+
+.box2 
 {
-  width:100%;
-  height:600px;
-  position:absolute;
-  left:0;
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  transition:1s;
-gap:15px;
-margin-top:400px;
-}
-.slide_div 
+width: 100%;
+height:600px;
+text-align: center;
+justify-content: center;}
+
+.cont3
 {
+margin:0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin:0 20px 0 20px;
+  align-items: center;
+  
 }
 
-.img{
-  position:relative;
-  height:350px;
- width:400px;
- transition: 0.7s;
+.card3 {
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 200px;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+.card3 {display: flex;}
+
+.card-content3 {
+  background-color:#fff;
+  min-width: 300px;
+  height:300px;
+  margin:25px;
+  animation: slide 5s linear infinite; /* Animation for the image */
 }
 
 
-.btn 
-{
-  position:absolute;
-  width:240px;
-  height:370px;
-transition:0.7s;
-background-color:transparent;
-border-radius: 20px;
+@keyframes slide {
+
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+.card3 :hover{
+  transform: scale(1.1);  
 }
 
-.btn:hover 
-{
-  background-color:rgba(0,0,0,0.2);
+.card3 {
+  overflow: auto;
 }
 
-#slider1:target ~ .imgCont #img1,
-#slider1:target ~ .imgCont #button2
-{
-  width:390px;
+
+.image-container {
+  position: relative; /* For positioning the text inside */
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide overflow (text will appear on hover) */
+}
+
+/* The image itself */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  transition: transform 0.3s ease; /* Smooth effect for scaling or zooming */
+}
+
+.expand-on-hover {
+  width: 100px;
+  transition: width 0.5s ease-in-out;
+}
+
+.expand-on-hover:hover {
+  width: 200px;
+}
+
+.card-content3 .hover-image {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+.card-content3:hover .hover-image {
+  transform: scale(1.1); /* Apply zoom effect on hover */
+}
+
+.card-content3:hover .text-overlay {
+  opacity:1; /* Fade in the text after hover */
+}
+
+.card-content3 .text-overlay {
+  transition-delay:0.8s; /* Delay the hover effect by 1 second */
+}
+
+
+/* The overlay text */
+.text-overlay {
+  position: absolute;
+  top:0%;
+  left: -100%; /* Initially hidden, positioned to the left */
+  color: white;
+  height:200px;
+  background-color: rgb(72, 72, 72);/* Semi-transparent background */
+  padding: 10px;
+  width: 200px; /* Width of the overlay text box */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.image-container:hover .text-overlay {
+  left: 0; /* Move the text box to the left */
+  opacity: 1; /* Make the text visible */
   height:600px;
-  background-color: red;
-  filter:saturate(100%);
+  width:50px;
 }
 
 
-#slider2:target ~ .imgCont #img2,
-#slider2:target ~ .imgCont #button2 
-{
-  width:390px;
-  height:600px;
-  background-color: red;
-  filter:saturate(100%);
+.image-container:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
-#slider3:target ~ .imgCont #img3,
-#slider3:target ~ .imgCont #button2 
-{
-  width:390px;
-  height:600px;
-  background-color: red;
-  filter:saturate(100%);
+
+.social-icons1 {
+  margin-top: 10px;
 }
 
-#slider1:target ~ .imgCont
- {  left:60%;
+.social-icons1 span{
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-#slider2:target ~ .imgCont
- {  left:60%;
+.social-icons1 span:hover {
+  background-color: yellow; 
+  color:white;/* Example hover color */
+}
+  .social-icon:hover {
+  background-color:black; /* Light yellow on hover */
+  }
+  
+  
+  .box3 
+  {
+    background-color: #9acd32;
+    height:600px;
+    width:100%;
+  }
+
+  
+  .post
+  {
+ border:2px solid transparent;
+   position: relative;
+   margin-left:320px;
+   width:160px;
+   font-family: 'Playfair Display', serif;
+ }
+ 
+.post:hover {
+  background-color:black;
+  color:#FECC4E
 }
 
-#slider3:target ~ .imgCont
- {  left:60%;
+
+
+
+
+.card-container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card4 {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right:960px;
+  margin-bottom:300px;
+}
+
+.image-wrapper4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* Layout images horizontally */
+}
+
+.image-wrapper4 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0; /* Initially hide the images */
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.image-wrapper4 {
+  animation: slide 6s infinite;
+}
+
+
+.image1 {
+  animation: slide 2s infinite;
+  animation-delay: 0s;
+}
+
+
+.image2 {
+  animation: slide 4s infinite;
+  animation-delay: 3s;
+}
+
+
+.text-overlay4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
 }
