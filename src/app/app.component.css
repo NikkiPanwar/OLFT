@@ -4,20 +4,20 @@
   align-items: center;
   font-size:20px;
   font-weight: 600;
-  color:yellow;
+  color:#ffc107;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 .navbar-nav .nav-link {
   transition: background-color 0.3s, color 0.3s;
-  color:green;
+  color:#ffc107;
   font-size:20px;
 }
 
 .navbar-nav .nav-link:hover {
-  background:#9acd32;; /* Hover effect */
-  color:blue;/* Change text color on hover */
+   /* Hover effect */
+  color:#ffc107;;/* Change text color on hover */
 }
 
 
@@ -31,7 +31,7 @@
 }
 
 .flex-item {
-  background-color:white; /* Background color */
+  background-color:#fff; /* Background color */
   padding:20px; /* Padding */
   border: 1px solid gray; /* Border */
   flex: 1; /* Grow to fill space */
@@ -51,7 +51,7 @@ margin: 0 auto; /* Centers the button */
 
 .last-button:hover
 {
-color:#FECC4E;
+color:#ffc107;
 background-color: black;
 }
 .social-icon {
@@ -60,9 +60,9 @@ justify-content: center;
 align-items: center;
 width: 40px; /* Width of the circle */
 height: 40px; /* Height of the circle */
-border: 2px solid #FECC4E; /* Yellow outline */
+border: 2px solid #ffc107; /* Yellow outline */
 border-radius: 50%; /* Makes the shape circular */
-color:#FECC4E;/* Icon color */
+color:#ffc107;/* Icon color */
 margin: 0 5px; /* Space between icons */
 background-color:forestgreen; /* Background color */
 transition: background-color 0.3s;

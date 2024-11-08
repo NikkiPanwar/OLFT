@@ -1,0 +1,30 @@
+.page3 
+{
+    width:100%;
+    height:560px;
+    background-color:#fff;
+    text-align: center;
+    padding-top:40px;
+    color:rgb(58, 56, 56);
+    font-family: 'Trebuchet MS', sans-serif;
+    justify-content: center;
+}
+
+.home-button
+{
+    width:260px;
+    height:75px;
+    justify-content: center;
+  padding-top:20px;
+  color: #fff;
+  font-weight:800;
+  font-size:30px;
+  border-radius:10px;
+}
+
+.home-button:hover 
+{
+    background-color: black;
+    color:#ffc107;
+    /*ffc107;*/
+}

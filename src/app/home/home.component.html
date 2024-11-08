@@ -67,137 +67,128 @@
 </div>
 <br><br>
 
-<div class="bg">
+<div class="Packages_Container">
   
-<p style="padding-top:100px;padding-left:100px;font-size: 40px;color:aliceblue;
+<p style="padding-top:80px;padding-left:100px;font-size: 40px;color:aliceblue;
 font-family:'Outfit',sans-serif;font-weight:800;">Upcoming Tours
 </p>
 <p style="font-size:20px;padding-left:100px;padding-bottom:0px;color:aliceblue;
 font-family:'Outfit',sans-serif;">
   Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
 
+<div class="container">
 
-<div class="package-container" class="carousel slide" data-ride="carousel" data-interval="3000">
-  <div class="package-slide">
+<!-- Previous and Next buttons -->
+<button class="prev-btn" (click)="scrollPrev()">
+  <span><i class="fas fa-arrow-left fa-sm"></i></span></button>
+<button class="next-btn" (click)="scrollNext()">
+ <span><i class="fas fa-arrow-right fa-sm"></i></span>
 
+</button>
+                
 
-    <div class="card border">
-      <img src="assets/images/9.jpg" alt="tour 1"  class="card-img-top">
-      <div class="card-header">
-        <button class="btn btn-warning  center-button">
-          <span><i class="fas fa-clock"></i></span>
-           3 days 4 Nights</button><br>
-        <h2>Vinales Valley</h2>
-        <div class="card-body">
-        <p><a href="#" class="btn btn-warning">Book Now</a>                         
-      <span style="margin-left:70px">Starting From </span>
-      <span><h6 style="margin-left:170px;">Per Person</h6></span>
-    </div>
-    </div>
-    </div> 
-
-
-    
-
-<div class="card border">
-  <img src="assets/images/4.jpg" alt="tour 1"  class="card-img-top">
-  <div class="card-header">
-    <button class="btn btn-warning  center-button">
-      <span><i class="fas fa-clock"></i></span>
-       3 days 4 Nights</button><br>
-    <h2>Vinales Valley</h2>
-    <div class="card-body">
-    <p><a href="#" class="btn btn-warning">Book Now</a>                         
-  <span style="margin-left:70px">Starting From </span>
-  <span><h6 style="margin-left:170px;">Per Person</h6></span>
-</div>
+  <div #scrollContainer class="item-container">
+      <!--card1-->
+    <div class="item">
+      <div class="card" style="width:22rem;">
+        <span class="badge">
+          <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+      <img src="assets/images/1.jpg" class="card-img-top" alt="Franz Josef Glacier">
+     <div class="card-body">
+      <h2 class="card-title">Vineas Valley</h2>
+      <span><a href="#" class="btn btn-warning book-button">Book Now 
+        <i class="fas fa-arrow-right fa-sm"></i></a></span>
+        <span style="margin-left:70px;font-size:16px;">Starting From</span>
+<p style="margin-left:190px;font-size:16px;">Per Person</p>
+      </div>    
 </div>
 </div>
 
+  <!--card2-->
+  <div class="item">
+  <div class="card" style="width:22rem;">
+    <span class="badge">
+      <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+  <img src="assets/images/2.jpg" class="card-img-top" alt="Franz Josef Glacier">
+ <div class="card-body">
+  <h2 class="card-title">Vineas Valley</h2>
+  <span><a href="#" class="btn btn-warning book-button">Book Now 
+    <i class="fas fa-arrow-right fa-sm"></i></a></span>
+    <span style="margin-left:70px;font-size:16px;">Starting From</span>
+<p style="margin-left:190px;font-size:16px;">Per Person</p>
+  </div>    
+</div></div>
 
-
-
-<div class="card border">
-  <img src="assets/images/3.jpg" alt="tour 1"  class="card-img-top">
-  <div class="card-header">
-    <button class="btn btn-warning  center-button">
-      <span><i class="fas fa-clock"></i></span>
-       3 days 4 Nights</button><br>
-    <h2>Vinales Valley</h2>
-    <div class="card-body">
-    <p><a href="#" class="btn btn-warning">Book Now</a>                         
-  <span style="margin-left:70px">Starting From </span>
-  <span><h6 style="margin-left:170px;">Per Person</h6></span>
-</div>
-</div>
-</div> 
-
-
-<div class="card border">
-  <img src="assets/images/e.jpg" alt="tour 1"  class="card-img-top">
-  <div class="card-header">
-    <button class="btn btn-warning  center-button">
-      <span><i class="fas fa-clock"></i></span>
-       3 days 4 Nights</button><br>
-    <h2>Vinales Valley</h2>
-    <div class="card-body">
-    <p><a href="#" class="btn btn-warning">Book Now</a>                         
-  <span style="margin-left:70px">Starting From </span>
-  <span><h6 style="margin-left:170px;">Per Person</h6></span>
-</div>
+  <!--card3-->
+  <div class="item">
+  <div class="card" style="width:22rem;">
+    <span class="badge">
+      <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+  <img src="assets/images/3.jpg" class="card-img-top" alt="Franz Josef Glacier">
+ <div class="card-body">
+  <h2 class="card-title">Vineas Valley</h2>
+  <span><a href="#" class="btn btn-warning book-button">Book Now 
+    <i class="fas fa-arrow-right fa-sm"></i></a></span>
+    <span style="margin-left:70px;font-size:16px;">Starting From</span>
+<p style="margin-left:190px;font-size:16px;">Per Person</p>
+  </div>    
 </div>
 </div>
 
 
-<div class="card border">
-  <img src="assets/images/b.jpg" alt="tour 1"  class="card-img-top">
-  <div class="card-header">
-    <button class="btn btn-warning  center-button">
-      <span><i class="fas fa-clock"></i></span>
-       3 days 4 Nights</button><br>
-    <h2>Vinales Valley</h2>
-    <div class="card-body">
-    <p><a href="#" class="btn btn-warning">Book Now</a>                         
-  <span style="margin-left:70px">Starting From </span>
-  <span><h6 style="margin-left:170px;">Per Person</h6></span>
-</div>
-</div>
-</div>
-
-
-
-<div class="card border">
-  <img src="assets/images/9.jpg" alt="tour 1"  class="card-img-top">
-  <div class="card-header">
-    <button class="btn btn-warning  center-button">
-      <span><i class="fas fa-clock"></i></span>
-       3 days 4 Nights</button><br>
-    <h2>Vinales Valley</h2>
-    <div class="card-body">
-    <p><a href="#" class="btn btn-warning">Book Now</a>                         
-  <span style="margin-left:70px">Starting From </span>
-  <span><h6 style="margin-left:170px;">Per Person</h6></span>
-</div>
-</div>
-</div>
-
-
-
-  <a class="carousel-control-prev" href="#travelCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#travelCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span></a>
-
+  <!--card4-->
+  <div class="item">
+    <div class="card" style="width:22rem;">
+      <span class="badge">
+        <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+    <img src="assets/images/4.jpg" class="card-img-top" alt="Franz Josef Glacier">
+   <div class="card-body">
+    <h2 class="card-title">Vineas Valley</h2>
+    <span><a href="#" class="btn btn-warning book-button">Book Now 
+      <i class="fas fa-arrow-right fa-sm"></i></a></span>
+      <span style="margin-left:70px;font-size:16px;">Starting From</span>
+  <p style="margin-left:190px;font-size:16px;">Per Person</p>
+    </div>    
+  </div>
   </div>
 
-</div>
-      <a href="#" class="btn btn-warning view-button">View All Offer</a>
-</div>
+
+  <!--card5-->
+  <div class="item">
+    <div class="card" style="width:22rem;">
+      <span class="badge">
+        <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+    <img src="assets/images/5.jpg" class="card-img-top" alt="Franz Josef Glacier">
+   <div class="card-body">
+    <h2 class="card-title">Vineas Valley</h2>
+    <span><a href="#" class="btn btn-warning book-button">Book Now 
+      <i class="fas fa-arrow-right fa-sm"></i></a></span>
+      <span style="margin-left:70px;font-size:16px;">Starting From</span>
+  <p style="margin-left:190px;font-size:16px;">Per Person</p>
+    </div>    
+  </div>
+  </div>
 
 
+ <!--card6-->
+  <div class="item">
+    <div class="card" style="width:22rem;">
+      <span class="badge">
+        <i class="fas fa-clock"></i> 3 Days 4 Nights</span>
+    <img src="assets/images/6.jpg" class="card-img-top" alt="Franz Josef Glacier">
+   <div class="card-body">
+    <h2 class="card-title">Vineas Valley</h2>
+    <span><a href="#" class="btn btn-warning book-button">Book Now 
+      <i class="fas fa-arrow-right fa-sm"></i></a></span>
+      <span style="margin-left:70px;font-size:16px;">Starting From</span>
+  <p style="margin-left:190px;font-size:16px;">Per Person</p>
+    </div>    
+  </div>
+  </div>
+</div>
+</div>
+<a href="#" class="btn btn-warning view-button">View All Offer</a>
+</div>
 
 
 
@@ -206,6 +197,47 @@ font-family:'Outfit',sans-serif;">
 <div class="top">
   Top Destination
 <a href="#" class="btn btn-warning tour-button">View All Tours</a>
+<div class="cont">
+
+   <!--card1-->
+   <div class="card1">
+<img src="assets/images/a.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+<div class="text-overlay1"></div>  
+</div>
+
+<div class="card1">
+<img src="assets/images/b.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+</div>
+
+<div class="card1">
+<img src="assets/images/c.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+</div>
+
+<div class="card1">
+<img src="assets/images/d.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+</div>
+
+<div class="card1">
+  <img src="assets/images/e.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+    </div>
+
+<div class="card1">
+      <img src="assets/images/f.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+        </div>
+
+<div class="card1">
+ <img src="assets/images/g.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+</div>
+
+
+<div class="card1">
+<img src="assets/images/h.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+</div>
+
+<div class="card1">
+  <img src="assets/images/i.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+  </div>
+</div>
 </div>
 
 
@@ -278,11 +310,8 @@ data-interval="3000">
 
   <br>
   <div class="cont3">
-
-
     <section class="card3">
       
-
       <div class="card-content3">
         <div class="image-container">
            <img src="/assets/images/1.jpg" alt="Image 1" height="300px" width="300px">
@@ -370,29 +399,7 @@ font-family:'Outfit',sans-serif;">
         <p>Description of the image.</p>
       </div>
     </div>
-  </div>
-
-  
-
-
-  <div class="card-container4">
-    <div class="card4">
-      <div class="image-wrapper4">
-        <img src="src/assets/images/1.jpg" alt="Image 1" class="image1">
-      </div>
-      <div class="text-overlay4">
-        <h3>sdfghjk</h3>
-        <p>9 Essentially trips</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
+  </div></div>
 
 
 
@@ -415,6 +422,8 @@ font-family:'Outfit',sans-serif;">
     <span class="social-icon"><i class="fab fa-twitter"></i></span>
     <span class="social-icon"><i class="fab fa-linkedin-in"></i></span>
     <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
+    <span class="social-icon"><i class="fab fa-pinterest"></i></span>
+
   </div>
           <div class="col-md-2">
               <h4>Quick Links</h4>
@@ -451,7 +460,7 @@ font-family:'Outfit',sans-serif;">
       <hr class="my-4">
       <div class="text-center">
           <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-          <p>Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd</p>
+          <p>Copyright 2024 Funstay | Design By Pvt. Ltd</p>
       </div>
   </div>
 </footer>
