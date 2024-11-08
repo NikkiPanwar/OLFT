@@ -243,7 +243,7 @@ font-family:'Outfit',sans-serif;">
 
 <!--what  users says-->
 <div class="box1">
-  <p style="padding-top:100px;padding-left:100px;font-size: 40px;
+  <p style="padding-top:65px;padding-left:100px;font-size: 40px;
   font-family:'Outfit',sans-serif;font-weight:800;">
   What Our Travel Buddy Say<br>
    About Us
@@ -255,51 +255,96 @@ Capturing Memories, One Testimonial at a Time: Hear What Our Travel Buddies
 Have to <br>Say About the One Life For Travel Experience!
 </p>
 
+<div class="cont1">
+<!--previous button and next button-->
+<button class="prev-btn" (click)="scrollPrev()">
+  <span><i class="fas fa-arrow-left fa-sm"></i></span></button>
+<button class="next-btn" (click)="scrollNext()">
+ <span><i class="fas fa-arrow-right fa-sm"></i></span>
+</button>
+<div #scrollContainer class="item-container">
+  <!--card1-->
+<div class="item1">
 
+<div class="package-slide">
  
 
-<div class="container1" class="carousel slide" data-ride="carousel"
-data-interval="3000">
-<div class="package-slide">
-  <div class="card1">
-      <img src="assets/images/1.jpg" alt="User Photo" class="user-photo">
-      <div style="font-size:30px;font-weight:200;">Raju Adakalli</div>
-    
-      <span class="rating" style="margin-top:0px;margin-left:105px;">⭐⭐⭐⭐⭐</span>
-      <p style="font-size: 20px;">
-          Thank u entire team of Funstay for the meaningful and memorable trip of
-           Vietnam! Must say everyone in the group mingled as one family during the 
-           entire tour and created unforgettable moments & memories for all for a
-            lifetime! Thank u all.
-      </p>
-  </div>
+  <div class="card2">
+    <img src="assets/images/11.jpg" alt="User Photo" class="user-photo">
+    <span>Raju Adakalli</span>
+   <span> <div class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div></span>
+    <p style="font-size: 20px;">
+  Thank u entire team of Funstay for the meaningful and memorable trip of
+  Vietnam! Must say everyone in the group mingled as one family during the 
+  entire tour and created unforgettable moments & memories for all for a
+   lifetime! Thank u all.</p></div>
 
-  <div class="card1">
+
+  <div class="card2">
       <img src="assets/images/5.jpg" alt="User Photo" class="user-photo">
-      <span style="margin-left: 10px;font-size:30px;font-weight:200;">Shwan Pull</span>
-      <div class="rating" style="margin-top:0px;margin-left:105px;">⭐⭐⭐⭐⭐</div>
+      <span>Shwan Pull</span>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
       <p style="font-size: 20px;">
         but also the leap electronic typesting ,remaining essentially unchanged. It was 
         popularised in the 1960s with the release of Let containing Lorem Ipsum passages
       </p>
   </div>
 
-  <div class="card1">
-      <img src="assets/images/6.jpg" alt="User Photo" class="user-photo">
-      <span style="margin-left: 10px;font-size:30px;font-weight:200;"> Raju Adakalli</span>
-      <div class="rating"style="margin-top:0px;margin-left:105px;">⭐⭐⭐⭐⭐</div>
-      <p style="font-size: 20px;">
-        but also the leap electronic typesting ,remaining essentially unchanged. It was 
-        popularised in the 1960s with the release of Let containing Lorem Ipsum passages
-      </p>
+
+  <div class="card2">
+    <img src="assets/images/4.jpg" alt="User Photo" class="user-photo">
+    <span>Lilyan Danclark</span>
+    <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p style="font-size: 20px;">
+      but also the leap electronic typesting ,remaining essentially unchanged. It was 
+      popularised in the 1960s with the release of Let containing Lorem Ipsum passages
+    </p>
+</div>
+
+
+<div class="card2">
+  <img src="assets/images/4.jpg" alt="User Photo" class="user-photo">
+  <span>Lilyan Danclark</span>
+  <div class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
   </div>
-</div>
-</div>
+  <p style="font-size: 20px;">
+    but also the leap electronic typesting ,remaining essentially unchanged. It was 
+    popularised in the 1960s with the release of Let containing Lorem Ipsum passages
+  </p>
 </div>
 
 
-<!--box 2-->
-<div class="box2">
+
+</div>
+</div>
+</div></div></div>
+
+
+<!--box 3-->
+<div class="box3">
   <p style="font-size:40px;padding-top:20px;
   font-family:'Outfit',sans-serif;font-weight:800;"> Our Sherpas
   </p>
@@ -308,74 +353,74 @@ data-interval="3000">
   
   Guiding You Beyond Maps: Your Personal Navigator to Unforgettable Adventures 
 
-  <br>
+
+
+
   <div class="cont3">
     <section class="card3">
-      
+      <!--card 1-->
       <div class="card-content3">
         <div class="image-container">
-           <img src="/assets/images/1.jpg" alt="Image 1" height="300px" width="300px">
-           <div class="text-overlay">
+          <img src="/assets/images/e.jpg" alt="Image">
+          <div class="text-overlay">
             <div class="social-icons1">
-              <span><i class="fas fa-instagram" aria-label="Instagram"></i></span><br>
-              <span><i class="fas fa-facebook-f" aria-label="Facebook"></i></span><br>
-              <span><i class="fas fa-whatsapp" aria-label="WhatsApp"></i></span><br>
-              <span><i class="fas fa-twitter" aria-label="Twitter"></i></span><br>
-            </div>
-           </div>
-         </div>
-       </div>
-    
-
-         <div class="card-content3">
-          <div class="image-container">
-             <img src="/assets/images/2.jpg" alt="Image 1" height="300px" width="300px">
-             <div class="text-overlay">
-              <div class="social-icons1">
-                <span><i class="fas fa-instagram" aria-label="Instagram"></i></span><br>
-                <span><i class="fas fa-facebook-f" aria-label="Facebook"></i></span><br>
-                <span><i class="fas fa-whatsapp" aria-label="WhatsApp"></i></span><br>
-                <span><i class="fas fa-twitter" aria-label="Twitter"></i></span><br>
+              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
+          </div>
+        </div>
+        </div>
+            <div class="card-body">
+              <h2 class="card-title">Vineas Valley</h2>
+              <h5>Tour Guide</h5>
               </div>
-             </div>
-           </div>
-         </div>
-    
-         
-
-
-         <div class="card-content3">
-          <div class="image-container">
-             <img src="/assets/images/8.jpg" alt="Image 1" height="300px" width="300px">
-             <div class="text-overlay">
-              <div class="social-icons1">
-                <span><i class="fas fa-instagram" aria-label="Instagram"></i></span><br>
-                <span><i class="fas fa-facebook-f" aria-label="Facebook"></i></span><br>
-                <span><i class="fas fa-whatsapp" aria-label="WhatsApp"></i></span><br>
-                <span><i class="fas fa-twitter" aria-label="Twitter"></i></span><br>
+      </div>
+<!--card 2-->
+      <div class="card-content3">
+        <div class="image-container">
+          <img src="/assets/images/f.jpg" alt="Image">
+          <div class="text-overlay">
+            <div class="social-icons1">
+              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
+          </div>
+        </div>
+        </div>
+            <div class="card-body">
+              <h2 class="card-title">Vineas Valley</h2>
+              <h5>Tour Guide</h5>
               </div>
-             </div>
-           </div>
-         </div>
+      </div>
+      <!--card 3-->
+      <div class="card-content3">
+        <div class="image-container">
+          <img src="/assets/images/g.jpg" alt="Image">
+          <div class="text-overlay">
+            <div class="social-icons1">
+              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
+          </div>
+        </div>
+        </div>
+            <div class="card-body">
+              <h2 class="card-title">Vineas Valley</h2>
+              <h5>Tour Guide</h5>
+              </div>
+      </div>
     </section>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 <!--recent post-->
 
-<div class="box3">
+<div class="box4">
   <p style="font-size:45px;padding-top:20px;padding-left:70px;
   font-family:'Outfit',sans-serif;font-weight:800;"> Recent Post
   </p>
@@ -386,20 +431,26 @@ font-family:'Outfit',sans-serif;">
    hendrerit a<br> id lectus. Suspendissendt blandit interdum. 
   Sed pellentesque at nunc eget consectetur.  
 
-  <a href="#" class="btn btn-warning post">View All Post</a>
+  <div class="cont4">
+ <!--Carousel and Cards -->
+ <!----card 1-->
 
-  <div class="card-container4">
-    <div class="card4">
-      <div class="image-wrapper4">
-        <img src="image1.jpg" alt="Image 1" class="image1">
-        <img src="image2.jpg" alt="Image 2" class="image2">
-      </div>
-      <div class="text-overlay4">
-        <h3>Card Title</h3>
-        <p>Description of the image.</p>
-      </div>
-    </div>
-  </div></div>
+ <div class="card4" style="width:22rem;">
+
+  <span class="badge4">
+      <span><i class="fas fa-calendar"></i></span>  July 15,2022</span>
+<img src="assets/images/7.jpg" class="card4-img-top"alt="National Capitol of Cuba">
+  <div class="card4-body">
+    <span><i class="fas fa-user f-sm"></i> By User</span>
+    <span><i class="fas fa-comment f-sm"></i> Comment</span>
+      <h2 class="card4-title">Summer Holidays To The 
+        <p>oxolotan River</p>
+      </h2>
+
+</div>
+</div></div>
+  <a href="#" class="btn btn-warning post">View All Post</a>
+</div>
 
 
 
@@ -458,11 +509,10 @@ font-family:'Outfit',sans-serif;">
           </div>
       </div>
       <hr class="my-4">
-      <div class="text-center">
-          <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-          <p>Copyright 2024 Funstay | Design By Pvt. Ltd</p>
+      <div class="text-center"></div>
+          <p>Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd</p>
       </div>
-  </div>
+  
 </footer>
 </body>
 </html>

@@ -62,9 +62,9 @@ width: 40px; /* Width of the circle */
 height: 40px; /* Height of the circle */
 border: 2px solid #ffc107; /* Yellow outline */
 border-radius: 50%; /* Makes the shape circular */
-color:#ffc107;/* Icon color */
+color:#ffff;/* Icon color */
 margin: 0 5px; /* Space between icons */
-background-color:forestgreen; /* Background color */
+background-color: #ffc107; /* Background color */
 transition: background-color 0.3s;
 }
 
