@@ -9,15 +9,17 @@
 <body>
   
 <div class="background">
-<button class="btn btn-warning center-button">EXPLORE NOW</button>
+<button class="btn btn-warning center-button">Explore Now</button>
 </div>
 
 <div class="flex-container">
 
   <div class="flex-item"> 
-<span><i class="fas fa-flag-checkered"> Destination</i></span>
-<select>
-  <option value="" disabled selected>where are you going ?</option>
+<span style="color:#fcb900;">
+  <i class="fas fa-flag-checkered"></i>
+</span>  Destination
+<select class="a">
+  <option value="" disabled selected>Where Are You Going ?</option>
   <option value="Belgium">Belgium</option>
   <option value="Cambodia">Cambodia</option>
   <option value="China">China</option>
@@ -27,14 +29,16 @@
   <option value="India">India</option>
   <option value="New Zealand">New Zealand</option>
   <option value="Paris">Paris</option>
-  <option value="America">United State of AMerica</option>
+  <option value="America">United State of America</option>
 
 </select></div>
 
 
 <div class="flex-item">
-<span><i class="fas fa-suitcase"> Travel Type </i></span>
-<select>
+<span style="color:#fcb900;">
+  <i class="fas fa-suitcase"></i></span>
+    Travel Type
+<select class="a">
   <option value="" disabled selected>All Activity  </option>
   <option value="Adventure">Adventure</option>
   <option value="City Tour">City Tour</option>
@@ -42,51 +46,49 @@
   <option value="Escorted Tour">Escorted Tour</option>
   <option value="Family">Family</option>
   <option value="Hill Town">Hill Town</option>
-</select></div>
-
-
-<div class="flex-item">
-<span><i class="fas fa-clock"> Duration</i></span>
-<input type="text"  class="form-control" placeholder="Please Type Duration">
+</select>
 </div>
 
-
-
+<div class="flex-item">
+<span style="color:#fcb900;">
+  <i class="fas fa-clock"></i>  </span> 
+    Duration
+<input type="text"  class="form-control" placeholder="Please type duration">
+</div>
 
 <div class="flex-item">
-<span><i class="fas fa-calendar-alt"> Journey Date</i></span>
+<span style="color:#fcb900;"><i class="fas fa-calendar-alt"></i> </span>
+    Journey Date
 <input type="date" #date class="form-control" placeholder="Select your date">
-</div>
 
+</div>
 
 <div class="flex-item">
-  <a href="#" class="btn btn-warning find-button">
-     <span><i class="fas fa-search"></i></span> FIND NOW</a>
-     <br>
+  <a href="#" class="btn btn-warning find-button">Find Now</a>
 </div>
 </div>
-<br><br>
+<br>
 
 <div class="Packages_Container">
-  
-<p style="padding-top:80px;padding-left:100px;font-size: 40px;color:aliceblue;
-font-family:'Outfit',sans-serif;font-weight:800;">Upcoming Tours
+
+<p style="padding-top:98px;padding-left:122px;font-size:35px;
+color:#fff;
+font-family:'Montserrat',sans-serif;font-weight:800;">Upcoming Tours
 </p>
-<p style="font-size:20px;padding-left:100px;padding-bottom:0px;color:aliceblue;
-font-family:'Outfit',sans-serif;">
+<p style="font-size:16px;padding-left:122px;color:#fff;
+font-family:'Montserrat',sans-serif;">
   Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
+
+<!-- Previous and Next buttons -->
+
 
 <div class="container">
 
-<!-- Previous and Next buttons -->
-<button class="prev-btn" (click)="scrollPrev()">
-  <span><i class="fas fa-arrow-left fa-sm"></i></span></button>
-<button class="next-btn" (click)="scrollNext()">
- <span><i class="fas fa-arrow-right fa-sm"></i></span>
-
-</button>
-                
-
+  <button class="prev-btn" (click)="scrollPrev()">
+    <span style="font-size:0.8rem;"><i class="fas fa-arrow-left fa-sm"></i></span></button>
+  <button class="next-btn" (click)="scrollNext()">
+   <span style="font-size:0.8rem;"><i class="fas fa-arrow-right"></i></span>
+  </button>
   <div #scrollContainer class="item-container">
       <!--card1-->
     <div class="item">
@@ -97,9 +99,12 @@ font-family:'Outfit',sans-serif;">
      <div class="card-body">
       <h2 class="card-title">Vineas Valley</h2>
       <span><a href="#" class="btn btn-warning book-button">Book Now 
-        <i class="fas fa-arrow-right fa-sm"></i></a></span>
-        <span style="margin-left:70px;font-size:16px;">Starting From</span>
-<p style="margin-left:190px;font-size:16px;">Per Person</p>
+        <i class="fas fa-arrow-right" style="font-size:0.6rem;">
+        </i>
+      </a>
+    </span>
+        <span class="c">Starting From</span>
+<p class="d">Per Person</p>
       </div>    
 </div>
 </div>
@@ -113,10 +118,9 @@ font-family:'Outfit',sans-serif;">
  <div class="card-body">
   <h2 class="card-title">Vineas Valley</h2>
   <span><a href="#" class="btn btn-warning book-button">Book Now 
-    <i class="fas fa-arrow-right fa-sm"></i></a></span>
-    <span style="margin-left:70px;font-size:16px;">Starting From</span>
-<p style="margin-left:190px;font-size:16px;">Per Person</p>
-  </div>    
+    <i class="fas fa-arrow-right" style="font-size:0.6rem;"></i></a></span>
+    <span class="c">Starting From</span>
+<p class="d">Per Person</p></div>    
 </div></div>
 
   <!--card3-->
@@ -128,10 +132,9 @@ font-family:'Outfit',sans-serif;">
  <div class="card-body">
   <h2 class="card-title">Vineas Valley</h2>
   <span><a href="#" class="btn btn-warning book-button">Book Now 
-    <i class="fas fa-arrow-right fa-sm"></i></a></span>
-    <span style="margin-left:70px;font-size:16px;">Starting From</span>
-<p style="margin-left:190px;font-size:16px;">Per Person</p>
-  </div>    
+    <i class="fas fa-arrow-right" style="font-size:0.6rem;"></i></a></span>
+    <span class="c">Starting From</span>
+    <p class="d">Per Person</p></div>    
 </div>
 </div>
 
@@ -145,10 +148,9 @@ font-family:'Outfit',sans-serif;">
    <div class="card-body">
     <h2 class="card-title">Vineas Valley</h2>
     <span><a href="#" class="btn btn-warning book-button">Book Now 
-      <i class="fas fa-arrow-right fa-sm"></i></a></span>
-      <span style="margin-left:70px;font-size:16px;">Starting From</span>
-  <p style="margin-left:190px;font-size:16px;">Per Person</p>
-    </div>    
+      <i class="fas fa-arrow-right" style="font-size:0.6rem;"></i></a></span>
+      <span class="c">Starting From</span>
+      <p class="d">Per Person</p></div>    
   </div>
   </div>
 
@@ -162,10 +164,9 @@ font-family:'Outfit',sans-serif;">
    <div class="card-body">
     <h2 class="card-title">Vineas Valley</h2>
     <span><a href="#" class="btn btn-warning book-button">Book Now 
-      <i class="fas fa-arrow-right fa-sm"></i></a></span>
-      <span style="margin-left:70px;font-size:16px;">Starting From</span>
-  <p style="margin-left:190px;font-size:16px;">Per Person</p>
-    </div>    
+      <i class="fas fa-arrow-right" style="font-size:0.6rem;"></i></a></span>
+      <span class="c">Starting From</span>
+      <p class="d">Per Person</p></div>    
   </div>
   </div>
 
@@ -179,9 +180,9 @@ font-family:'Outfit',sans-serif;">
    <div class="card-body">
     <h2 class="card-title">Vineas Valley</h2>
     <span><a href="#" class="btn btn-warning book-button">Book Now 
-      <i class="fas fa-arrow-right fa-sm"></i></a></span>
-      <span style="margin-left:70px;font-size:16px;">Starting From</span>
-  <p style="margin-left:190px;font-size:16px;">Per Person</p>
+      <i class="fas fa-arrow-right" style="font-size:0.6rem;"></i></a></span>
+      <span class="c">Starting From</span>
+      <p class="d">Per Person</p>
     </div>    
   </div>
   </div>
@@ -195,152 +196,215 @@ font-family:'Outfit',sans-serif;">
 
 <!--top destination -->
 <div class="top">
-  Top Destination
+  Top Destination 
 <a href="#" class="btn btn-warning tour-button">View All Tours</a>
 <div class="cont">
 
-   <!--card1-->
    <div class="card1">
-<img src="assets/images/a.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
-<div class="text-overlay1"></div>  
+<img src="assets/images/a.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+<div class="text-overlay2">
+    <h2>Paris</h2>
+    <div class="line-number">
+      <div class="line"></div>
+    <div class="number">3 Place</div> 
+</div>  
+</div>
 </div>
 
 <div class="card1">
-<img src="assets/images/b.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+<img src="assets/images/b.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+<div class="text-overlay2">
+  <h2>Paris</h2>
+  <div class="line-number">
+    <div class="line"></div>
+  <div class="number">3 Place</div> 
+</div>  
+</div>
 </div>
 
 <div class="card1">
-<img src="assets/images/c.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+<img src="assets/images/c.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+<div class="text-overlay2">
+  <h2>Paris</h2>
+  <div class="line-number">
+    <div class="line"></div>
+  <div class="number">3 Place</div> 
+</div>  
+</div>
 </div>
 
 <div class="card1">
-<img src="assets/images/d.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+<img src="assets/images/d.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+<div class="text-overlay2">
+  <h2>Paris</h2>
+  <div class="line-number">
+    <div class="line"></div>
+  <div class="number">3 Place</div> 
+</div>  
+</div>
 </div>
 
 <div class="card1">
-  <img src="assets/images/e.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+  <img src="assets/images/e.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+  <div class="text-overlay2">
+    <h2>Paris</h2>
+    <div class="line-number">
+      <div class="line"></div>
+    <div class="number">3 Place</div> 
+</div>  
+</div>    
+</div>
+
+<div class="card1">
+      <img src="assets/images/f.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+      <div class="text-overlay2">
+        <h2>Paris</h2>
+        <div class="line-number">
+          <div class="line"></div>
+        <div class="number">3 Place</div> 
+    </div>  
+    </div>   
     </div>
 
 <div class="card1">
-      <img src="assets/images/f.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
-        </div>
+ <img src="assets/images/g.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+ <div class="text-overlay2">
+  <h2>Paris</h2>
+  <div class="line-number">
+    <div class="line"></div>
+  <div class="number">3 Place</div> 
+</div>  
+</div>
+</div>
+
 
 <div class="card1">
- <img src="assets/images/g.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+<img src="assets/images/h.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+<div class="text-overlay2">
+    <h2>Paris</h2>
+    <div class="line-number">
+      <div class="line"></div>
+    <div class="number">3 Place</div> 
+</div>  
 </div>
-
+</div>
 
 <div class="card1">
-<img src="assets/images/h.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
+  <img src="assets/images/i.jpg" alt="Image" style="width:260px; height:300px; border-radius:6px;">
+  <div class="text-overlay2">
+    <h2>Paris</h2>
+    <div class="line-number">
+      <div class="line"></div>
+    <div class="number">3 Place</div> 
+</div>  
+</div>  
 </div>
 
-<div class="card1">
-  <img src="assets/images/i.jpg" alt="Image" style="width:250px; height:300px; border-radius:6px;">
-  </div>
+
 </div>
 </div>
 
 
-<!--what  users says-->
-<div class="box1">
+
+<div class="Packages_Container">
   <p style="padding-top:65px;padding-left:100px;font-size: 40px;
-  font-family:'Outfit',sans-serif;font-weight:800;">
+  font-family:'Outfit',sans-serif;font-weight:800;color:#fff">
   What Our Travel Buddy Say<br>
    About Us
   </p>
   <p style="font-size:17px;padding-left:100px;padding-bottom:0px;
+  color: #fff;
   font-family:'Outfit',sans-serif;">
   
 Capturing Memories, One Testimonial at a Time: Hear What Our Travel Buddies 
 Have to <br>Say About the One Life For Travel Experience!
 </p>
-
-<div class="cont1">
-<!--previous button and next button-->
-<button class="prev-btn" (click)="scrollPrev()">
-  <span><i class="fas fa-arrow-left fa-sm"></i></span></button>
-<button class="next-btn" (click)="scrollNext()">
- <span><i class="fas fa-arrow-right fa-sm"></i></span>
-</button>
-<div #scrollContainer class="item-container">
-  <!--card1-->
-<div class="item1">
-
-<div class="package-slide">
  
-
-  <div class="card2">
-    <img src="assets/images/11.jpg" alt="User Photo" class="user-photo">
-    <span>Raju Adakalli</span>
-   <span> <div class="rating">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-    </div></span>
-    <p style="font-size: 20px;">
+  <!-- Previous and Next buttons -->
+   
+  <div class="container">
+  
+    <button class="prev-btn" (click)="scrollPrev()">
+      <span style="font-size:0.8rem;"><i class="fas fa-arrow-left fa-sm"></i></span></button>
+    <button class="next-btn" (click)="scrollNext()">
+     <span style="font-size:0.8rem;"><i class="fas fa-arrow-right"></i></span>
+    
+    </button>
+    <div #scrollContainer class="item-container">
+        <!--card1-->
+        <div class="card2">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+        <img src="assets/images/1.jpg" class="user-photo" alt="Franz Josef Glacier">
+    </div>
+    <div class="col-md-8">
+    <div class="card-body">
+        <p class="title">Raju Adakalli</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+</div>
+</div></div>
+<p style="font-size:18px;">
   Thank u entire team of Funstay for the meaningful and memorable trip of
   Vietnam! Must say everyone in the group mingled as one family during the 
   entire tour and created unforgettable moments & memories for all for a
-   lifetime! Thank u all.</p></div>
+   lifetime! Thank u all.</p>
+</div>
+</div></div>
 
 
-  <div class="card2">
-      <img src="assets/images/5.jpg" alt="User Photo" class="user-photo">
-      <span>Shwan Pull</span>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-      <p style="font-size: 20px;">
-        but also the leap electronic typesting ,remaining essentially unchanged. It was 
-        popularised in the 1960s with the release of Let containing Lorem Ipsum passages
-      </p>
-  </div>
-
-
-  <div class="card2">
-    <img src="assets/images/4.jpg" alt="User Photo" class="user-photo">
-    <span>Lilyan Danclark</span>
+    <!--card1-->
+    <div class="card2" style="  margin-left:20px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+    <img src="assets/images/1.jpg" class="user-photo" alt="Franz Josef Glacier">
+</div>
+<div class="col-md-8">
+<div class="card-body">
+    <p class="title">Raju Adakalli</p>
     <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-    <p style="font-size: 20px;">
-      but also the leap electronic typesting ,remaining essentially unchanged. It was 
-      popularised in the 1960s with the release of Let containing Lorem Ipsum passages
-    </p>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
 </div>
-
-
-<div class="card2">
-  <img src="assets/images/4.jpg" alt="User Photo" class="user-photo">
-  <span>Lilyan Danclark</span>
-  <div class="rating">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-  </div>
-  <p style="font-size: 20px;">
-    but also the leap electronic typesting ,remaining essentially unchanged. It was 
-    popularised in the 1960s with the release of Let containing Lorem Ipsum passages
-  </p>
-</div>
-
-
-
+</div></div>
+<p style="font-size:18px;">
+  But also the leap into electronic typesetting , remaining essentially unchanged. 
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem ipsum passages
+</p>
 </div>
 </div>
-</div></div></div>
+    <!--card1-->
+    <div class="card2"  style="margin-left:20px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+    <img src="assets/images/1.jpg" class="user-photo" alt="Franz Josef Glacier">
+</div>
+<div class="col-md-8">
+<div class="card-body">
+    <p class="title">Raju Adakalli</p>
+    <div class="rating">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+</div>
+</div></div>
+<p style="font-size:18px;">
+  But also the leap into electronic typesetting , remaining essentially unchanged. 
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem ipsum passages
+</p></div>
+</div>
+</div>
+</div>
+
 
 
 <!--box 3-->
@@ -354,165 +418,220 @@ Have to <br>Say About the One Life For Travel Experience!
   Guiding You Beyond Maps: Your Personal Navigator to Unforgettable Adventures 
 
 
-
-
   <div class="cont3">
     <section class="card3">
       <!--card 1-->
       <div class="card-content3">
         <div class="image-container">
-          <img src="/assets/images/e.jpg" alt="Image">
+          <img src="/assets/images/i.jpg" alt="Image">
           <div class="text-overlay">
             <div class="social-icons1">
-              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
-              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
-              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
-              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
+              <span class="twitter-icon-container"><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+              <span class="twitter-icon-container"><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+              <span class="twitter-icon-container"><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+              <span class="twitter-icon-container"><i class="fab fa-twitter" aria-label="Twitter"></i></span>
           </div>
         </div>
         </div>
             <div class="card-body">
-              <h2 class="card-title">Vineas Valley</h2>
-              <h5>Tour Guide</h5>
-              </div>
+              <h4 class="title2">Vineas Valley</h4>
+              <h4 style="color:#494747;font-size: 19px;"> Tour Guide</h4>
+               </div>
       </div>
-<!--card 2-->
-      <div class="card-content3">
-        <div class="image-container">
-          <img src="/assets/images/f.jpg" alt="Image">
-          <div class="text-overlay">
-            <div class="social-icons1">
-              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
-              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
-              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
-              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
-          </div>
+    
+     <!--card 1-->
+     <div class="card-content3">
+      <div class="image-container">
+        <img src="/assets/images/g.jpg" alt="Image">
+        <div class="text-overlay">
+          <div class="social-icons1">
+            <span class="twitter-icon-container"><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+            <span class="twitter-icon-container"><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+            <span class="twitter-icon-container"><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+<span class="twitter-icon-container"><i class="fab fa-twitter" aria-label="Twitter"></i></span>
         </div>
-        </div>
-            <div class="card-body">
-              <h2 class="card-title">Vineas Valley</h2>
-              <h5>Tour Guide</h5>
-              </div>
       </div>
-      <!--card 3-->
-      <div class="card-content3">
-        <div class="image-container">
-          <img src="/assets/images/g.jpg" alt="Image">
-          <div class="text-overlay">
-            <div class="social-icons1">
-              <span><i class="fab fa-instagram" aria-label="Instagram"></i></span>
-              <span><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
-              <span><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
-              <span><i class="fab fa-twitter" aria-label="Twitter"></i></span>
-          </div>
-        </div>
-        </div>
-            <div class="card-body">
-              <h2 class="card-title">Vineas Valley</h2>
-              <h5>Tour Guide</h5>
-              </div>
       </div>
+          <div class="card-body">
+            <h4 class="title2">Vineas Valley</h4>
+            <h4 style="color:#494747;font-size: 19px;"> Tour Guide</h4>
+             </div>
+    </div>
+     <!--card 1-->
+     <div class="card-content3">
+      <div class="image-container">
+        <img src="/assets/images/11.jpg" alt="Image">
+        <div class="text-overlay">
+          <div class="social-icons1">
+            <span class="twitter-icon-container"><i class="fab fa-instagram" aria-label="Instagram"></i></span>
+            <span class="twitter-icon-container"><i class="fab fa-facebook-f" aria-label="Facebook"></i></span>
+            <span class="twitter-icon-container"><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></span>
+            <span class="twitter-icon-container"><i class="fab fa-twitter" aria-label="Twitter"></i></span>
+        </div>
+      </div>
+      </div>
+          <div class="card-body">
+            <h4 class="title2">Vineas Valley</h4>
+           <h4 style="color:#494747;font-size: 19px;"> Tour Guide</h4>
+            </div>
+    </div>
     </section>
   </div>
-</div>
-    
-
-
+    </div>
 <!--recent post-->
 
 <div class="box4">
-  <p style="font-size:45px;padding-top:20px;padding-left:70px;
-  font-family:'Outfit',sans-serif;font-weight:800;"> Recent Post
-  </p>
- 
-  <p style="font-size:19px;padding-bottom:0px;color:grey;padding-left: 70px;
-font-family:'Outfit',sans-serif;">
-  Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis
-   hendrerit a<br> id lectus. Suspendissendt blandit interdum. 
-  Sed pellentesque at nunc eget consectetur.  
+
+  <p class="recent">Recent Post </p>
+  <div class="row">
+  <div class="col-md-1"></div>
+<div class="col-md-8">
+ <p style="color:#494747;font-weight:570;">Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis
+   hendrerit a id lectus.<br> Suspendissendt blandit interdum. 
+  Sed pellentesque at nunc eget consectetur.</p></div>
+  <div class="col-md-3 mb-5">
+    <a href="#" class="btn btn-warning">View All Post</a>
+  </div>
+</div>
 
   <div class="cont4">
- <!--Carousel and Cards -->
+
  <!----card 1-->
-
  <div class="card4" style="width:22rem;">
-
   <span class="badge4">
-      <span><i class="fas fa-calendar"></i></span>  July 15,2022</span>
-<img src="assets/images/7.jpg" class="card4-img-top"alt="National Capitol of Cuba">
+      <span><i class="fas fa-calendar-alt"></i></span>  July 15,2022</span>
+<img src="assets/images/6.jpg" class="card4-img-top"alt="National Capitol of Cuba">
   <div class="card4-body">
-    <span><i class="fas fa-user f-sm"></i> By User</span>
-    <span><i class="fas fa-comment f-sm"></i> Comment</span>
+    <span class="i">
+      <i class="fas fa-user-circle"></i> </span>
+  <span class="user">By User</span>
+ <span class="i"> <i class="fas fa-comment"></i></span>
+  <span class="user">(0) Comment</span>
       <h2 class="card4-title">Summer Holidays To The 
         <p>oxolotan River</p>
       </h2>
 
 </div>
-</div></div>
-  <a href="#" class="btn btn-warning post">View All Post</a>
 </div>
 
 
+ <!----card 1-->
+ <div class="card4" style="width:22rem;">
+  <span class="badge4">
+      <span><i class="fas fa-calendar-alt"></i></span>  July 15,2022</span>
+<img src="assets/images/7.jpg" class="card4-img-top"alt="National Capitol of Cuba">
+  <div class="card4-body">
+    <span class="i">
+      <i class="fas fa-user-circle"></i> </span>
+  <span class="user">By User</span>
+ <span class="i"> <i class="fas fa-comment"></i></span>
+  <span class="user">(0) Comment</span>
+      <h2 class="card4-title">Summer Holidays To The 
+        <p>oxolotan River</p>
+      </h2>
+
+</div>
+</div>
 
 
+ <!----card 3-->
+ <div class="card4" style="width:22rem;">
+  <span class="badge4">
+      <span><i class="fas fa-calendar-alt"></i></span>  July 15,2022</span>
+<img src="assets/images/8.jpg" class="card4-img-top"alt="National Capitol of Cuba">
+  <div class="card4-body">
+    <span class="i">
+      <i class="fas fa-user-circle"></i> </span>
+  <span class="user">By User</span>
+ <span class="i"> <i class="fas fa-comment"></i></span>
+  <span class="user">(0) Comment</span>
+      <h2 class="card4-title">Summer Holidays To The 
+        <p>oxolotan River</p>
+      </h2>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="join">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-12 d-flex align-items-center">
+      <div>
+ <p class="h2"> JOIN US FOR MORE UPDATE</p>
+ <h6 class="h3">Duis rutrum nisl urna. Maecenas vel libero faucibus nisi 
+ venenatis hendrerit a id lectus.<br>
+ Suspendissendt blandit interdum.</h6></div>
+ <div class="col-md-1"></div>
+ <div class="col-md-2">
+  <a href="#" class="btn btn-warning join-now ms-3 ">Join Now</a>
+</div>
+ </div>
+</div>
+</div>
+                                                                
 
 <!-- Main Content of the Website -->
 <!-- Footer Section -->
-<footer class="bg-dark text-light py-4">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-5">
-           <b>   <h3>About Us</h3>
-              <p>Learn more about our mission and values.
-                Lorem ipsum dolor sit amet consectetur adipisicing e Rem ipsam voluptatum inventore.</p>
-              <p>Working days : Monday-Friday
-                (9AM-5PM)
-                <h4>FOLLOW US ON :</h4></b>
-    <span class="social-icon"><i class="fab fa-instagram"></i></span>
-    <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-    <span class="social-icon"><i class="fab fa-twitter"></i></span>
-    <span class="social-icon"><i class="fab fa-linkedin-in"></i></span>
-    <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
-    <span class="social-icon"><i class="fab fa-pinterest"></i></span>
-
-  </div>
-          <div class="col-md-2">
-              <h4>Quick Links</h4>
-              <ul class="list-unstyled">
-                  <li><a href="#" class="text-light">Guid</a></li>
-                  <li><a href="#" class="text-light">Blogs</a></li>
-                  <li><a href="#" class="text-light">Contact Us</a></li>
-                  <li><a href="#" class="text-light">Destination</a></li>
-                  <li><a href="#" class="text-light">FAQ</a></li>
-                  <li><a href="#" class="text-light">Gallery</a></li> </ul>
-          </div>
-
-          <div class="col-md-2">
-            <h4>Tour Type</h4>
-            <ul class="list-unstyled">
-                <li><a href="#" class="text-light">City Tour</a></li>
-                <li><a href="#" class="text-light">Hill Town </a></li>
-                <li><a href="#" class="text-light">Family</a></li>
-                <li><a href="#" class="text-light">Adventure</a></li>
-                <li><a href="#" class="text-light">Escorted Tour</a></li>
-                <li><a href="#" class="text-light">Couple</a></li> </ul>
-        </div>
-          <div class="col-md-2">
-              <h4>Contact Us</h4>
-              <span><i class="fas fa-phone"></i></span> 
-             + 91 123456789
-                 <p> +91 109876556</p>
-              <p><i class="fas fa-envelope"></i> 
-                info&#64;example.com<br> info&#64;support.com</p>
-               <p><i class="fas fa-compass"></i>
-              168/170<br>Avenue 01 Mirpur DOHS,Bangladesh</p>
-          </div>
-      </div>
-      <hr class="my-4">
-      <div class="text-center"></div>
-          <p>Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd</p>
-      </div>
+<div class="foot" style="background-color: #000001;">
+  <footer class="text-light py-4">
+    <div class="cont5" style="background-color:#000000">
+        <div class="row">
+            <div class="col-md-4">
+             <b>   <p class="h4">OLFT</p>
+ <p>
+  Duis rutrum nisl urna. Maecenas vel libero<br>
+   faucibus nisi venenatis hendrerit a id lectus.<br>
+   Suspendissendt molestie turpis nec lacinia <br>
+   vehicula.
+ </p>
+                  <p>Working days : Monday-Friday
+                  (9AM-5PM)
+    <p style="font-weight:800;font-size:20px;">
+      FOLLOW US ON :</p></b>
+      <span class="social-icon"><i class="fab fa-instagram"></i></span>
+      <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+      <span class="social-icon"><i class="fab fa-twitter"></i></span>
+      <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
+      <span class="social-icon"><i class="fab fa-pinterest"></i></span>
   
+    </div>
+            <div class="col-md-2">
+                <p class="h5">Quick Links</p>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light">Guid</a></li>
+                    <li><a href="#" class="text-light">Blogs</a></li>
+                    <li><a href="#" class="text-light">Contact Us</a></li>
+                    <li><a href="#" class="text-light">Destination</a></li>
+                    <li><a href="#" class="text-light">FAQ</a></li>
+                    <li><a href="#" class="text-light">Gallery</a></li> </ul>
+            </div>
+  
+            <div class="col-md-2">
+              <p class="h5">Tour Type</p>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-light">City Tour</a></li>
+                  <li><a href="#" class="text-light">Hill Town </a></li>
+                  <li><a href="#" class="text-light">Family</a></li>
+                  <li><a href="#" class="text-light">Adventure</a></li>
+                  <li><a href="#" class="text-light">Escorted Tour</a></li>
+                  <li><a href="#" class="text-light">Couple</a></li> </ul>
+          </div>
+            <div class="col-md-3">
+                <p class="h5">Contact Us</p>
+                <span><i class="fas fa-phone"></i></span> 
+               + 91 123456789
+                   <p> +91 109876556</p>
+                <p><i class="fas fa-envelope"></i> 
+                  info&#64;example.com<br> info&#64;support.com</p>
+                 <p><i class="fas fa-compass"></i>
+                168/170 Avenue 01 <br>Mirpur DOHS,Bangladesh</p>
+      </div>
+</div></div>
 </footer>
-</body>
-</html>
+</div>  
+<div class="e">
+  Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd
+</div>
+

@@ -3,10 +3,12 @@
 {
     height:auto;
     width:100%;
-    background-color:rgb(228, 225, 225);
+    margin-top:40px;
+    background-color:#ffffff;
     display: flex;
+    font-family:  "Montserrat", sans-serif;;
     flex-wrap: wrap; /* Allows cards to wrap to next row */
-    gap:10px; /* Space between the cards */
+    gap:25px; /* Space between the cards */
     justify-content: center;  /* Center horizontally */
 }
 
@@ -14,8 +16,8 @@
         /* Custom card styles */
         .card {
             border: none;
-            background-color:rgb(215, 210, 210);
-            margin-top:70px;
+            background-color:#f9f5f5;
+            margin-top:20px;
             height:370px;
             width:400px;
             cursor: pointer;
@@ -45,17 +47,22 @@
             padding: 1rem;
         }
         .card-title {
-            font-size:1.5rem;
-            color:rgb(53, 40, 40);
+            font-size:18px;
+            color:#454545;
+            font-weight: 550;
+            font-family:'Montserrat', sans-serif;;
         }
-.card-title:hover{color:#ffc107;}
+.card-title:hover{color:#fecc4e;}
 
         .badge {
             position: absolute;
             top: 30px;
             left: 20px;
-            background-color: #ffc107;
-            font-size:1.03rem;
+            font-weight:600;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fecc4e;
+            font-size:1.02rem;
             padding: 12px 10px;
             opacity: 1;  /* Keep it visible */
             visibility: visible;  /* Ensure it's always visible */
@@ -70,46 +77,148 @@
 
         .book-button
         {
-            color:black;
-            font-weight:600;
+            color:#161616;
+            font-weight:700;
+            font-size: 14px;
+            background-color: #fecc4e;
+            border:none;
+            font-family: "Mantserrat",sans-serif;
+            background-color:fecc4e;
         }
         .book-button:hover 
         {
             background-color: black;
-            color: #ffc107;
+            color: #fecc4e;
         }
 
 .cont2 
 {
     width:100%;
+    
 }
 
 .page
 {
-background-color:rgb(247, 246, 246);
+background-color:#ffffff;
 height:150px;
 text-align: center;
 padding-top: 50px;
 padding-left: 40px;
 display: flex;
 justify-content: center; /* Align buttons horizontally */
-gap:20px; /* Creates space between each button */
+gap:10px; /* Creates space between each button */
 }
 .page-button
 {
     color:black;
-    background-color: aliceblue;
-    border: 2px solid  #ffc107;
+    background-color:#ffffff;
+    border: 2px solid  #fecc4e;
     font-size: medium;
 }
 .page-button:hover 
 {
-    background-color: #ffc107;
-    color: aliceblue;
+    background-color: #fecc4e;
+    color:#ffffff;
+}
+.start
+{
+  margin-left:110px;
+  color:#212529;
+  font-weight:400;
+  font-size:15px;
+  font-family: "Mantserrat",sans-serif;
+}
+
+/*cont for footer*/
+.cont5 
+{
+  height:300px;
+  width:90%;
+  margin-left:110px;
+  margin-top:30px;
+}
+
+
+.h4
+{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.h5
+{
+  font-family: "Montserrat", sans-serif;
+  font-weight:800;
+  font-size:19px;
+}
+
+
+/*design last box*/
+.e
+{
+  height:60px;
+  text-align: center;
+  padding-top:20px;
+  color:#ffffff;
+  background-color:rgb(86, 82, 91);
+  font-size:16px;
+width:100%;
 }
 
 
 
 
+/*for dot*/
+ul.list-unstyled li a {
+  text-decoration: none;
+  color: #fecc4e;
+  position: relative; 
+  display: inline-flex; 
+  padding-left:2px; 
+  align-items: center; 
+  padding-right: 25px;
+  transition: transform 0.4s ease-in-out; 
+}
 
-        
+
+ul.list-unstyled li a::before {
+  content: ''; 
+  position: absolute;
+  
+  left: -12px;
+  width: 6px;
+  height:6px;
+  border-radius: 70%; 
+  background-color: #fecc4e; 
+  opacity: 0; 
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for dot */
+}
+
+
+ul.list-unstyled li a:hover {
+  color: #fecc4e; 
+  transform: translateX(10px);
+
+  
+}
+
+/* Show the dot on hover */
+ul.list-unstyled li a:hover::before {
+  opacity: 1; 
+  transform: translateX(9px); 
+}
+
+
+
+
+/* Style for the Previous and Next buttons */
+.navigate-button {
+
+  height:40px;
+  width:40px;
+  color:black;
+  border-radius: 150px;
+  background-color: #fecc4e;
+  border:none;
+  transition: background-color 0.3s ease;
+}

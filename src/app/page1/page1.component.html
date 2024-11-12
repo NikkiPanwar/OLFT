@@ -1,10 +1,4 @@
-<html>
-<head>
-        <!-- Font Awesome CDN -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-      </head>
-  
-<body>
+
     <div class="cont">
  <!-- Carousel and Cards -->
  <!----card 1-->
@@ -17,8 +11,8 @@
         <div class="card-body">
             <h2 class="card-title"> Milford Sound Piopiotahi</h2>
   <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right fa-sm"></i></a></span>
- <span style="margin-left:70px;font-size:18px;">Starting From</span>
+ <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+ <span class="start">Starting From</span>
         </div>
     </div>
                     
@@ -31,8 +25,8 @@
             <div class="card-body">
                 <h2 class="card-title"> Milford Sound Piopiotahi</h2>
       <span><a href="#" class="btn btn-warning book-button">Book Now 
-     <i class="fas fa-arrow-right fa-sm"></i></a></span>
-     <span style="margin-left:70px;font-size:18px;">Starting From</span>
+     <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+     <span class="start">Starting From</span>
             </div>
         </div>
                         
@@ -45,8 +39,8 @@
                 <div class="card-body">
                     <h2 class="card-title"> Milford Sound Piopiotahi</h2>
           <span><a href="#" class="btn btn-warning book-button">Book Now 
-         <i class="fas fa-arrow-right fa-sm"></i></a></span>
-         <span style="margin-left:70px;font-size:18px;">Starting From</span>
+         <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+         <span class="start">Starting From</span>
                 </div>
             </div>
                             
@@ -59,8 +53,8 @@
                     <div class="card-body">
                         <h2 class="card-title"> Milford Sound Piopiotahi</h2>
               <span><a href="#" class="btn btn-warning book-button">Book Now 
-             <i class="fas fa-arrow-right fa-sm"></i></a></span>
-             <span style="margin-left:70px;font-size:18px;">Starting From</span>
+             <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+             <span class="start">Starting From</span>
                     </div>
                 </div>
                                 
@@ -73,8 +67,8 @@
                         <div class="card-body">
                             <h2 class="card-title"> Milford Sound Piopiotahi</h2>
                   <span><a href="#" class="btn btn-warning book-button">Book Now 
-                 <i class="fas fa-arrow-right fa-sm"></i></a></span>
-                 <span style="margin-left:70px;font-size:18px;">Starting From</span>
+                 <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+                 <span class="start">Starting From</span>
                         </div>
                     </div>
                                     
@@ -87,8 +81,8 @@
                             <div class="card-body">
                                 <h2 class="card-title"> Milford Sound Piopiotahi</h2>
                       <span><a href="#" class="btn btn-warning book-button">Book Now 
-                     <i class="fas fa-arrow-right fa-sm"></i></a></span>
-                     <span style="margin-left:70px;font-size:18px;">Starting From</span>
+                     <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+                     <span class="start">Starting From</span>
                             </div>
                         </div>
                                         
@@ -101,8 +95,8 @@
         <div class="card-body">
             <h2 class="card-title"> Milford Sound Piopiotahi</h2>
   <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right fa-sm"></i></a></span>
- <span style="margin-left:70px;font-size:18px;">Starting From</span>
+ <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+ <span class="start">Starting From</span>
         </div>
     </div>
                                                     
@@ -115,8 +109,8 @@
         <div class="card-body">
             <h2 class="card-title"> Milford Sound Piopiotahi</h2>
   <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right fa-sm"></i></a></span>
- <span style="margin-left:70px;font-size:18px;">Starting From</span>
+ <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+ <span class="start">Starting From</span>
         </div>
     </div>
                                     
@@ -129,88 +123,93 @@
                     <div class="card-body">
                         <h2 class="card-title"> Milford Sound Piopiotahi</h2>
               <span><a href="#" class="btn btn-warning book-button">Book Now 
-             <i class="fas fa-arrow-right fa-sm"></i></a></span>
-             <span style="margin-left:70px;font-size:18px;">Starting From</span>
+             <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
+             <span class="start">Starting From</span>
                     </div>
       </div></div>
-      
+     
       <div class="page">
+        
+            <button (click)="goToPreviousPage()" class="btn btn-warning navigate-button">
+    <i class="fas fa-arrow-left"></i>
+</button>
+           
    <span>   <a href="/tour" class="btn btn-light page-button"> 1 </a></span>
    <span>   <a href ="/page1" class="btn btn-light page-button"> 2</a></span>
    <span>   <a href ="/page2" class="btn btn-light page-button"> 3</a></span>
-
-     
-     
-    </div>
-      
-      
-                
-                                                                
+   
+ <button (click)="goToNextPage()" class="btn btn-warning navigate-button">
+    <i class="fas fa-arrow-right"></i>
+ </button>
+          </div>
+    
+    
+                                                   
 
 <!-- Main Content of the Website -->
 <!-- Footer Section -->
- <div class="cont2">
-<footer class="bg-dark text-light py-4">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-5">
-           <b>   <h3>About Us</h3>
-              <p>Learn more about our mission and values.
-                Lorem ipsum dolor sit amet consectetur adipisicing e Rem ipsam voluptatum inventore.</p>
-              <p>Working days : Monday-Friday
-                (9AM-5PM)
-                <h4>FOLLOW US ON :</h4></b>
-    <span class="social-icon"><i class="fab fa-instagram"></i></span>
-    <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-    <span class="social-icon"><i class="fab fa-twitter"></i></span>
-    <span class="social-icon"><i class="fab fa-linkedin-in"></i></span>
-    <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
-    <span class="social-icon"><i class="fab fa-pinterest"></i></span>
-
-  </div>
-          <div class="col-md-2">
-              <h4>Quick Links</h4>
-              <ul class="list-unstyled">
-                  <li><a href="#" class="text-light">Guid</a></li>
-                  <li><a href="#" class="text-light">Blogs</a></li>
-                  <li><a href="#" class="text-light">Contact Us</a></li>
-                  <li><a href="#" class="text-light">Destination</a></li>
-                  <li><a href="#" class="text-light">FAQ</a></li>
-                  <li><a href="#" class="text-light">Gallery</a></li> </ul>
-          </div>
-
-          <div class="col-md-2">
-            <h4>Tour Type</h4>
-            <ul class="list-unstyled">
-                <li><a href="#" class="text-light">City Tour</a></li>
-                <li><a href="#" class="text-light">Hill Town </a></li>
-                <li><a href="#" class="text-light">Family</a></li>
-                <li><a href="#" class="text-light">Adventure</a></li>
-                <li><a href="#" class="text-light">Escorted Tour</a></li>
-                <li><a href="#" class="text-light">Couple</a></li> </ul>
+<div class="foot" style="background-color: #000001;">
+    <footer class="text-light py-4">
+      <div class="cont5" style="background-color:#000000">
+          <div class="row">
+              <div class="col-md-4">
+               <b>   <p class="h4">OLFT</p>
+   <p>
+    Duis rutrum nisl urna. Maecenas vel libero<br>
+     faucibus nisi venenatis hendrerit a id lectus.<br>
+     Suspendissendt molestie turpis nec lacinia <br>
+     vehicula.
+   </p>
+                    <p>Working days : Monday-Friday
+                    (9AM-5PM)
+      <p style="font-weight:800;font-size:20px;">
+        FOLLOW US ON :</p></b>
+        <span class="social-icon"><i class="fab fa-instagram"></i></span>
+        <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+        <span class="social-icon"><i class="fab fa-twitter"></i></span>
+        <span class="social-icon"><i class="fab fa-whatsapp"></i></span>
+        <span class="social-icon"><i class="fab fa-pinterest"></i></span>
+    
+      </div>
+              <div class="col-md-2">
+                  <p class="h5">Quick Links</p>
+                  <ul class="list-unstyled">
+                      <li><a href="#" class="text-light">Guid</a></li>
+                      <li><a href="#" class="text-light">Blogs</a></li>
+                      <li><a href="#" class="text-light">Contact Us</a></li>
+                      <li><a href="#" class="text-light">Destination</a></li>
+                      <li><a href="#" class="text-light">FAQ</a></li>
+                      <li><a href="#" class="text-light">Gallery</a></li> </ul>
+              </div>
+    
+              <div class="col-md-2">
+                <p class="h5">Tour Type</p>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light">City Tour</a></li>
+                    <li><a href="#" class="text-light">Hill Town </a></li>
+                    <li><a href="#" class="text-light">Family</a></li>
+                    <li><a href="#" class="text-light">Adventure</a></li>
+                    <li><a href="#" class="text-light">Escorted Tour</a></li>
+                    <li><a href="#" class="text-light">Couple</a></li> </ul>
+            </div>
+              <div class="col-md-3">
+                  <p class="h5">Contact Us</p>
+                  <span><i class="fas fa-phone"></i></span> 
+                 + 91 123456789
+                     <p> +91 109876556</p>
+                  <p><i class="fas fa-envelope"></i> 
+                    info&#64;example.com<br> info&#64;support.com</p>
+                   <p><i class="fas fa-compass"></i>
+                  168/170 Avenue 01 <br>Mirpur DOHS,Bangladesh</p>
         </div>
-          <div class="col-md-2">
-              <h4>Contact Us</h4>
-              <span><i class="fas fa-phone"></i></span> 
-             + 91 123456789
-                 <p> +91 109876556</p>
-              <p><i class="fas fa-envelope"></i> 
-                info&#64;example.com<br> info&#64;support.com</p>
-               <p><i class="fas fa-compass"></i>
-              168/170<br>Avenue 01 Mirpur DOHS,Bangladesh</p>
-          </div>
-      </div>
-      <hr class="my-4">
-      <div class="text-center">
-          <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-          <p>Copyright 2024 Funstay | Design By Pvt. Ltd</p>
-      </div>
+  </div></div>
+  </footer>
+  </div>  
+  <div class="e">
+    Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd
   </div>
-</footer>
-</div>
-
-
-
+  
+  
 
 
 

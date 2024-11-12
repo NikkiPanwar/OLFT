@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tour',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class TourComponent {
 
+  constructor(private router:Router) { }
+  goToNextPage() {
+    this.router.navigate(['/page1']);
+  }
 }

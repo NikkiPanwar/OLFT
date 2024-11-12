@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { NgModel } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogsComponent } from './blogs/blogs.component';
@@ -18,5 +19,4 @@ export const routes: Routes = [
 {path :"destination", component:DestinationComponent},
 {path :"page1", component:Page1Component},
 {path :"page2", component:Page2Component}
-
 ];
