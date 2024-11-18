@@ -19,13 +19,13 @@
   margin:auto;
   border:2px solid transparent;
   text-align: center;
-  font-family: Arial, Helvetica,sans-serif;
-font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+font-size: 16px;
 font-weight:600;
-height:40px;
+height:44px;
 background-color:#FECC4E;
-width:150px;
-color: #000000;
+width:156.33px;
+color: #161616;
 }
 
 .center-button:hover
@@ -104,10 +104,11 @@ background-color:#161616;
   flex: 1; /* Makes the input fields take equal space */
   margin: 0 10px; /* Adds horizontal spacing */
 }
+
 /*upcoming tour*/
 .Packages_Container 
 {
-  background-color: #7A7A7A;
+  background-color: #6f6f6f;
   height:879px;
   width:100%;  
   font-family:'Montserrat', sans-serif; 
@@ -193,16 +194,18 @@ right:85px;
 
 .c
 {
-  margin-left:114px;
-  font-size:14px;
-  font-weight: 600;
-  color: #3d474c;
+  margin-left:80px;
+  font-size:16px;
+  font-style:'Barlow',sans-serif;
+  color: #2d373c;
+  font-weight:500;
 }
 .d
 {
-  margin-left:240px;
+  margin-left:200px;
   font-size:14px;
-  font-weight: 600;
+  font-weight:500;
+  font-style:'Barlow',sans-serif;
   color:#3d474c;
 }
 
@@ -221,24 +224,25 @@ right:85px;
           padding: 1rem;
       }
       .card-title {
-          font-size:1.5rem;
-          color:#363d41;
-          padding-top:13px;
-          font-family: Arial, Helvetica,sans-serif;
+          font-size:20px;
+          color:#454545;
+          padding-top:25px;
+          font-family: 'Montserrat',sans-serif;
       }
 
       .badge {
           position: absolute;
-          height:40px;
+          height:42px;
+          font-weight:520;
           justify-content: center;
           text-align: center;
-          width:180px;
-          padding:10px;
-          margin-left: 80px;
+          width:170px;
+          padding: 13px 20px;
+          margin-left:90px;
           margin-top:230px ;
           background-color: #FECC4E;;
           color:#2d373c;
-          font-size:15px;
+          font-size:16px;
           font-family: "Barlow",sans-serif;
           border-radius:20px;
           visibility: visible;  /* Ensure it's always visible */
@@ -247,11 +251,13 @@ right:85px;
       }
       .book-button
       {
-          color:#2d373c;
-          font-weight:550;
+          color:#161616;
+          font-weight:600;
           background-color: #FECC4E;
           border: none;
-          font-size: 15px;
+ font-family: "Montserrat", sans-serif ;
+          padding:6px 10px;
+          font-size: 16px;
       }
       .book-button:hover 
       {
@@ -261,17 +267,18 @@ right:85px;
 .view-button
 {
  display: block; /* Makes the button a block element */
- margin-left:40%;
+ margin:60px 600px;
+ padding:9px 25px;
  border:none;
  font-family: "Montserrat", sans-serif ;
  font-weight: 600;
  background-color: #FECC4E;;
  text-align: center;
-height:40px;
+height:42px;
+color:#2d373c;
 font-size: 16px;
- width:150px;
- border-radius: none;
- margin-top:70px;
+ width:162.58px;
+
 }
 
 .view-button:hover
@@ -287,12 +294,11 @@ background-color: black;
   padding-top:50px;
   padding-left:110px;
   font-weight:800;
-  color:#282121;
-  font-size:40px;
+  color:#2d373c;
+  font-size:35px;
   justify-content: center;
   background-color:#f6f2f2;
-  font-family:Arial, Helvetica,
-   sans-serif; 
+  font-family:'Barlow',sans-serif; 
 }
 
 .text-overlay2 {
@@ -301,11 +307,12 @@ background-color: black;
   left: 50%;          /* Center the text horizontally */
   transform: translateX(-50%); /* Adjust to perfectly center the text */
   color: #ffffff;       /* Text color */
-  font-size:24px; 
-  font-weight:800;
+  font-size:25px; 
+  font-weight:600;
     padding: 10px;     
     border-radius: 5px;
     width: auto;
+    font-family: "Montserrat",sans-serif;
     text-align: center;
     transition: all 0.3s ease; /* Smooth transition */
  z-index: 10;
@@ -336,7 +343,6 @@ background-color: black;
   animation: fadeIn 100s forwards; /* Fade in effect */
 }
 
-
 /* Animation for number */
 @keyframes fadeIn {
   from {
@@ -366,18 +372,18 @@ background-color: black;
   font-size:20px;
   margin-top: 5px;
 }
-
-
-
 .tour-button
  {
 border:2px solid transparent;
 height:40px;
   width:150px;
   position: relative;
-  margin-left:650px;
+  margin-left:679px;
   margin-top:1%;
-  
+  font-size:16px;
+  color:#161616;
+  background-color:#FECC4E;
+  font-family: 'Montserrat',sans-serif;
 }
 .cont 
 {
@@ -416,7 +422,7 @@ height:40px;
 
 .tour-button:hover
  {
-color:#ffc107;
+color:#FECC4E;
 background-color: black;
  }
 
@@ -428,70 +434,159 @@ background-color: black;
   gap:20px;
   cursor: pointer;
 }
- 
+ .travel
+ {
+padding-top:65px;
+padding-left:118px;
+font-size:42px;
+font-family:'Montserrat',sans-serif;
+font-weight:800;
+color:#fff;
+height:110px;
+width:770px;
+ }
+.travel2
+{
+font-size:16px;
+padding-left:118px;
+margin-top:90px;
+color: #fff;
+font-weight: 400;
+font-family:'Montserrat',sans-serif;
+  
+}
+
 .card2 {
   height:400px;
-  background:rgb(31, 31, 38);
+  background:#00152b;
   border-radius:5px;
   margin-top:40px;
   transition: transform 0.3s ease;
   color:#f6f2f2;
   cursor: pointer;
+  width:23rem;
+margin-left:20px;
 }
 
-.title
+
+.A 
 {
-margin-top:10px;
+  height:60px;
+  width:298px;
+  font-weight:600;
+  margin-left: 30px;
+  font-size:24px;
+  color:#ffffff;
+  margin-top:16px;
+  justify-content: flex-start;
+  background-color: greenyellow;
+  z-index: 2;
+  font-family: "Montserrat",sans-serif;
 }
-
-
 .user-photo {
-  width: 70px;
-  height:70px;
- border-radius:70px;
- margin-top:25px;
- margin-left: 25px;
+  width: 60px;
+  margin-right:15px ;
+  height:60px;  
+ border-radius:60px;
 }
 
 .rating {
-  font-size:1em;
-  color:#ffc107;
+  font-size:20px;
+  height:29px;
+  width:158px;
+  background-color: red;
+  color:#FECC4E;
+  margin-left: 80px;
 }
+
 
 .card2:hover
  {
-color:black;
+color:#212529;
 background-color: #fff;
 }
 
+.review-text 
+{
+  font-size:18px;
+  padding: 3px 20px;
+font-family: "Montserrat",sans-serif;
+}
 
 /*tour guid*/
+
+.our{
+font-size:45px;
+padding-top:17px;
+font-family:'Barlow',sans-serif;
+font-weight:800;
+color: #2d372d;
+height:540x;
+width:820px;
+margin-left:280px;
+}
+.guide
+{
+  font-size:16px;
+  height:38px;
+  width:820px;
+  font-family:'Montserrat',sans-serif;
+  color:#666666;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-left:290px;
+}
+.title2 
+{
+  height:27.52px;
+  width:340px;
+color:#2d373c;
+font-size: 23px;
+font-family: "Montserrat",sans-serif;
+}
+.tg{
+  font-size:18px;
+  color:#666666;
+  font-family: "Montserrat",sans-serif;
+}
+
+.card2-img-top {
+  height:300px;
+  width:100%;
+  transition: transform 0.2s ease;
+    z-index: 1;
+}
   .box3 
   {
   width: 100%;
-  height:600px;
+  height:550px;
   text-align: center;
-  justify-content: center;
-  background-color:#fff;
-  padding-top: 30px;
-  }
+  background-color:#fef9f9;
 
+  }
   .cont3
 {
-margin-left:150px;
+margin-left:40px;
   display: flex;
   align-items: center;
   text-align: center;
   height:350px;
-  width:80%;
+  width:100%;
+  gap:30px;
+  flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .card3 {
-  background-color: #fff;
+  border: none;
   display: flex;
+  background-color:#ffffff;
   flex-direction:row;
+  height:399.31px;
+  width:410px;
+  cursor: pointer;
+  overflow: hidden;
+  position:relative;
   transition: transform 0.6s ease-in-out;
 }
 
@@ -535,19 +630,9 @@ object-fit: cover;
 
 .card-content3 .hover-image {
 cursor: pointer;
-transition: transform 0.3s ease-in-out;
+transition: transform 0.8s ease-in-out;
 
 }
-
-
- 
-/* The image itself */
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  }
-
 
 /* The overlay text */
 .text-overlay {
@@ -578,7 +663,7 @@ width:50px;
   align-items: center; 
     width: 30px; 
   height:30px;
-  color:#fcb900;        
+  color:#FECC4E;        
   background-color:#ffffff; 
   border-radius: 50%;     
   border: 2px solid transparent; /* Optional: add a border with Twitter's blue color */
@@ -607,7 +692,7 @@ border-radius:200px;
 }
 
 .social-icons1 span:hover {
-background-color: #fcb900;
+background-color: #FECC4E;
 color:#fff;/* Example hover color */
 }
 
@@ -622,37 +707,52 @@ color:#fff;/* Example hover color */
 
 .recent 
 {
-  font-size:43px;
+  font-size:45px;
   padding-top:50px;
-  padding-left:110px;
-  font-family:'Outfit',sans-serif;
+  padding-left:120px;
+  font-family:'Barlow',sans-serif;
   font-weight:800;
+  height:54px;
+  width:772.48px;
+}
+
+.paragraph2
+{
+color:#494747;
+font-weight:570;
+margin-top:60px;
+margin-left:10px;
+font-weight: 400;
 }
 
 .user 
 {
-  font-size:13px;
+  font-size:15px;
   font-weight:650;
   margin-left:10px;
-  color:#2d373c;
+  color:#696969;
+  height:23.5px;
+  font-family: "Montserrat",sans-serif;
+  width:81.81px
 }
 .i 
 {
 font-size:16px;
 margin-left:15px;
 font-weight: 650;
-color:#fcb900;
+color:#FECC4E;
  
 }
 
 .cont4 
 {
-    height:280px;
+    height:300px;
     width:100%;
     margin-bottom:30px;
     justify-content: center;
     align-items: center;
     background-color:#fef9f9;
+    margin-top:20px;
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap to next row */
     gap:20px; /* Space between the cards */
@@ -665,13 +765,11 @@ color:#fcb900;
             border: none;
             background-color:#ffffff;
             height:360px;
-            width:400px;
+            width:22rem;
             color:#2d373c;
             cursor: pointer;
             transition: all 0.3s ease;
             overflow: hidden;
-            
-             /* Vertical spacing between rows */
             position: relative;
         }
 
@@ -691,17 +789,15 @@ color:#fcb900;
             padding: 1rem;
         }
         .card4-title {
-            font-size:18px;
+            font-size:20px;
             padding-top:10px;
             color:#2d373c;
             font-weight:600;
-            
-font-family:Arial, Helvetica, sans-serif;
+            height:52px;
+            text-decoration: none;
+            width:304.31px;
+            font-family:"Montserrat",sans-serif;
         }
-
-
-
-
 /* Apply the color changes on hover */
 .card4-title:hover {
   animation: color-change 3s infinite; /* Start the animation on hover */
@@ -722,18 +818,16 @@ font-family:Arial, Helvetica, sans-serif;
     color: #000; /* Loop back to the first color */
   }
 }
-
-
-
-        .badge4 {
+.badge4 {
             position: absolute;
             top:200px;
             left: 20px;
-            background-color: #ffc107;
-            font-size:1.01rem;
+            background-color: #FECC4E;
+            font-size:15px;
+            font-weight:600;
             color: #fff;
             border-radius:5px;
-            font-weight: 600;
+            font-family: "Montserrat",sans-serif;
             padding:5px 12px;
             opacity: 1;  /* Keep it visible */
             visibility: visible;  /* Ensure it's always visible */
@@ -754,14 +848,21 @@ font-family:Arial, Helvetica, sans-serif;
 /*post button*/
 .post-button
 {
-  background-color:#ffc107;
-  border: 2px solid transparent;
-
-  color:#000;
+  background-color:#FECC4E;
+  border: 1px solid transparent;
+font-weight: 600;
+font-family: "Montserrat",sans-serif;
+font-size: 16px;
+height:45px;
+width:150px;
+padding:10px;
+margin-left: 35px;
+margin-top: 40px;
+  color:#161616;
 }
         .post-button:hover{
-          color:#ffc107;
-          background-color: #000;
+          color:#FECC4E;
+          background-color: #161616;
         }
 /*join css*/
 .join 
@@ -772,19 +873,22 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 .h2{ 
-font-family:Barlow, Sans-serif;
-font-size:38px;
+font-family:"Barlow", Sans-serif;
+font-size:45px;
 font-weight:800;
+height:54px;
+width:639.92;
 color:#ffffff;
-padding-top:130px;
+padding-top:100px;
 padding-left:200px;
 }
 .h3 
 {
-  font-family:Barlow, Sans-serif;
-font-size:17px;
+  font-family:"Barlow", Sans-serif;
+font-size:16px;
+font-weight: 400;
 color:#ffffff;
-padding-top:0px;
+padding-top:50px;
 padding-left:210px;
 }
 /*cont for join now box*/
@@ -798,14 +902,14 @@ padding-left:210px;
  text-align: center;
  margin-top:120px;
  width:140px;
-  background-color:#fcb900;
+  background-color:#FECC4E;
   color:#000000;
   
 }
 .join-now:hover 
 {
    background-color:#000;
-  color:#fcb900
+  color:#FECC4E;
   
 }
 /*cont for footer*/
@@ -815,8 +919,9 @@ padding-left:210px;
   width:90%;
   margin-left:110px;
   margin-top:30px;
+background-color:#212529;
 }
-
+.foot{background-color:#212529;}
 
 .h4
 {
@@ -828,9 +933,22 @@ padding-left:210px;
 {
   font-family: "Montserrat", sans-serif;
   font-weight:800;
-  font-size:19px;
+  font-size:20px;
+  color:#fff;
 }
 
+.follow
+{
+  font-weight:800;
+  font-size:20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.paragraph
+{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+}
 
 /*design last box*/
 .e
@@ -843,10 +961,6 @@ padding-left:210px;
   font-size:16px;
 width:100%;
 }
-
-
-
-
 /*for dot*/
 ul.list-unstyled li a {
   text-decoration: none;

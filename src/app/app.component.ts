@@ -1,11 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
+/*import { NgFor, NgIf } from '@angular/common';*/
 import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink,RouterOutlet],
+  imports: [RouterLink,RouterOutlet,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.None // Disable encapsulation
