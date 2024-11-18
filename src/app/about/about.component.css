@@ -22,7 +22,7 @@
 .img 
 {
   z-index:10;
-  height:260px;
+  height:240px;
     margin-top:0px;
     width:530px;
     color: #212529;
@@ -31,10 +31,10 @@
     margin-left:85px;
     font-size: 16px;
     font-family: "Montserrat",sans-serif; /* Space between img1 and img2 */
-    transform: scale(1.05); /* Slightly enlarge the image */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow to give it depth */
-  }
-  
+      box-shadow: rgba(0, 0, 0, 0.2); 
+      /* Add a shadow to give it depth */
+    }
+    
 
 .video {
     position: relative;
@@ -46,10 +46,7 @@
     width: 100%;
     height: auto;
   }
-  .video-overlay i:hover {
-    opacity: 1; /* Make the icon fully visible on hover */
-  }
-  
+ 
   
   .video-overlay {
     position: absolute;
@@ -75,8 +72,12 @@ margin-left:30%;
       cursor: pointer;
       opacity: 0.8;
   }
-
-  
+    .video-overlay i:hover {
+      opacity: 1;
+      color: #000;
+      text-shadow:  rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6); 
+    }
   .img-cont 
   {
     display: flex;
@@ -299,4 +300,613 @@ display: flex;
 {
   background-color:white;
   color:#fecc4e;
+}
+
+.box3 
+{
+  height:720px;
+  width:100%;
+  background-color:#5e5e5e;
+  font-family: "Montserrat",sans-serif;
+}
+
+.our-client
+{
+  height:66px;
+  width:820px;
+  color:#fff;
+  font-size: 42px;
+  padding-top:90px;
+  padding-left:120px;
+  font-weight: 800;
+}
+.para1
+{
+  height:66px;
+  width:820px;
+  color:#fff;
+  font-size:16px;
+  padding-top:50px;
+  padding-left:120px  ;
+}
+
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height:400px;
+  width:90%;
+  margin-left:70px;
+margin-top: 40px;
+  overflow: hidden;
+}
+
+.item-container {
+  display: flex;
+  overflow: hidden;
+  width:auto; /* Adjust width based on your design */
+  height:auto;
+    gap:6px; /* Space between the cards */
+    justify-content: flex-start;  /* Center horizontally */
+    scroll-behavior: smooth;
+}
+
+
+.item {
+  flex: 0 0 0; /* Show three items at a time (each item is 300px wide) */
+  display: flex;
+  width:33%;/*per card width*/
+  margin-right:20px;
+
+}
+
+.prev-btn, .next-btn {
+  background-color:#FECC4E;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  position: absolute;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  top:20px;
+  right:20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.prev-btn {
+right:85px;
+}
+
+.next-btn {
+  right:20px;
+}
+
+.card1 {
+  height:336px;
+  width:358;
+  background:#00152b;
+  border-radius:5px;
+  margin-top:40px;
+  transition: transform 0.3s ease;
+  color:#f6f2f2;
+  cursor: pointer;
+margin-left:20px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.user-photo {
+  border-radius: 50%;
+    width: 60px;
+    height:60px;  
+}
+.user-info-cell {
+  padding-left: 10px;
+  display: inline;
+
+}
+.rating-cell {
+  padding-right: 10px;
+}
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.rating i {
+  color: gold;
+}
+.card2:hover
+ {
+color:#212529;
+background-color: #fff;
+}
+.review-text 
+{
+  font-size:18px;
+  padding: 3px 20px;
+font-family: "Montserrat",sans-serif;
+}
+.prev-btn:hover, .next-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.box4
+{
+  height:750px;
+  width:100%;
+  background-color:#fbfbfb;
+}
+
+/*tour guide*/
+.para2
+{
+  color: #FECC4E;
+  font-family: "Satisfy", cursive;
+padding-top: 130px;
+text-align: center;
+}
+.para3 
+{
+  color:#2d373c;
+  font-weight: 800;
+  font-size: 45px;
+  text-align: center;
+  font-family: "Montserrat",sans-serif;
+}
+.para4 
+{
+  height:66px;
+  width:1340px;
+  font-size: 16px;
+  color:#666666;
+  text-align: center;
+}
+
+.cont3
+{
+margin-left:30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height:350px;
+  width:95%;
+  margin-top:30px;
+  gap:30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card3 {
+  border: none;
+  display: flex;
+  background-color:#ffffff;
+  flex-direction:row;
+  height:399px;
+  width:390px;
+  cursor: pointer;
+  overflow: hidden;
+  position:relative;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card-content3 {
+  background-color:#f7f7f7;
+  width: 370px;
+  height:270px;
+  margin:25px;
+  transition: transform 0.5s ease-out;
+  border-radius:30px;
+  /* Animation for the image */
+}
+
+@keyframes slide {
+
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+.card3 :hover{
+transform: scale(1.02);  
+}
+
+.card2-img-top {
+  height:300px;
+  width:100%;
+  transition: transform 0.2s ease;
+    z-index: 1;
+}
+.image-container {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  
+/* The image itself */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  }
+
+  .text-overlay {
+position: absolute;
+top:0%;
+left: -100%; /* Initially hidden, positioned to the left */ 
+color: #fff;
+opacity: 0;
+height:200px;
+background-color: rgb(238, 225, 225);/* Semi-transparent background */
+padding: 10px;
+width: 200px; /* Width of the overlay text box*/ 
+transition: all 0.3s ease; 
+/* Smooth transition for hover effect*/ 
+}
+
+
+.image-container:hover .text-overlay {
+left: 0; /* Move the text box to the left */
+opacity: 1; /* Make the text visible */
+height:600px;
+width:50px;
+}
+
+.twitter-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+    width: 30px; 
+  height:30px;
+  color:#FECC4E;        
+  background-color:#ffffff; 
+  border-radius: 50%;     
+  border: 2px solid transparent; /* Optional: add a border with Twitter's blue color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for extra effect */
+}
+
+.social-icons1 {
+  justify-content: center;
+  align-items: center;
+  gap:20px; /* Space between icons */
+margin-top:30px;
+cursor: pointer;
+padding-right: 10px;
+}
+.twitter-icon-container
+{margin-bottom:15px;}
+
+.social-icons1 span{
+margin-right: 10px;
+border: 2px solid transparent;
+font-size:15px;
+padding:4px;
+cursor: pointer;
+transition: color 0.3s ease;
+border-radius:200px;
+
+}
+
+.social-icons1 span:hover {
+background-color: #FECC4E;
+color:#fff;/* Example hover color */
+}
+.title2 
+{
+  height:27.52px;
+  width:340px;
+color:#2d373c;
+font-size: 23px;
+font-family: "Montserrat",sans-serif;
+}
+.tg{
+  font-size:18px;
+  color:#666666;
+  font-family: "Montserrat",sans-serif;
+}
+
+.box5
+{
+  height:750px;
+  width:100%;
+  background-color:#fbfbfb;
+}
+.cont4 
+{
+    height:300px;
+    width:100%;
+    margin-bottom:30px;
+    justify-content: center;
+    align-items: center;
+    background-color:#fef9f9;
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to next row */
+    gap:20px; /* Space between the cards */
+    justify-content: center;  /* Center horizontally */
+}
+.card4 {
+  border: none;
+  background-color:#ffffff;
+  height:360px;
+  width:22rem;
+  color:#2d373c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card4-img-top {
+height:250px;
+width:100%;
+transition: transform 0.2s ease;
+  z-index: 1;
+}
+.card4:hover .badge {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card4-body {
+font-size: 20px;
+  padding: 1rem;
+}
+.card4-title {
+  font-size:20px;
+  padding-top:10px;
+  color:#2d373c;
+  font-weight:600;
+  height:52px;
+  text-decoration: none;
+  width:304.31px;
+  font-family:"Montserrat",sans-serif;
+}
+/* Apply the color changes on hover */
+.card4-title:hover {
+animation: color-change 3s infinite; /* Start the animation on hover */
+}
+
+/* Keyframes to change the text color in sequence */
+@keyframes color-change {
+0% {
+color: #0000; /* First color */
+}
+35% {
+color: #fcb900; /* Second color */
+}
+90% {
+color:green; /* Third color */
+}
+100% {
+color: #000; /* Loop back to the first color */
+}
+}
+.badge4 {
+  position: absolute;
+  top:200px;
+  left: 20px;
+  background-color: #FECC4E;
+  font-size:15px;
+  font-weight:600;
+  color: #fff;
+  border-radius:5px;
+  font-family: "Montserrat",sans-serif;
+  padding:5px 12px;
+  opacity: 1;  /* Keep it visible */
+  visibility: visible;  /* Ensure it's always visible */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;  /* Keep the badge on top of the image */
+}
+.card4-img-top:hover 
+{
+  transition: transform 0.2s ease;
+  transform: scale(1.1);  /* Zoom in by 10% */
+}
+
+/* Style for smaller icons */
+.f-sm {
+font-size: 0.8rem;  /* Adjust the size to make the icons smaller */
+}
+
+.user 
+{
+  font-size:15px;
+  font-weight:650;
+  margin-left:10px;
+  color:#696969;
+  height:23.5px;
+  font-family: "Montserrat",sans-serif;
+  width:81.81px
+}
+.i 
+{
+font-size:16px;
+margin-left:15px;
+font-weight: 650;
+color:#FECC4E;
+ 
+}
+
+.box6
+{
+  height:430px;
+  background-color:#fbfbfb;
+  width:100%;
+
+}
+.container2 
+{
+  height:350px;
+  width:100%;
+  padding-top:20px;
+  justify-content: center;
+  background-color:#fbfbfb;
+  display: flex;
+  overflow: hidden;
+  margin-top:50px;
+}
+
+.card2{
+
+  display: flex;
+  flex-direction:row;
+  border:none;
+  height:250px;
+  border-radius: 150px;
+  width:250.67px;
+  z-index:2;
+  margin:15px;
+  position: relative;
+  display: inline-block;
+  animation-duration: 14s;
+  animation-delay: 200ms;
+  animation-play-state: running;
+  animation: both;
+}
+
+.card3-img-top {
+  height:250px;
+border-radius:8px;
+  width:100%;
+  transition: transform 0.8s ease;
+    z-index: 1;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+   /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  
+  z-index: 2;
+}
+
+.card2:hover .overlay {
+  opacity: 1;
+}
+.facebook-icon {
+  color: #000;
+  font-size:40px;
+  text-decoration: none;
+}
+
+
+
+/*cont for footer*/
+.box7 
+{
+  height:400px;
+  width:100%;
+  background-color:#212529;
+}
+.cont5
+{
+  height:300px;
+  width:90%;
+  margin-left:110px;
+  margin-top:30px;
+background-color:#212529;
+}
+
+.h4
+{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.h5
+{
+  font-family: "Montserrat", sans-serif;
+  font-weight:800;
+  font-size:20px;
+  color:#fff;
+}
+
+.follow
+{
+  font-weight:800;
+  font-size:20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.paragraph
+{
+  font-family:"Montserrat", sans-serif;
+  font-weight:500;
+}
+
+/*design last box*/
+.e
+{
+  height:60px;
+  text-align: center;
+  padding-top:20px;
+  color:#ffffff;
+  background-color:#162b32;
+  font-size:16px;
+width:100%;
+}
+/*for dot*/
+ul.list-unstyled li a {
+  text-decoration: none;
+  color: #fcb900;
+  position: relative; 
+  display: inline-flex; 
+  padding-left:2px; 
+  align-items: center; 
+  padding-right: 25px;
+  transition: transform 0.4s ease-in-out; 
+}
+ul.list-unstyled li a::before {
+  content: ''; 
+  position: absolute;
+  
+  left: -12px;
+  width: 6px;
+  height:6px;
+  border-radius: 70%; 
+  background-color: #fcb900; 
+  opacity: 0; 
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for dot */
+}
+ul.list-unstyled li a:hover {
+  color: #fcb900; 
+  transform: translateX(10px);
+}
+/* Show the dot on hover */
+ul.list-unstyled li a:hover::before {
+  opacity: 1; 
+  transform: translateX(9px); 
 }
