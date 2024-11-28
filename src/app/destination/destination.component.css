@@ -1,0 +1,94 @@
+.page-wrapper {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+}
+
+.turio-heading-area {
+    margin-bottom: 20px;
+}
+
+.heading-section h4 {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.heading-section h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.heading-description p {
+    color: #555;
+    font-size: 16px;
+}
+
+.destination-card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+
+.card-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-content h4 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.card-content h4 a:hover {
+    color: #007BFF;
+}
+
+.place-count {
+    color: #777;
+    font-size: 14px;
+}
+.heading-section .heading-subtitle h4 {
+    font-size: 22px;
+    font-family: "satisfy";
+    margin-bottom: 10px;
+    color: #fecc4e;
+}
+.heading-section[_ngcontent-ng-c2025931573] h2[_ngcontent-ng-c2025931573] {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.heading-section .heading-description p {
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #666666;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+

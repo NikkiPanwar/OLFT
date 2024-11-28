@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { PackageComponent } from './package/package.component';
+import { Package2Component } from './package2/package2.component';
 
 export const routes: Routes = [
 
@@ -22,12 +23,8 @@ export const routes: Routes = [
 {path :"tour",component:TourComponent},
 {path:"page1",component:Page1Component},
 {path:"page2",component:Page2Component},
-{ path: '', redirectTo: '/tour', pathMatch: 'full' }
+{ path: '', redirectTo: '/tour', pathMatch: 'full' },
+{path:"package2",component:Package2Component}
 ]
 
-@NgModule
-({
-    imports:[RouterModule.forRoot(routes)],
-    exports:[RouterModule]
-})
 export class AppRoutingModule { }

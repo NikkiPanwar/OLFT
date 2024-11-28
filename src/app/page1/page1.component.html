@@ -1,133 +1,23 @@
 
-    <div class="cont">
- <!-- Carousel and Cards -->
- <!----card 1-->
-
-    <div class="card" style="width:22rem;">
-
-        <span class="badge">
-            <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-<img src="assets/images/2.jpg" class="card-img-top"alt="National Capitol of Cuba">
-        <div class="card-body">
-            <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-  <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
- <span class="start">Starting From</span>
-        </div>
+<div class="cont">
+    <div *ngFor="let card of cards" class="card" style="width:22rem;">
+      <!-- Card Content -->
+      <span class="badge">
+        <span><i class="fas fa-clock"></i></span> {{ card.duration }}
+      </span>
+      <img [src]="card.imageUrl" [alt]="card.altText" class="card-img-top">
+      <div class="card-body">
+        <h2 class="card-title">{{ card.title }}</h2>
+        <span>
+          <a [href]="card.link" class="btn btn-warning book-button">Book Now
+            <i class="fas fa-arrow-right fa-sm" style="font-size:0.6rem;"></i>
+          </a>
+        </span>
+        <span class="start">{{ card.startingFrom }}</span>
+      </div>
     </div>
-                    
-    <!--card 2-->
-        <div class="card" style="width:22rem;">
-    
-            <span class="badge">
-                <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-    <img src="assets/images/3.jpg" class="card-img-top"alt="National Capitol of Cuba">
-            <div class="card-body">
-                <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-      <span><a href="#" class="btn btn-warning book-button">Book Now 
-     <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-     <span class="start">Starting From</span>
-            </div>
-        </div>
-                        
-        <!--card 3-->
-            <div class="card" style="width:22rem;">
-        
-                <span class="badge">
-                    <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-        <img src="assets/images/4.jpg" class="card-img-top"alt="National Capitol of Cuba">
-                <div class="card-body">
-                    <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-          <span><a href="#" class="btn btn-warning book-button">Book Now 
-         <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-         <span class="start">Starting From</span>
-                </div>
-            </div>
-                            
-            <!--card-4-->
-                <div class="card" style="width:22rem;">
-            
-                    <span class="badge">
-                        <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-            <img src="assets/images/5.jpg" class="card-img-top"alt="National Capitol of Cuba">
-                    <div class="card-body">
-                        <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-              <span><a href="#" class="btn btn-warning book-button">Book Now 
-             <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-             <span class="start">Starting From</span>
-                    </div>
-                </div>
-                                
-                <!--card-5-->
-                    <div class="card" style="width:22rem;">
-                
-                        <span class="badge">
-                            <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-                <img src="assets/images/6.jpg" class="card-img-top"alt="National Capitol of Cuba">
-                        <div class="card-body">
-                            <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-                  <span><a href="#" class="btn btn-warning book-button">Book Now 
-                 <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-                 <span class="start">Starting From</span>
-                        </div>
-                    </div>
-                                    
-                    <!--card-6-->
-                        <div class="card" style="width:22rem;">
-                    
-                            <span class="badge">
-                                <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-                    <img src="assets/images/7.jpg" class="card-img-top"alt="National Capitol of Cuba">
-                            <div class="card-body">
-                                <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-                      <span><a href="#" class="btn btn-warning book-button">Book Now 
-                     <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-                     <span class="start">Starting From</span>
-                            </div>
-                        </div>
-                                        
-                 <!--card-7-->
-    <div class="card" style="width:22rem;">
+</div>
 
-        <span class="badge">
-            <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-<img src="assets/images/8.jpg" class="card-img-top"alt="National Capitol of Cuba">
-        <div class="card-body">
-            <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-  <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
- <span class="start">Starting From</span>
-        </div>
-    </div>
-                                                    
-                 <!--card-8-->
-    <div class="card" style="width:22rem;">
-
-        <span class="badge">
-            <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-<img src="assets/images/9.jpg" class="card-img-top"alt="National Capitol of Cuba">
-        <div class="card-body">
-            <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-  <span><a href="#" class="btn btn-warning book-button">Book Now 
- <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
- <span class="start">Starting From</span>
-        </div>
-    </div>
-                                    
-                 <!--card-9-->
-                 <div class="card" style="width:22rem;">
-
-                    <span class="badge">
-                        <span><i class="fas fa-clock"></i></span> 3 Days 4 Nights</span>
-            <img src="assets/images/11.jpg" class="card-img-top"alt="National Capitol of Cuba">
-                    <div class="card-body">
-                        <h2 class="card-title"> Milford Sound Piopiotahi</h2>
-              <span><a href="#" class="btn btn-warning book-button">Book Now 
-             <i class="fas fa-arrow-right"style="font-size:0.6rem;"></i></a></span>
-             <span class="start">Starting From</span>
-                    </div>
-      </div></div>
-     
       <div class="page">
         
             <button (click)="goToPreviousPage()" class="btn btn-warning navigate-button">
@@ -138,23 +28,6 @@
    <span>   <a href ="/page1" class="btn btn-light page-button"> 2</a></span>
    <span>   <a href="/page2" class="btn btn-light page-button"> 3</a></span>
 
-   <!----
-<nav aria-label="Page navigation">
-    <ul>
-        <li class="page-item">
-            <a class="page-link" href="/tour">1</a>
-        </li>
-
-        <li class="page-item-active">
-            <a aria-current="page" class="page-link current">2</a>
-                </li>
-
-        <li class="page-item">
-            <a class="page-link" href="/page3">3</a>
-        </li>
-    </ul>
-    
-    </nav>-->
  <button (click)="goToNextPage()" class="btn btn-warning navigate-button ">
     <i class="fas fa-arrow-right"></i>
  </button>
@@ -169,8 +42,9 @@
     <footer class="text-light py-4">
       <div class="cont5" style="background-color:#000000">
           <div class="row">
-              <div class="col-md-4">
-               <b>   <p class="h4">OLFT</p>
+            <div class="col-md-4">
+                <p class="h4">
+<img src="assets/images/logo.png" class="logo"> </p>
    <p>
     Duis rutrum nisl urna. Maecenas vel libero<br>
      faucibus nisi venenatis hendrerit a id lectus.<br>
@@ -180,7 +54,7 @@
                     <p>Working days : Monday-Friday
                     (9AM-5PM)
       <p style="font-weight:800;font-size:20px;">
-        FOLLOW US ON :</p></b>
+        FOLLOW US ON :</p>
         <span class="social-icon"><i class="fab fa-instagram"></i></span>
         <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
         <span class="social-icon"><i class="fab fa-twitter"></i></span>
@@ -225,12 +99,3 @@
   <div class="e">
     Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd
   </div>
-  
-  
-
-
-
-
-
-
-  

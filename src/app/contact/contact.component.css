@@ -1,0 +1,75 @@
+.container{
+    display: block;
+    width: 100%;
+}
+.elementor-widget-google_maps[_ngcontent-ng-c3050684849] iframe[_ngcontent-ng-c3050684849] {
+    width: 100%;
+}
+.contact-form-wrap {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-subheading {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-input-group {
+    margin-bottom: 15px;
+}
+
+.custom-input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.custom-input-group .required {
+    color: red;
+}
+
+.custom-input-group input, 
+.custom-input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.custom-input-group input:focus, 
+.custom-input-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}

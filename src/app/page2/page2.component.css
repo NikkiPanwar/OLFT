@@ -9,6 +9,10 @@
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
 }
+.logo{
+  height:52.67px;            
+  width:147px;
+}
 
 .home-button
 {

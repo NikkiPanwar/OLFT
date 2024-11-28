@@ -4,11 +4,11 @@
     height:auto;
     width:100%;
     margin-top:40px;
-    background-color:#ffffff;
+    background-color:#fff;
     display: flex;
     font-family:  "Montserrat", sans-serif;;
     flex-wrap: wrap; /* Allows cards to wrap to next row */
-    gap:25px; /* Space between the cards */
+    gap:25px; /* Space between the cards */ 
     justify-content: center;  /* Center horizontally */
 }
 
@@ -17,14 +17,12 @@
         .card {
             border: none;
             background-color:#f9f5f5;
-            margin-top:20px;
+            margin-top:17px;
             height:370px;
-            width:400px;
+            width:22rem;
             cursor: pointer;
             transition: all 0.3s ease;
             overflow: hidden;
-            
-             /* Vertical spacing between rows */
             position: relative;
         }
 
@@ -47,16 +45,17 @@
             padding: 1rem;
         }
         .card-title {
-            font-size:18px;
+            font-size:23px;
             color:#454545;
             font-weight: 550;
             font-family:'Montserrat', sans-serif;;
         }
-.card-title:hover{color:#fecc4e;}
+.card-title:hover
+{color:#fecc4e;}
 
         .badge {
             position: absolute;
-            top: 30px;
+            top: 20px;
             left: 20px;
             font-weight:600;
             font-size: 14px;
@@ -72,15 +71,18 @@
         .card-img-top:hover 
         {
             transition: transform 0.2s ease;
-            transform: scale(1.1);  /* Zoom in by 10% */
+            transform: scale(1.04);  /* Zoom in by 10% */
         }
 
         .book-button
         {
             color:#161616;
-            font-weight:700;
-            font-size: 14px;
+            font-weight:500;
+            height:40px;
+            width:120px;
+            font-size: 17px;
             background-color: #fecc4e;
+            margin-top: 10px;
             border:none;
             font-family: "Mantserrat",sans-serif;
             background-color:fecc4e;
@@ -137,8 +139,6 @@ gap:10px; /* Creates space between each button */
   margin-left:110px;
   margin-top:30px;
 }
-
-
 .h4
 {
   font-family: "Montserrat", sans-serif;
@@ -151,8 +151,6 @@ gap:10px; /* Creates space between each button */
   font-weight:800;
   font-size:19px;
 }
-
-
 /*design last box*/
 .e
 {
@@ -207,10 +205,6 @@ ul.list-unstyled li a:hover::before {
   opacity: 1; 
   transform: translateX(9px); 
 }
-
-
-
-
 /* Style for the Previous and Next buttons */
 .navigate-button {
 
@@ -221,4 +215,8 @@ ul.list-unstyled li a:hover::before {
   background-color: #fecc4e;
   border:none;
   transition: background-color 0.3s ease;
+}
+.logo{
+  height:52.67px;            
+  width:147px;
 }
