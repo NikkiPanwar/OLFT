@@ -197,34 +197,34 @@ Suspendissendt blandit interdum. Sed pellentesque at nunc eget consectetur.
 
   <div class="cont3">
     <!--card 1-->
-<div *ngFor="let guide of tourGuides" class="card3">
+<div *ngFor="let guide of  _tourguides" class="card3">
     <div class="card3-img-top">
       <div class="image-container">
-        <img [src]="guide.photo" alt="Image">
+        <img [src]="guide?.image" alt="Image">
         <div class="text-overlay">
           <div class="social-icons1">
   <span class="twitter-icon-container ">
-<a [href]="guide.socialMedia.instagram" target="_blank">
+<a [href]="guide.insta" target="_blank">
 <i class="fab fa-instagram" aria-label="Instagram"></i></a>
 </span>
 <span class="twitter-icon-container">
- <a [href]="guide.socialMedia.facebook" target="_blank">
+ <a [href]="guide.insta" target="_blank">
 <i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
 </span>
 <span class="twitter-icon-container">
-<a [href]="guide.socialMedia.whatsapp" target="_blank">
+<a [href]="guide.insta" target="_blank">
 <i class="fab fa-whatsapp" aria-label="WhatsApp"></i></a>
 </span>
 <span class="twitter-icon-container">
-<a [href]="guide.socialMedia.twitter" target="_blank">
+<a [href]="guide.insta" target="_blank">
 <i class="fab fa-twitter" aria-label="Twitter"></i></a>
             </span>
           </div>
         </div>
       </div>
       <div class="card-body">
-        <h4 class="title2">{{ guide.name }}</h4>
-        <h4 class="tg">{{ guide.role }}</h4>
+        <h4 class="title2">{{ guide.captain}}</h4>
+        <h4 class="tg">Tour Guide</h4>
       </div>
     </div>
   </div>

@@ -351,7 +351,7 @@ border:none;
 /**/
 .box4
 {
-  height:720px;
+  height:680px;
   width:100%;
   background-color:#fbfbfb;
 }
@@ -361,7 +361,7 @@ border:none;
 {
   color: #FECC4E;
   font-family: "Satisfy", cursive;
-padding-top: 110px;
+padding-top: 70px;
 text-align: center;
 }
 .para3 
@@ -406,7 +406,6 @@ margin-left:30px;
   position:relative;
   transition: transform 0.6s ease-in-out;
 }
-
 
 .card3 :hover{
 transform: scale(1.02);  
@@ -506,7 +505,7 @@ font-family: "Montserrat",sans-serif;
 
 .box5
 {
-  height:700px;
+  height:720px;
   width:100%;
   background-color:#fbfbfb;
 }
@@ -517,8 +516,8 @@ font-family: "Montserrat",sans-serif;
     margin-bottom:30px;
     justify-content: center;
     align-items: center;
-    background-color:#fef9f9;
-    margin-top:20px;
+    background-color:#fefbfbfb;
+    margin-top:0px;
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap to next row */
     gap:20px; /* Space between the cards */
@@ -631,8 +630,8 @@ color:#FECC4E;
 /*tour*/
 .box6
 {
-  height:430px;
-  background-color:#fbfbfb;
+  height:330px;
+  background-color :#fbfbfb;
   width:100%;
 
 }
@@ -640,9 +639,8 @@ color:#FECC4E;
 {
   height:350px;
   width:97%;
-  padding-top:20px;
+  padding-top:0px;
   justify-content: center;
-  background-color:#fbfbfb;
   display: flex;
   overflow: hidden;
   margin-left: 20px;

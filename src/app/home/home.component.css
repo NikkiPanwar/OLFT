@@ -28,6 +28,7 @@ width:156.33px;
 color: #161616;
 }
 
+
 .center-button:hover
  {
 color:#FECC4E;
@@ -38,6 +39,7 @@ background-color: black;
 {
 color:#FECC4E;
 }
+
 .find-button
  {
   display:inline-block; /* Makes the button a block element */
@@ -78,7 +80,7 @@ background-color:#161616;
 }
 
 .a {
-  overflow-y: auto;
+overflow-y: auto; 
   background-color: #fff;
   height: 30px;
   padding: 0;
@@ -89,6 +91,7 @@ background-color:#161616;
   font-weight:600;
   font-size: 13px;
 }
+
 .form-control
 {
   font-size:13px;
@@ -256,22 +259,23 @@ right:105px;
           visibility: visible;  /* Ensure it's always visible */
           transition: opacity 0.3s ease, visibility 0.3s ease;
           z-index: 2;  /* Keep the badge on top of the image */
-      }
-      .book-button
-      {
-          color:#161616;
+      } 
+
+  a.book-button
+      { color:#161616;
           font-weight:600;
-          background-color: #FECC4E;
+          background-color:#FECC4E;
           border: none;
- font-family: "Montserrat", sans-serif ;
+          font-family: "Montserrat", sans-serif ;
           padding:6px 10px;
           font-size: 16px;
       }
-      .book-button:hover 
-      {
-          background-color: black;
-          color:#FECC4E;;
-      }      
+
+      a.book-button:hover
+    {
+      background-color:#000000 ;
+      color:#FECC4E;} 
+
 .view-button
 {
  display: block; /* Makes the button a block element */
@@ -286,7 +290,6 @@ height:42px;
 color:#2d373c;
 font-size: 16px;
  width:162.58px;
-
 }
 
 .view-button:hover
@@ -310,46 +313,45 @@ background-color: black;
 }
 
 .text-overlay2 {
-  position: absolute; /* Absolute positioning relative to the container */
-  top:210px;          /* Position the text 20px from the top of the container */
-  left: 50%;          /* Center the text horizontally */
-  transform: translateX(-50%); /* Adjust to perfectly center the text */
-  color: #ffffff;       /* Text color */
-  font-size:20px; 
-  font-weight:600;
+  position: absolute; 
+  top:210px;         
+  left: 50%;          
+  transform: translateX(-50%); 
+  color: #ffffff;      
     padding: 10px;     
     border-radius: 5px;
     width: auto;
     font-family: "Montserrat",sans-serif;
     text-align: center;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease; 
  z-index:10;
   }
+  .name{font-size:25px;
+  font-weight: 700;
+font-family: "Montserrat",sans-serif;}
 
   .text-overlay2:hover {
   color:#ffffff;
-    transform: translateX(-50%)
-     translateY(-30px); 
-     /* Move text upward */
+transform: translateX(-50%) translateY(-30px); 
   }
 
   .text-overlay2:hover .line-number {
-    display: block; /* Show the line and number */
+    display: block; 
   }
   .text-overlay2:hover .line {
-    width: 100%; /* Line expands to full width */
+    width: 100%;
   }
 
   .text-overlay2:hover .number {
-    display: block; /* Show the number */
+    display: block;
     opacity: 1;
-    animation: fadeIn 0.5s forwards; /* Fade-in effect */
+    animation: fadeIn 0.5s forwards; 
   }
 
 .text-overlay2:hover .number {
-  display: block; /* Show the number on hover */
+  display: block; 
   opacity: 0;
-  animation: fadeIn 100s forwards; /* Fade in effect */
+  animation: fadeIn 100s forwards;
 }
 
 /* Animation for number */
@@ -363,24 +365,25 @@ background-color: black;
 }
 
 .line-number {
-  display: none; /* Hide the line and number by default */
+  display: none;
   margin-top:8px;
 }
 .line {
-  width: 0; /* Line is hidden initially */
+  width: 0;
   height:4px;
   width:110%;
   background-color:#FECC4E;
   margin-bottom:2px;
-  transition: width 0.3s ease; /* Smooth transition */
+  transition: width 0.3s ease; 
 }
 
 .number {
   display: none;  /* Initially hidden */
   color:#fff;
-  font-size:18px;
+  font-size:15px;
   margin-top: 5px;
 }
+
 .tour-button
  {
 border:2px solid transparent;
@@ -419,6 +422,7 @@ height:40px;
   position: relative;
   display: inline-block;
 }
+
 .card1:hover {
   transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
@@ -426,7 +430,7 @@ height:40px;
 
 .img-tour
 {
-  width:260px; 
+  width:260px;
   height:300px;
   border-radius:6px; 
 }
@@ -435,8 +439,6 @@ height:40px;
 color:#FECC4E;
 background-color: black;
  }
-
-
 /*review*/
  .package-slide {
   display:flex;
@@ -444,6 +446,7 @@ background-color: black;
   gap:20px;
   cursor: pointer;
 }
+
  .travel
  {
 padding-top:65px;
@@ -478,7 +481,6 @@ font-family:'Montserrat',sans-serif;
   width:23rem;
 margin-left:20px;
 }
-
 .A 
 {
   height:60px;
@@ -506,13 +508,11 @@ margin-left:20px;
   color:#FECC4E;
   margin-left: 80px;
 }
-
 .card2:hover
  {
 color:#212529;
 background-color: #fff;
 }
-
 .review-text 
 {
   font-size:18px;
@@ -615,10 +615,7 @@ margin-left:40px;
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
-  }
-
-}
+    transform: translateX(-50%);}}
 
 .card3 :hover{
 transform: scale(1.02);  
@@ -642,7 +639,6 @@ cursor: pointer;
 transition: transform 0.8s ease-in-out;
 
 }
-
 /* The overlay text */
 .text-overlay {
 position: absolute;
@@ -921,9 +917,7 @@ padding-left:210px;
 {
    background-color:#000;
   color:#FECC4E;
-  
 }
-
 /*cont for footer*/
 .cont5 
 {
@@ -955,13 +949,11 @@ background-color:#212529;
   font-size:20px;
   font-family: "Montserrat", sans-serif;
 }
-
 .paragraph
 {
   font-family:"Montserrat", sans-serif;
   font-weight:500;
 }
-
 /*design last box*/
 .e
 {
@@ -984,8 +976,6 @@ ul.list-unstyled li a {
   padding-right: 25px;
   transition: transform 0.4s ease-in-out; 
 }
-
-
 ul.list-unstyled li a::before {
   content: ''; 
   position: absolute;
@@ -998,16 +988,10 @@ ul.list-unstyled li a::before {
   opacity: 0; 
   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for dot */
 }
-
-
 ul.list-unstyled li a:hover {
   color: #fcb900; 
-  transform: translateX(10px);
-
-  
+  transform: translateX(10px); 
 }
-
-/* Show the dot on hover */
 ul.list-unstyled li a:hover::before {
   opacity: 1; 
   transform: translateX(9px); 

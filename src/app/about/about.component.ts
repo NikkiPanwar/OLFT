@@ -1,17 +1,59 @@
-import { NgFor, NgForOf, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
+
+export interface TourGuide {
+  id: number;
+  captain: string;
+  image: string;
+  created_at: string; // Consider using Date if you want to handle date objects
+  updated_at: string; // Consider using Date if you want to handle date objects
+  insta: string;
+  phn_number: string;
+}
+
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [NgFor],
+  providers:[ServiceService],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent {
-  constructor() { }
+export class AboutComponent implements OnInit{
+
+  _tourguides:TourGuide[] =[]
+
   
-  ngOnInit(): void {}
+
+  formatDaysAndNights(days: any): string {
+    if (days < 1) {
+      return '0 days 0 nights';
+    }
+    
+    const nights = days > 1 ? days - 1 : 0; // Calculate nights based on days
+    return `${nights} nights ${days} days`;
+  }
+  
+  constructor(private _service:ServiceService) { }
+  
+  ngOnInit(): void {
+
+    this._service.getTourGuides().subscribe({
+      next:(data)=>{
+
+        this._tourguides = data.slice(0,3);
+         
+        console.log(data)
+      },
+
+      error:(err)=>{
+        console.log(err)
+
+      }
+    });
+  }
 
 
   tourGuides = [
@@ -25,29 +67,8 @@ export class AboutComponent {
         whatsapp: 'https://www.whatsapp.com',
         twitter: 'https://www.twitter.com'
       }
-    },
-    {
-      name: 'Theodore Aiden',
-      role: 'Tour Guide',
-      photo: '/assets/images/a.jpg',
-      socialMedia: {
-        instagram: 'https://www.instagram.com',
-        facebook: 'https://www.facebook.com',
-        whatsapp: 'https://www.whatsapp.com',
-        twitter: 'https://www.twitter.com'
-      }
-    },
-    {
-      name: 'Sebastian Mateo',
-      role: 'Tour Guide',
-      photo: '/assets/images/g.jpg',
-      socialMedia: {
-        instagram: 'https://www.instagram.com',
-        facebook: 'https://www.facebook.com',
-        whatsapp: 'https://www.whatsapp.com',
-        twitter: 'https://www.twitter.com'
-      }
     }
+    
   ];
   
   reviews = [
@@ -125,4 +146,5 @@ export class AboutComponent {
     { imageUrl: 'assets/images/d.jpg', icon: 'e-fab-linkedin' },
 
   ];
+
 }

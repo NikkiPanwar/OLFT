@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { filter } from 'rxjs';
+import { Router } from '@angular/router';
 
 export interface Package {
   pk_Package_id: number;           // Unique identifier for the package
@@ -18,8 +19,10 @@ export interface Package {
   tour_guide: number;              // ID of the associated tour guide
   tour_type: string;               // Type of the tour (e.g., Hill, Beach, etc.)
   travel_with_bus: string;         // Indicates if travel is with a bus (as a string)
-  updated_at: string;              // Last updated date (consider using Date type if needed)
-}
+  updated_at: string;  
+  inclusions: [];         // Array of inclusions
+  exclusions:[];         // Array of exclusions
+        }
 
 export interface TourGuide {
   id: number;
@@ -45,16 +48,18 @@ export class HomeComponent implements OnInit{
   _tourguides:TourGuide[] =[]
 
 
-  formatDaysAndNights(days: any): string {
-    if (days < 1) {
+  formatDaysAndNights(nights: any): string {
+    if (nights < 1) {
       return '0 days 0 nights';
     }
     
-    const nights = days > 1 ? days - 1 : 0; // Calculate nights based on days
-    return `${nights} nights ${days} days`;
+    const days = nights > 1 ? nights - 1 : 0; // Calculate nights based on days
+    return `${days} days ${nights} nights`;
   }
 
-  constructor(private _service:ServiceService) { }
+  constructor(private _service:ServiceService,
+    private router:Router
+  ) { }
   
   ngOnInit(): void {
 
@@ -85,48 +90,7 @@ export class HomeComponent implements OnInit{
     });
   }
 
-
-
-
-
 /*data for cards*/
-
-  tourGuides = [
-    {
-      name: 'Lincoln Anthony',
-      role: 'Tour Guide',
-      photo: '/assets/images/i.jpg',
-      socialMedia: {
-        instagram: 'https://www.instagram.com',
-        facebook: 'https://www.facebook.com',
-        whatsapp: 'https://www.whatsapp.com',
-        twitter: 'https://www.twitter.com'
-      }
-    },
-    {
-      name: 'Theodore Aiden',
-      role: 'Tour Guide',
-      photo: '/assets/images/a.jpg',
-      socialMedia: {
-        instagram: 'https://www.instagram.com',
-        facebook: 'https://www.facebook.com',
-        whatsapp: 'https://www.whatsapp.com',
-        twitter: 'https://www.twitter.com'
-      }
-    },
-    {
-      name: 'Sebastian Mateo',
-      role: 'Tour Guide',
-      photo: '/assets/images/g.jpg',
-      socialMedia: {
-        instagram: 'https://www.instagram.com',
-        facebook: 'https://www.facebook.com',
-        whatsapp: 'https://www.whatsapp.com',
-        twitter: 'https://www.twitter.com'
-      }
-    }
-  ];
-
 
   reviews = [
     {
@@ -161,6 +125,7 @@ export class HomeComponent implements OnInit{
     { tourName: 'Tokyo', placeRank: '1st Place', imagePath: 'assets/images/c.jpg' }
   ];
 
+
   scrollPosition = 0;
   itemWidth = 310; // Adjust based on your design
 
@@ -179,90 +144,8 @@ export class HomeComponent implements OnInit{
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
     }
   }
-  
-  cards = [
-    {
-      title: 'Vineas Valley',
-      imageUrl: 'assets/images/a.jpg',
-      altText: 'Franz Josef Glacier',
-      duration: '3 Days 4 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Milford Sound Piopiotahi',
-      imageUrl: 'assets/images/4.jpg',
-      altText: 'Milford Sound',
-      duration: '5 Days 6 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/5.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/6.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/7.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/8.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier  Adventure',
-      imageUrl: 'assets/images/9.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/10.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    },
-    {
-      title: 'Great Barrier Adventure',
-      imageUrl: 'assets/images/11.jpg',
-      altText: 'Great Barrier Reef',
-      duration: '4 Days 3 Nights',
-      link: 'package',
-      startingFrom: 'Starting From',
-      perPerson: 'Per Person'
-    }
-  ];
+
+
   cards1 = [
     {
       date: 'July 15, 2022',
@@ -289,5 +172,8 @@ export class HomeComponent implements OnInit{
       author: 'User'
     }
   ];
-}
 
+  bookNow(packageId: number) {
+    this.router.navigate(['/package', packageId]);
+}
+}

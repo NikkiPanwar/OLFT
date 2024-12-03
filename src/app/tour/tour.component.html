@@ -1,19 +1,22 @@
 
  <div class="cont">
-    <div *ngFor="let card of cards" class="card" style="width:22rem;">
+    <div *ngFor="let card of _packages " class="card" style="width:22rem;">
       <!-- Card Content -->
       <span class="badge">
-        <span><i class="fas fa-clock"></i></span> {{ card.duration }}
+        <span><i class="fas fa-clock"></i>
+        
+        </span> {{formatDaysAndNights(card?.duration )}}
       </span>
-      <img [src]="card.imageUrl" [alt]="card.altText" class="card-img-top">
+      <img [src]="card.image" [alt]="card.title" class="card-img-top">
       <div class="card-body">
         <h2 class="card-title">{{ card.title }}</h2>
         <span>
-          <a [href]="card.link" class="btn btn-warning book-button">Book Now
+          <a (click)="bookNow(card.pk_Package_id)"
+           class="btn btn-warning book-button">Book Now
             <i class="fas fa-arrow-right fa-sm" style="font-size:0.6rem;"></i>
           </a>
         </span>
-        <span class="start">{{ card.startingFrom }}</span>
+        <span class="start">StartingFrom</span>
       </div>
     </div>
 </div>

@@ -1,6 +1,27 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from '../service.service';
+
+export interface Package {
+  pk_Package_id: number;           // Unique identifier for the package
+  title: string;                   // Title of the package
+  about: string;                   // Description of the package
+  coordinates: string;             // Coordinates of the location
+  country: string;                 // Country where the package is located
+  created_at: string;              // Creation date (consider using Date type if needed)
+  duration: string;                // Duration of the package
+  group_size: number;              // Maximum group size
+  hasItineraries: boolean;         // Indicates if itineraries are available
+  image: string;                   // URL of the package image
+  state: string;                   // State where the package is located
+  tour_guide: number;              // ID of the associated tour guide
+  tour_type: string;               // Type of the tour (e.g., Hill, Beach, etc.)
+  travel_with_bus: string;         // Indicates if travel is with a bus (as a string)
+  updated_at: string;              // Last updated date (consider using Date type if needed)
+}
+
+
 
 @Component({
   selector: 'app-tour',
@@ -9,85 +30,40 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './tour.component.html',
   styleUrl: './tour.component.css'
 })
-export class TourComponent {
+export class TourComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private _service:ServiceService ,private router:Router) { }
   goToNextPage() {
     this.router.navigate(['/page1']);
   }
 
-    cards = [
-      {
-        duration: '3 Days 4 Nights',
-        imageUrl: 'assets/images/3.jpg',
-        altText: 'National Capitol of Cuba',
-        title: 'Milford Sound Piopiotahi',
-        link: '#',
-        startingFrom: 'Starting From'
+  _packages:Package[] = []
+
+  formatDaysAndNights(days: any): string {
+    if (days < 1) {
+      return '0 days 0 nights';
+    }
+    
+    const nights = days > 1 ? days - 1 : 0; // Calculate nights based on days
+    return `${nights} nights ${days} days`;
+  }
+  bookNow(packageId: number) 
+  {
+    this.router.navigate(['/package', packageId]);
+}
+
+  ngOnInit(): void {
+
+    this._service.getPackages().subscribe({
+      next:(data)=>{
+
+        this._packages = data;
+        console.log(data)
       },
-      {
-        duration: '4 Days 3 Nights',
-        imageUrl: 'assets/images/4.jpg',
-        altText: 'Great Barrier Reef',
-        title: 'Great Barrier Adventure',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/5.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House ',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/6.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House ',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/7.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/8.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/9.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/10.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House',
-        link: '#',
-        startingFrom: 'Starting From'
-      },
-      {
-        duration: '5 Days 6 Nights',
-        imageUrl: 'assets/images/11.jpg',
-        altText: 'Sydney Opera House',
-        title: 'Sydney Opera House',
-        link: '#',
-        startingFrom: 'Starting From'
+      error:(err)=>{
+        console.log(err)
+
       }
-    ];
+    });
+  }
 }
