@@ -382,8 +382,7 @@ margin-top:40px;
 
 .detail{
   color:#2d373c;
-  padding-right:600px;
-    padding-bottom: 10px;
+  margin-right:600px;
     font-size: 30px;
     font-weight: 700;
     line-height: 1;
@@ -410,6 +409,7 @@ margin-top:40px;
 .accordion-button:not(.collapsed) {
   background-color: #fff; 
   border-radius: 50px;
+  height:70px;
 }
 
 .plan-index-circle {
@@ -417,8 +417,8 @@ margin-top:40px;
   color: white;
   border-radius: 50%; 
   border: 3px solid brown;
-  width: 60px; 
-  height: 60px; 
+  width: 68px; 
+  height: 68px; 
   position: absolute;
   left: 0; 
   top:50%;
@@ -427,9 +427,9 @@ margin-top:40px;
 }
 
 .plan-index{
-  font-size: 18px; 
-  margin-left:18px;
-  margin-top: 14px; 
+  font-size: 19px; 
+  margin-left:23px;
+  margin-top: 20px; 
   font-weight: bold; 
 }
 
@@ -541,7 +541,6 @@ margin-top:40px;
   margin-left:890px;
   width:30%;
 }
-
 .cont8
 {
   background-color:#fbfbfb;

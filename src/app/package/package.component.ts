@@ -1,8 +1,8 @@
-import { NgFor, NgForOf, NgIf } from '@angular/common';
+
+import { NgFor,NgIf } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../service.service';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 export interface Package {
@@ -23,7 +23,8 @@ export interface Package {
              // Last updated date (consider using Date type if needed)
      inclusions: Inclusion[];         // Array of inclusions
      exclusions: Exclusion[];         // Array of exclusions
-}
+galleries :Gallery[];
+    }
  export interface Exclusion {
  exclusion_id: number; 
   pk_Package_id: number; 
@@ -57,6 +58,17 @@ export interface Gallery {
   updated_at: string;  }
 
 
+export interface Itinerary {
+  id: number;
+  pk_Package_id: number;
+  days: number;
+  title: string;
+  description: string;
+  image: string;
+  created_at: string;
+  updated_at: string;
+  package: any; 
+}
 
 @Component({
   selector: 'app-package',
@@ -73,9 +85,11 @@ export class PackageComponent implements OnInit{
   returnTime: string = '5:00 PM'; 
 
 
+  
+  filteredItineraries: Itinerary[] = [];
   _packages:Package[]=[];
   _galleries:Gallery[]=[];
-_itineraries:any[]=[];
+_itineraries:Itinerary[]=[];
 
   activeInclusions: Inclusion[] = [];
   excludedItems: Exclusion[] = [];
@@ -94,9 +108,7 @@ _itineraries:any[]=[];
 
   // Data for each button
   buttonData = {
-    button1: 'Pellentesque sagittis, non fringilla eros molestie.fringilla eros molestia eros molestie.  Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.onsequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus.',   
-    button2:'Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla',
-   
+
     button3: '',
     button4: 'Details related to Button 3 are displayed here.'
 
@@ -153,16 +165,6 @@ onRatingChange(ratingName: string, value: number) {
   console.log(`Rating for ${ratingName}: ${value}`);
  
 }
-
-
-  plans= [
-    { dayIndex: 1,title: 'DAY 1 : Departure And Small Tour', time: '10:00 AM to 9:00PM',about:'Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.' },
-    { dayIndex: 2, title: 'DAY 2 : Visit the main museums and lunch included',  time: '12:00 PM to 9:00PM',about:'Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.' },
-    { dayIndex: 3, title: 'DAY 3 : Excursion in the natural oasis and picnic', time: '2:00 PM to 9:00PM',about:'Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.' },
-    { dayIndex: 4, title: 'DAY 4 : Transfer to the airport and return to the agency', time: '2:00 PM to 9:00PM',about:'Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla.' }
-
-  ];  
-
 
   openIndex: number | null = null;  
   toggleCollapse(index: number): void {
@@ -223,12 +225,12 @@ this._galleries= data
   }
 }),
 
-this._service.getItineraries().subscribe({ //gallery
+this._service.getItineraries().subscribe({ //itineraries
   next:(data)=>{
 this._itineraries= data
     console.log(data)
+    this.filterItineraries(); // Filter itineraries after loading them
   },
-
   error:(err)=>{
     console.log(err)
   }
@@ -240,14 +242,18 @@ this._itineraries= data
   getPackageDetail(id: number): void {
     if (id) {
       this._service.getPackage(id).subscribe({
-        next: (data: Package) =>
-         {
+        next:(data: Package) =>{
           this.package = data; 
+          console.log('Package data:', this.package);
+        this._galleries = this.package.galleries;
+        console.log('Galleries:', this._galleries);
          this.separateInclusions();
+         this.filterItineraries(); // Filter itineraries after loading them
+        
         },
         error: (err) => {
-          console.error('Error fetching package:', err); // Log the error
-          console.log(err); // Additional error message
+          console.error('Error fetching package:', err); 
+          console.log(err); 
         }
       });
     } else {
@@ -277,6 +283,12 @@ separateInclusions() {
       created_at: new Date().toISOString(), 
       updated_at: new Date().toISOString()  
     }));
+  }
+}
+
+filterItineraries(): void {
+  if (this.packageId) {
+    this.filteredItineraries = this._itineraries.filter(itinerary => itinerary.pk_Package_id === this.packageId);
   }
 }
 }

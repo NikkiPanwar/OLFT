@@ -1,7 +1,11 @@
+<div class="cont">
+ <div class="cont1">
+<div *ngFor="let card of _packages |  
+paginate: {itemsPerPage:9, currentPage: page,
+totalItems:totalLength } " class="card">
 
- <div class="cont">
-    <div *ngFor="let card of _packages " class="card" style="width:22rem;">
-      <!-- Card Content -->
+
+<!-- Card Content -->
       <span class="badge">
         <span><i class="fas fa-clock"></i>
         
@@ -16,21 +20,14 @@
             <i class="fas fa-arrow-right fa-sm" style="font-size:0.6rem;"></i>
           </a>
         </span>
-        <span class="start">StartingFrom</span>
+        <span class="start">Starting From</span>
       </div>
     </div>
 </div>
-<div class="page">
-<span><a href ="/tour" class="btn btn-light page-button"> 1 </a></span>
-<span><a href="/page1" class="btn btn-light page-button"> 2</a></span>
-<span><a href="/page2" class="btn btn-light page-button"> 3</a></span> 
 
-   <div>
-    <button (click)="goToNextPage()" class="btn btn-warning navigate-button">
-     <span><i class="fas  fa-arrow-right"></i></span></button>
-    
-  </div> </div>
- 
+
+  <pagination-controls class="my-pagination" (pageChange)="page= $event"></pagination-controls>
+ </div>
       
                 
     

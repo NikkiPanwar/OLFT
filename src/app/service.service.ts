@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { Package } from './home/home.component';
-import { Gallery } from './package/package.component';
+import { Gallery, Itinerary } from './package/package.component';
 
 @Injectable({
   providedIn: 'root'
@@ -35,13 +35,14 @@ getDestination():Observable<any[]>
 
 getGallery():Observable<Gallery[]>
 {
-  return this.http.get<Gallery[]>(this.apiUrl+'Gallery');
+  return this.http.get<Gallery[]>(this.apiUrl+'galleries');
 }
 
-getItineraries():Observable<any[]>
+getItineraries():Observable<Itinerary[]>
 {
-return this.http.get<any[]>(this.apiUrl+'itineraries')
+return this.http.get<Itinerary[]>(this.apiUrl+'itineraries')
 }
+
 
 }
 // @Injectable({

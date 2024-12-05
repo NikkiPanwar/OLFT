@@ -383,7 +383,11 @@ transform: translateX(-50%) translateY(-30px);
   font-size:15px;
   margin-top: 5px;
 }
-
+.a-package2
+{
+  text-decoration: none;
+ color:#fff; 
+}
 .tour-button
  {
 border:2px solid transparent;

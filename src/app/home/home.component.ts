@@ -21,7 +21,8 @@ export interface Package {
   travel_with_bus: string;         // Indicates if travel is with a bus (as a string)
   updated_at: string;  
   inclusions: [];         // Array of inclusions
-  exclusions:[];         // Array of exclusions
+  exclusions:[];  
+  galleries:[];       // Array of exclusions
         }
 
 export interface TourGuide {

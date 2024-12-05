@@ -1,5 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+/*import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
@@ -26,5 +26,5 @@ export const routes: Routes = [
 {path:"page2",component:Page2Component},
 {path:"package2",component:Package2Component}
 ]
-
+*/
 export class AppRoutingModule { }

@@ -125,8 +125,9 @@
   <div class="card1" *ngFor="let tour of tours">
     <img [src]="tour.imagePath" alt="Image" class="img-tour">
     <div class="text-overlay2">
+      <a href="/package2" class="a-package2">
       <h2 class="name">{{ tour.tourName }}</h2>
-      <div class="line-number">
+    </a> <div class="line-number">
         <div class="line"></div>
         <div class="number">{{ tour.placeRank }}</div>
       </div>

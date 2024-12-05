@@ -13,6 +13,6 @@ export class Page2Component {
   constructor(private router: Router) {}
 
   goToPage2() {
-    this.router.navigate(['/page2']);
+    this.router.navigate(['/tour/page2']);
   }
 }

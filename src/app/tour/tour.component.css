@@ -1,5 +1,5 @@
 
-.cont 
+.cont
 {
     height:auto;
     width:100%;
@@ -12,14 +12,22 @@
     justify-content: center;  /* Center horizontally */
 }
 
-
-        /* Custom card styles */
+.cont1
+{  height:auto;
+  width:98%;
+  background-color:#fff;
+  display: flex;
+  font-family:  "Montserrat", sans-serif;;
+  flex-wrap: wrap; 
+  gap:25px; 
+  justify-content: center;  
+}
         .card {
             border: none;
             background-color:#f9f5f5;
             margin-top:17px;
-            height:370px;
-            width:22rem;
+            height:350px;
+            width:360px;
             cursor: pointer;
             transition: all 0.3s ease;
             overflow: hidden;
@@ -74,7 +82,7 @@
             transform: scale(1.04);  /* Zoom in by 10% */
         }
 
-        .book-button
+        a.book-button
         {
             color:#161616;
             font-weight:500;
@@ -87,7 +95,7 @@
             font-family: "Mantserrat",sans-serif;
             background-color:fecc4e;
         }
-        .book-button:hover 
+        a.book-button:hover 
         {
             background-color: black;
             color: #fecc4e;
@@ -98,30 +106,6 @@
     width:100%;
     
 }
-
-.page
-{
-background-color:#ffffff;
-height:150px;
-text-align: center;
-padding-top: 50px;
-padding-left: 40px;
-display: flex;
-justify-content: center; /* Align buttons horizontally */
-gap:10px; /* Creates space between each button */
-}
-.page-button
-{
-    color:black;
-    background-color:#ffffff;
-    border: 2px solid  #fecc4e;
-    font-size: medium;
-}
-.page-button:hover 
-{
-    background-color: #fecc4e;
-    color:#ffffff;
-}
 .start
 {
   margin-left:110px;
@@ -129,6 +113,36 @@ gap:10px; /* Creates space between each button */
   font-weight:400;
   font-size:15px;
   font-family: "Mantserrat",sans-serif;
+}
+
+.my-pagination {
+  display: flex; /* Use flexbox to arrange items in a row */
+  justify-content: center; /* Center the pagination controls */
+  align-items: center; /* Align items vertically in the center */
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+.my-pagination div {
+  margin: 0 5px; /* Add some horizontal spacing between buttons */
+}
+
+.my-pagination a {
+  text-decoration: none; /* Remove underline from links */
+  color: #007bff; /* Change link color */
+  padding: 8px 12px; /* Add padding for better click area */
+  border: 1px solid #007bff; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.my-pagination a:hover {
+  background-color: #fecc4e; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+.my-pagination .disabled {
+  pointer-events: none; /* Disable clicking on disabled buttons */
+  opacity: 0.5; /* Make disabled buttons look faded */
 }
 
 /*cont for footer*/

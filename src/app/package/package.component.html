@@ -9,20 +9,20 @@
 <div class="flex-item">
   <span ><i class="fas fa-shoe-prints upward-shoe-prints">     
     </i> Tour Type</span> 
-    <h2 class="h2">{{ package?.tour_type }}</h2>
+    <h2 class="h2">{{ package?.tour_type }} Type</h2>
 </div>
      
 <div class="flex-item">
   <span>
   <i class="fas fa-users icon"></i>
    Group Size</span>
-  <h2 class="h2"> <span>{{ package?.group_size}}</span></h2>
+  <h2 class="h2"> <span>{{ package?.group_size}} Person</span></h2>
   </div>
 
   <div class="flex-item">
   <span><i class="fas fa-user-tie icon"></i>    
     Tour Guide</span> 
-  <h2 class="h2"> <span>{{package?.tour_guide }}</span></h2>
+  <h2 class="h2"> <span>{{package?.tour_guide }} Mentor</span></h2>
 </div>
 </div>
 
@@ -194,30 +194,29 @@
 
         <div *ngIf="activeButton === 'button2'">
           <h2 class="detail">Details</h2>
-          <p class="para1">{{ buttonData.button2 }}</p>
-        
-          <div *ngFor="let plan of plans; let i = index">
-            <!-- Accordion Item -->
+          <p class="para1">{{package?.title}}</p>
+          <div *ngFor="let itinerary of filteredItineraries; let i = index">
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading{{i}}">
 <button class="accordion-button" type="button" (click)="toggleCollapse(i)"
 [attr.aria-expanded]="isOpen(i) ? 'true' : 'false'"
-[attr.aria-controls]="'planCollapse' + (i + 1)">
+[attr.aria-controls]="'itineraryCollapse' + (i + 1)">
  <div class="plan-index-circle">
-<h4 class="plan-index">{{ plan.dayIndex }}</h4></div>
+<h4 class="plan-index">{{ itinerary.days}}</h4></div>
 <div class="plan-title">
- <h5>{{ plan.title }}</h5>
- <h6>{{ plan.time }}</h6>
+  
+  <h5>Day : {{itinerary.days}}  {{ itinerary.title }}</h5>
+  <h6>{{ itinerary.created_at}}</h6>
   </div>
 </button>
 </h2>
-          
+      
               <!-- Collapsible Content -->
-<div id="planCollapse{{ i + 1 }}" class="accordion-collapse collapse"
+<div id="itineraryCollapse{{ i + 1 }}"  class="accordion-collapse collapse"
  [class.show]="isOpen(i)" [attr.aria-labelledby]="'heading' + i"
 [attr.data-bs-parent]="'#accordion'">
     <div class="accordion-body">
-                  <p>Details for {{ plan.about}}</p>
+                  <p>Details for {{itinerary.description}}</p>
                 </div>
               </div>
             </div>
@@ -229,27 +228,27 @@
 
     <div *ngIf="activeButton === 'button3'">
       <p>{{ buttonData.button3 }}</p>
-     
       <div class="cont9">
-        <div class="row">
-          <div class="col-6" *ngFor="let image of _galleries.slice(0, 2)">
-            <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
+          <div class="row">
+            <div class="col-6" *ngFor="let image of _galleries.slice(0, 2)">
+              <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
+            </div>
+          </div>
+          
+          <div class="row justify-content-end">
+            <div class="col-12">
+              <img *ngIf="_galleries[2]" [src]="_galleries[2].image_url" 
+                   [alt]="'Image ' + _galleries[2].pk_Package_id" class="img3">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-6" *ngFor="let image of _galleries.slice(3, _galleries.length)">
+              <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
+            </div>
           </div>
         </div>
       
-        <div class="row justify-content-end">
-          <div class="col-12">
-            <img *ngIf="_galleries[2]" [src]="_galleries[2].image_url" [alt]="'Image ' + _galleries[2].pk_Package_id" class="img3">
-          </div>
-        </div>
-      
-        <div class="row">
-          <div class="col-6" *ngFor="let image of _galleries.slice(3, 5)">
-            <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
-          </div>
-        </div>
-      </div>
-    
   <!--btn 3 close--></div>
 
   <div *ngIf="activeButton === 'button4'">
