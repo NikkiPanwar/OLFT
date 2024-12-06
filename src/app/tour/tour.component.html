@@ -1,9 +1,12 @@
 <div class="cont">
  <div class="cont1">
-<div *ngFor="let card of _packages |  
-paginate: {itemsPerPage:9, currentPage: page,
-totalItems:totalLength } " class="card">
 
+<div *ngFor="let card of _packages |
+ slice:(activePage-1)*itemsPerPage:(activePage)*itemsPerPage" class="card">
+ 
+
+<!--paginate: {itemsPerPage:9, currentPage: activePage,
+totalItems:totalLength } " class="card">-->
 
 <!-- Card Content -->
       <span class="badge">
@@ -15,8 +18,8 @@ totalItems:totalLength } " class="card">
       <div class="card-body">
         <h2 class="card-title">{{ card.title }}</h2>
         <span>
-          <a (click)="bookNow(card.pk_Package_id)"
-           class="btn btn-warning book-button">Book Now
+<a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">
+  Book Now
             <i class="fas fa-arrow-right fa-sm" style="font-size:0.6rem;"></i>
           </a>
         </span>
@@ -26,8 +29,29 @@ totalItems:totalLength } " class="card">
 </div>
 
 
-  <pagination-controls class="my-pagination" (pageChange)="page= $event"></pagination-controls>
- </div>
+ <div class="pagination-container">
+<button (click)="previousPage()" [disabled]="activePage === 1" 
+  class="pagination-btn">
+    <i class="fas fa-angle-double-left"></i></button>
+
+<div class="page-numbers">
+  <span *ngFor="let page of visiblePages" (click)="setPage(page)" 
+[class.active]="activePage === page" class="page-number"> {{ page }} </span>
+  </div>
+
+  <!-- Next Button -->
+  <button (click)="nextPage()" [disabled]="activePage === totalPages" class="pagination-btn">
+<i class="fas fa-angle-double-right"></i></button>
+</div>
+
+
+
+
+<!----  <pagination-controls class="my-pagination" (pageChange)="page= $event"></pagination-controls>
+--
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+-->
+</div>
       
                 
     

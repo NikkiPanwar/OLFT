@@ -11,7 +11,6 @@
 width:57%;
 margin-left: 100px;
 z-index: 1;
-background-color:#fefbfb;
 position: absolute;
 }
 
@@ -35,17 +34,6 @@ font-family:"Montserrat",sans-serif;
 font-size:16px;
 color:#666666;
 }
-
-.cont3
-{
-  height:100%;
-  width:50%;
-  position: absolute;
-  margin-left:870px;
-  top:0%;
-  z-index: 0;
-}
-
 .img-cont
 {
   border-radius: 5px;
@@ -95,17 +83,138 @@ vertical-align: middle;
 
   .destination-map {
     width: 100%;
+    height:600px;
     border-radius: 8px;
 }
 .destination-map h3 {
-    font-weight: 600;
-        font-size: 24px; 
+    font-weight:700;
+        font-size: 28px; 
         margin-bottom: 20px;
         color: #333;
-    }
-      .destination-map iframe {
-        width:100%;
-        height: 450px; 
-        border: none; 
-        border-radius: 8px; 
-      }
+}
+.destination-map iframe {
+width:100%;
+height: 450px; 
+border: none; 
+border-radius: 8px; 
+}
+
+.cont3
+{
+  height:100%;
+  width:40%;
+  position: absolute;
+  margin-left:880px;
+  z-index: 0;
+}
+.cont4
+{
+height:1500px;
+width:356px;
+margin-top: 80px;
+}
+
+.cont5
+{
+height:auto;
+width:356px;
+}
+
+.tour-name
+{
+font-size:18px;
+border-radius: 10px;
+padding-top:15px;
+padding-left:45px;
+height:50px;
+font-weight: 700;
+color:#fff;
+background: #333;
+font-family: "Montserrat",sans-serif;
+}
+.card {
+  border: none;
+  background-color:#f9f5f5;
+  margin-top:17px;
+  height:390px;
+  width:360px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height:250px;
+  width:100%;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.card:hover .badge {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-body {
+font-size: 20px;
+  padding: 1rem;
+}
+.card-title {
+  font-size:20px;
+  color:#454545;
+  font-weight: 550;
+  font-family:'Montserrat', sans-serif;;
+}
+.card-title:hover
+{color:#fecc4e;}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight:600;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fecc4e;
+  font-size:1.02rem;
+  padding: 12px 10px;
+  opacity: 1;  /* Keep it visible */
+  visibility: visible;  /* Ensure it's always visible */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;  /* Keep the badge on top of the image */
+}
+.card-img-top:hover 
+{
+  transition: transform 0.2s ease;
+  transform: scale(1.04);  /* Zoom in by 10% */
+}
+
+a.book-button
+{
+  color:#161616;
+  font-weight:500;
+  height:40px;
+  width:120px;
+  font-size: 17px;
+  background-color: #fecc4e;
+  margin-top: 10px;
+  border:none;
+  font-family: "Mantserrat",sans-serif;
+  background-color:fecc4e;
+}
+a.book-button:hover 
+{
+  background-color: black;
+  color: #fecc4e;
+}
+
+.start
+{
+  margin-left:110px;
+  color:#212529;
+  font-weight:400;
+  font-size:15px;
+  font-family: "Mantserrat",sans-serif;
+}

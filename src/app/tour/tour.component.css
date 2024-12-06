@@ -26,7 +26,7 @@
             border: none;
             background-color:#f9f5f5;
             margin-top:17px;
-            height:350px;
+            height:360px;
             width:360px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -114,36 +114,52 @@
   font-size:15px;
   font-family: "Mantserrat",sans-serif;
 }
-
-.my-pagination {
-  display: flex; /* Use flexbox to arrange items in a row */
-  justify-content: center; /* Center the pagination controls */
-  align-items: center; /* Align items vertically in the center */
-  margin: 20px 0; /* Add some margin for spacing */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.my-pagination div {
-  margin: 0 5px; /* Add some horizontal spacing between buttons */
+.pagination-btn {
+  height:45px;
+  width:45px;
+  margin: 10px;
+border-radius:50px;
+  border:none;
+  background-color:#fecc4e;
+  color: white;
+  cursor: pointer;
 }
 
-.my-pagination a {
-  text-decoration: none; /* Remove underline from links */
-  color: #007bff; /* Change link color */
-  padding: 8px 12px; /* Add padding for better click area */
-  border: 1px solid #007bff; /* Add border */
-  border-radius: 4px; /* Rounded corners */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.pagination-btn:disabled {
+  background-color: #ddd;
 }
 
-.my-pagination a:hover {
-  background-color: #fecc4e; /* Change background on hover */
-  color: white; /* Change text color on hover */
+.page-numbers {
+  display: flex;
+  align-items: center;
 }
 
-.my-pagination .disabled {
-  pointer-events: none; /* Disable clicking on disabled buttons */
-  opacity: 0.5; /* Make disabled buttons look faded */
+.page-number {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border:1px solid #fecc4e;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+.page-number.active {
+  background-color:#fff;
+  color:#fecc4e;
+  border:1px soild #fecc4e;
+}
+
+.page-number:hover {
+  background-color:#fecc4e;
+  color: white;
+}
+
 
 /*cont for footer*/
 .cont5 

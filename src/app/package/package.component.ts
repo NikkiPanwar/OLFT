@@ -1,4 +1,3 @@
-
 import { NgFor,NgIf } from '@angular/common';
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -25,6 +24,9 @@ export interface Package {
      exclusions: Exclusion[];         // Array of exclusions
 galleries :Gallery[];
     }
+
+
+
  export interface Exclusion {
  exclusion_id: number; 
   pk_Package_id: number; 
@@ -98,7 +100,8 @@ _itineraries:Itinerary[]=[];
   packageId: number | undefined = 24;
   package: Package | undefined; 
   
-  constructor(private route:ActivatedRoute,private _service:ServiceService){
+  constructor(private route:ActivatedRoute, private _service:ServiceService){
+
     this.route.params.subscribe(params => {
       this.packageId = +params['id']; 
       console.log(this.packageId);
@@ -108,19 +111,9 @@ _itineraries:Itinerary[]=[];
 
   // Data for each button
   buttonData = {
-
     button3: '',
     button4: 'Details related to Button 3 are displayed here.'
-
   };
-
-  // images = {
-  //   img1: 'assets/images/a.jpg',
-  //   img2: 'assets/images/b.jpg',
-  //   img3: 'assets/images/c.jpg',
-  //   img4: 'assets/images/d.jpg',
-  //   img5: 'assets/images/e.jpg',
-  // };
 
 
 
@@ -187,22 +180,6 @@ onRatingChange(ratingName: string, value: number) {
 
  
 ngOnInit(): void {
-  
-  // if (this.packageId) {
-  //   this._service.getPackage(this.packageId).subscribe({
-  //     next: (data: Package) => {
-  //       this.package = data;  // Assign the received data to the package property
-  //       console.log(data);     // Log the data object itself
-  //       console.log('hello');  // Log the string 'hello'
-  //     },
-  //     error: (err) => {
-  //       console.error('Error fetching package:', err);  // Log error if the API call fails
-  //     }
-  //   });
-  // } else {
-  //   console.log('No packageId provided');
-  // }
-  
 
 this._service.getPackages().subscribe({//popular package
   next:(data)=>{
@@ -265,7 +242,6 @@ this._itineraries= data
     if (nights < 1) {
       return '0 days 0 nights';
     }
-    
     const days = nights > 1 ? nights - 1 : 0; // Calculate nights based on days
     return `${days} days ${nights} nights`;
   }
@@ -288,7 +264,9 @@ separateInclusions() {
 
 filterItineraries(): void {
   if (this.packageId) {
-    this.filteredItineraries = this._itineraries.filter(itinerary => itinerary.pk_Package_id === this.packageId);
+    this.filteredItineraries = this._itineraries.filter(itinerary =>
+       itinerary.pk_Package_id === this.packageId);
   }
 }
+
 }

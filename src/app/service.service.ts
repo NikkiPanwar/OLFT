@@ -10,6 +10,7 @@ import { Gallery, Itinerary } from './package/package.component';
 export class ServiceService {
   private apiUrl = 'http://localhost:8000/api/';   // Replace with your API endpoint.
   private apipackage = 'http://localhost:8000/api/package/'; 
+
   constructor(private http: HttpClient) {}
   getPackages(): Observable<Package[]>
    {
@@ -22,22 +23,21 @@ export class ServiceService {
     return this.http.get<Package>(`${this.apipackage}${id}`); // Use the correct URL and format
   }
 
-  getTourGuides(): Observable<any[]>
+getTourGuides(): Observable<any[]>
   {
     return this.http.get<any[]>(this.apiUrl+'tourguides');
   }
 
 getDestination():Observable<any[]>
 {
-
-  return this.http.get<any[]>(this.apiUrl+'destination');
+return this.http.get<any[]>(this.apiUrl+'destination');
 }
 
 getGallery():Observable<Gallery[]>
 {
   return this.http.get<Gallery[]>(this.apiUrl+'galleries');
 }
-
+  
 getItineraries():Observable<Itinerary[]>
 {
 return this.http.get<Itinerary[]>(this.apiUrl+'itineraries')

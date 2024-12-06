@@ -49,14 +49,35 @@ Sed pellentesque at nunc consectetur.Duis rutrum nisl urna. Maecenas vel libero 
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d773126.3466208713!2d-73.965441!3d40.805449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f63c75af2d65%3A0xf45542f6cb090cc9!2s2880%20Broadway%2C%20New%20York%2C%20NY%2010025!5e0!3m2!1sen!2sus!4v1693316969321!5m2!1sen!2sus" 
 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
   </iframe> 
-  </div>
-     
-  <!--cont1-close--></div>
+  </div><!--cont1-close--></div>
 
 
-  <div class="cont3"></div>
-  
-  
-  
-  
-  </div>
+  <div class="cont3">
+<div class="cont4">
+<h3 class="tour-name">New Zeland Tour Package</h3>
+<div class="cont5">
+<div *ngFor="let card of _packages" class="card">
+    <span class="badge">
+      
+        <span><i class="fas fa-clock"></i>
+        
+</span>  {{formatDaysAndNights(card?.duration )}} </span>
+
+      <img [src]="card.image" [alt]="card.title" class="card-img-top">
+      <div class="card-body">
+        <h2 class="card-title">{{ card.title }}</h2>
+        <span>
+<a href="/package2" class="btn btn-warning book-button">
+  Book Now
+            <i class="fas fa-arrow-right fa-sm" style="font-size:0.6rem;"></i>
+          </a>
+        </span>
+        <span class="start">Starting From</span>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
