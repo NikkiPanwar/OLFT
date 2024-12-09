@@ -1,0 +1,25 @@
+.cont1
+{
+    height:auto;
+    width:100%;
+    background-color:#fecc4e;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cont2 
+{
+width:40%;
+height:auto;
+position: absolute;
+background-color: aqua;
+}
+.cont3 
+{
+width:30%;
+height:auto;
+margin-left:400px;
+position: absolute;
+background-color:greenyellow;
+}

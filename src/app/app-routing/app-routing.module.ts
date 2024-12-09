@@ -14,6 +14,7 @@ import { Page2Component } from '../page2/page2.component';
 import { Package2Component } from '../package2/package2.component';
 import {  HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { BlogDetailsComponent } from '../blog-details/blog-details.component';
 
 export const routes: Routes = [
 
@@ -27,7 +28,8 @@ export const routes: Routes = [
   {path :"tour",component:TourComponent},
   {path:"page1",component:Page1Component},
   {path:"page2",component:Page2Component},
-  {path:"package2",component:Package2Component}
+  {path:"package2",component:Package2Component},
+  {path:'blogDetails',component:BlogDetailsComponent}
   ]
 
 
