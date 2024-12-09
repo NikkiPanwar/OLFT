@@ -141,8 +141,8 @@ a{
   color:#212529;
 }
 a:hover {
-  color: #FECC4E;  /* Tomato color on hover */
-  text-decoration:none;  /* Optional: underline on hover */
+  color: #FECC4E;  
+  text-decoration:none; 
 }
 
 

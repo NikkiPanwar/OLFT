@@ -4,13 +4,10 @@
 <!-- Display card1 (can be a highlighted blog post or a separate section) -->
  
 <div class="card1">
-  <span class="i">
-    <i class="fas fa-user-circle"></i>
-  </span>
+  <span class="user">
+    <i class="fas fa-user-circle i"></i></span>
   <span class="user">By {{ card1.user }}</span>
-  <span class="i">
-    <i class="fas fa-comment"></i>
-  </span>
+    <i class="fas fa-comment i"></i>
   <span class="user">({{ card1.comments }}) Comment</span>
   <h2 class="card2-title">
     <a [href]="card1.link">{{ card1.title }}</a>
