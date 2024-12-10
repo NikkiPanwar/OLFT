@@ -2,24 +2,24 @@
   <div class="cont2">
     <div class="flex-container">
 
-      <div class="flex-item">
+      <div *ngIf="package?.duration"  class="flex-item">
 <span><i class="fas fa-clock icon"></i> Duration</span> 
         <h2 class="h2">{{formatDaysAndNights(package?.duration) }}</h2></div>
         
-<div class="flex-item">
+<div *ngIf="package?.tour_type" class="flex-item">
   <span ><i class="fas fa-shoe-prints upward-shoe-prints">     
     </i> Tour Type</span> 
     <h2 class="h2">{{ package?.tour_type }} Type</h2>
 </div>
      
-<div class="flex-item">
+<div  *ngIf="package?.group_size" class="flex-item">
   <span>
   <i class="fas fa-users icon"></i>
    Group Size</span>
   <h2 class="h2"> <span>{{ package?.group_size}} Person</span></h2>
   </div>
 
-  <div class="flex-item">
+  <div   *ngIf="package?.tour_guide"  class="flex-item">
   <span><i class="fas fa-user-tie icon"></i>    
     Tour Guide</span> 
   <h2 class="h2"> <span>{{package?.tour_guide }} Mentor</span></h2>
@@ -100,11 +100,11 @@
 
 </div>
 
-<div class="img-cont">
+<div class="img-cont" *ngIf="package?.image">
   <img [src]="package?.image" class="img-cont" alt="Tour Image">
 
 
-<div class="location">
+<div class="location"  *ngIf="package?.country">
   <span><i class="fas fa-map-marker-alt icon"></i></span>
   <span>{{package?.country}}</span>
   <hr>
@@ -134,29 +134,30 @@
 <div *ngIf="activeButton === 'button1'">
 <h2 class="cap">{{package?.title}}</h2>
 <p class="para">{{package?.about }}</p>
+
 <img src="assets/images/9.jpg" class="img1">
 
 <!--table data-->
-<div class="package-info-container">
+<div  class="package-info-container">
   <table class="table package-info-table mb-0">
     <tbody>
-      <tr>
+      <tr *ngIf="package?.title">
         <th>Destination</th>
         <td class="table-item">{{package?.title }}</td>
       </tr>
-      <tr>
+      <tr *ngIf="departure">
         <th>Departure</th>
         <td class="table-item">{{ departure }}</td>
       </tr>
-      <tr>
+      <tr *ngIf="departureTime">
         <th>Departure Time</th>
         <td class="table-item">{{ departureTime }}</td>
       </tr>
-      <tr>
+      <tr *ngIf="returnTime">
         <th>Return Time</th>
         <td class="table-item">{{ returnTime }}</td>
       </tr>
-      <tr>
+      <tr *ngIf="activeInclusions?.length">
         <th>Included</th>
         <td>
           <ul class="included-list table-item">
@@ -166,7 +167,7 @@
           </ul>
         </td>
       </tr>
-      <tr>
+      <tr *ngIf="excludedItems?.length">
         <th>Excluded</th>
         <td>
           <ul class="excluded-list table-item">
@@ -179,8 +180,8 @@
       <tr>
         <td class="tour-transport-col" colspan="2">
           <div class="tour-transport d-flex align-items-center justify-content-center">
-            <img decoding="async" src="https://www.tourxpro.egenslab.com/wp-content/uploads/2022/01/bus-1.svg" alt="Travel With Bus">
-            <span class="table-item">{{package?.travel_with_bus}}</span>
+            <span class="table-item">Travel with Bus :
+              {{package?.travel_with_bus}}</span>
           </div>
         </td>
       </tr>
