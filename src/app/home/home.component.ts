@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { filter } from 'rxjs';
 import { Router } from '@angular/router';
+import { Package } from '../model/OlftInterface';
 
+/*
 export interface Package {
   pk_Package_id: number;           // Unique identifier for the package
   title: string;                   // Title of the package
@@ -24,6 +26,7 @@ export interface Package {
   exclusions:[];  
   galleries:[];       // Array of exclusions
         }
+*/
 
 export interface TourGuide {
   id: number;

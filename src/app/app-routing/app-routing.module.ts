@@ -9,12 +9,12 @@ import { ContactComponent } from '../contact/contact.component';
 import { DestinationComponent } from '../destination/destination.component';
 import { PackageComponent } from '../package/package.component';
 import { TourComponent } from '../tour/tour.component';
-import { Page1Component } from '../page1/page1.component';
 import { Page2Component } from '../page2/page2.component';
 import { Package2Component } from '../package2/package2.component';
 import {  HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { BlogDetailsComponent } from '../blog-details/blog-details.component';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const routes: Routes = [
 
@@ -26,7 +26,6 @@ export const routes: Routes = [
   {path:"package", component:PackageComponent},
   { path: 'package/:id', component: PackageComponent },
   {path :"tour",component:TourComponent},
-  {path:"page1",component:Page1Component},
   {path:"page2",component:Page2Component},
   {path:"package2",component:Package2Component},
   {path:'blogDetails',component:BlogDetailsComponent}
@@ -39,8 +38,8 @@ export const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),  // Use forRoot() to configure routes for the entire application
     CommonModule , NgxPaginationModule,HttpClientModule,
-  
   ],
+  providers: [provideClientHydration()],
     
 exports:[RouterModule]
 })

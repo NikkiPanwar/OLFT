@@ -2,27 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
-
-
-
-
-export interface Package {
-  pk_Package_id: number;           // Unique identifier for the package
-  title: string;                   // Title of the package
-  about: string;                   // Description of the package
-  coordinates: string;             // Coordinates of the location
-  country: string;                 // Country where the package is located
-              // Creation date (consider using Date type if needed)
-  duration: string;                // Duration of the package
-  group_size: number;              // Maximum group size
-  hasItineraries: boolean;         // Indicates if itineraries are available
-  image: string;                   // URL of the package image
-  state: string;                   // State where the package is located
-  tour_guide: number;              // ID of the associated tour guide
-  tour_type: string;               // Type of the tour (e.g., Hill, Beach, etc.)
-  travel_with_bus: string;   
-}
-
+import { Package } from '../model/OlftInterface';
 
 
 @Component({

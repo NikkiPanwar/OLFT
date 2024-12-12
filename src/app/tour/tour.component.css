@@ -49,11 +49,11 @@
         }
 
         .card-body {
-        font-size: 20px;
-            padding: 1rem;
+        font-size: 18px;
+            padding:10px;
         }
         .card-title {
-            font-size:23px;
+            font-size:18px;
             color:#454545;
             font-weight: 550;
             font-family:'Montserrat', sans-serif;;

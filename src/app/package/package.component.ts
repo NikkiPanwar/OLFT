@@ -3,29 +3,29 @@ import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../service.service';
 import { FormsModule } from '@angular/forms';
+import { ItineraryResponse, Package,Itinerary,GalleryResponse , Gallery} from '../model/OlftInterface';
+import { map } from 'rxjs/operators';
 
-export interface Package {
-  pk_Package_id: number;           // Unique identifier for the package
-  title: string;                   // Title of the package
-  about: string;                   // Description of the package
-  coordinates: string;             // Coordinates of the location
-  country: string;                 // Country where the package is located
-              // Creation date (consider using Date type if needed)
-  duration: string;                // Duration of the package
-  group_size: number;              // Maximum group size
-  hasItineraries: boolean;         // Indicates if itineraries are available
-  image: string;                   // URL of the package image
-  state: string;                   // State where the package is located
-  tour_guide: number;              // ID of the associated tour guide
-  tour_type: string;               // Type of the tour (e.g., Hill, Beach, etc.)
-  travel_with_bus: string;         // Indicates if travel is with a bus (as a string)
-             // Last updated date (consider using Date type if needed)
-     inclusions: Inclusion[];         // Array of inclusions
-     exclusions: Exclusion[];         // Array of exclusions
-galleries :Gallery[];
-    }
-
-
+// export interface Package {
+//   pk_Package_id: number;           // Unique identifier for the package
+//   title: string;                   // Title of the package
+//   about: string;                   // Description of the package
+//   coordinates: string;             // Coordinates of the location
+//   country: string;                 // Country where the package is located
+//               // Creation date (consider using Date type if needed)
+//   duration: string;                // Duration of the package
+//   group_size: number;              // Maximum group size
+//   hasItineraries: boolean;         // Indicates if itineraries are available
+//   image: string;                   // URL of the package image
+//   state: string;                   // State where the package is located
+//   tour_guide: number;              // ID of the associated tour guide
+//   tour_type: string;               // Type of the tour (e.g., Hill, Beach, etc.)
+//   travel_with_bus: string;         // Indicates if travel is with a bus (as a string)
+//              // Last updated date (consider using Date type if needed)
+//      inclusions: Inclusion[];         // Array of inclusions
+//      exclusions: Exclusion[];         // Array of exclusions
+// galleries :Gallery[];
+//     }
 
  export interface Exclusion {
  exclusion_id: number; 
@@ -53,24 +53,26 @@ export interface Inclusion {
   include: Include;    
 }         
 
+/*
 export interface Gallery {
   image_url: string; 
   pk_Package_id: number;  
   created_at: string;  
   updated_at: string;  }
+*/
 
 
-export interface Itinerary {
-  id: number;
-  pk_Package_id: number;
-  days: number;
-  title: string;
-  description: string;
-  image: string;
-  created_at: string;
-  updated_at: string;
-  package: any; 
-}
+// export interface Itinerary {
+//   id: number;
+//   pk_Package_id: number;
+//   days: number;
+//   title: string;
+//   description: string;
+//   image: string;
+//   created_at: string;
+//   updated_at: string;
+//   package: any; 
+// }
 
 @Component({
   selector: 'app-package',
@@ -81,41 +83,32 @@ export interface Itinerary {
 })
 export class PackageComponent implements OnInit{
  
-  destination: string = 'Some Destination'; 
   departure: string = 'Some Departure'; 
   departureTime: string = '10:00 AM';
   returnTime: string = '5:00 PM'; 
 
-
-  
+  filteredGalleries: Gallery[] = [];
   filteredItineraries: Itinerary[] = [];
   _packages:Package[]=[];
   _galleries:Gallery[]=[];
-_itineraries:Itinerary[]=[];
+_itineraries: Itinerary[] =[]
 
   activeInclusions: Inclusion[] = [];
   excludedItems: Exclusion[] = [];
 
   activeButton: string = 'button1'; 
-  packageId: number | undefined = 24;
-  package: Package | undefined; 
+  packageId: number | undefined ;
+  package: Package | undefined ; 
   
+ 
   constructor(private route:ActivatedRoute, private _service:ServiceService){
 
     this.route.params.subscribe(params => {
       this.packageId = +params['id']; 
       console.log(this.packageId);
-      this.getPackageDetail(this.packageId)
+      this.getPackageDetail(this.packageId);
     });
   }
-
-  // Data for each button
-  buttonData = {
-    button3: '',
-    button4: 'Details related to Button 3 are displayed here.'
-  };
-
-
 
 /*form */
 
@@ -133,13 +126,9 @@ submitReview() {
 }
 
 resetReviewForm() {
-  this.reviewData = {
-    name: '',
-    email: '',
-    message:'',
-    title:''
-  };
+  this.reviewData = { name: '',email: '',message:'',title:''};
 }
+
 isReviewFormVisible: boolean = false;
 
 toggleReviewForm() {
@@ -180,6 +169,7 @@ onRatingChange(ratingName: string, value: number) {
 
  
 ngOnInit(): void {
+  
 
 this._service.getPackages().subscribe({//popular package
   next:(data)=>{
@@ -190,43 +180,56 @@ this._packages= data.slice(0,5);
   error:(err)=>{
     console.log(err)
   }
-}),
+});
 
-this._service.getGallery().subscribe({ //gallery
-  next:(data)=>{
+if (this.packageId) {
+this._service.getGallery(this.packageId).pipe
+(map((data:GalleryResponse)=>data.galleries)).subscribe({ //gallery
+  next:(data:Gallery[])=>{
 this._galleries= data
-    console.log(data)
-  },
-  error:(err)=>{
-    console.log(err)
-  }
-}),
-
-this._service.getItineraries().subscribe({ //itineraries
-  next:(data)=>{
-this._itineraries= data
-    console.log(data)
-    this.filterItineraries(); // Filter itineraries after loading them
+    console.log('gallery data',data)
+    console.log('galleries called');
+    if(this._galleries?.length>0)
+    {
+      this.filterGalleries();
+    }
   },
   error:(err)=>{
     console.log(err)
   }
 });
 
+
+if(this.packageId){
+this._service.getItineraries(this.packageId).pipe
+(map((data:ItineraryResponse)=>data.itineraries)).subscribe({ //itineraries
+  next:(data:Itinerary[])=>{
+  this._itineraries= data
+    console.log('string',data)
+    console.log("itinaries called")
+    if(this._itineraries?.length > 0){
+      this.filterItineraries(); // Filter itineraries after loading them
+    }
+  },
+  error:(err)=>{
+    console.log(err)  }  
+});
+}
+}
 }
 
 
-  getPackageDetail(id: number): void {
+  getPackageDetail(id: number): any {
     if (id) {
       this._service.getPackage(id).subscribe({
         next:(data: Package) =>{
           this.package = data; 
           console.log('Package data:', this.package);
-        this._galleries = this.package.galleries;
-        console.log('Galleries:', this._galleries);
+
+          console.log(this.package?.exclusions)
+     //  console.log('Galleries:', this._galleries);
          this.separateInclusions();
-         this.filterItineraries(); // Filter itineraries after loading them
-        
+        //  this.filterItineraries(); 
         },
         error: (err) => {
           console.error('Error fetching package:', err); 
@@ -263,10 +266,27 @@ separateInclusions() {
 }
 
 filterItineraries(): void {
-  if (this.packageId) {
+  if (this.packageId && this._itineraries.length > 0) {
     this.filteredItineraries = this._itineraries.filter(itinerary =>
        itinerary.pk_Package_id === this.packageId);
+       console.log("filtered values",this.filterItineraries)
   }
 }
 
+filterGalleries(): void {
+  if (this.packageId && this._galleries.length > 0) {
+    this.filteredGalleries = this._galleries.filter(gallery =>
+      gallery.pk_Package_id === this.packageId);
+      console.log("filtered gallery",this.filteredGalleries)
+  }
+}
+
+
+chunkedGalleries(galleries: Gallery[], chunkSize: number): Gallery[][] {
+  const chunks: Gallery[][] = [];
+  for (let i = 0; i < galleries.length; i += chunkSize) {
+    chunks.push(galleries.slice(i, i + chunkSize));
+  }
+  return chunks;
+}
 }

@@ -2,26 +2,23 @@
   <div class="cont2">
     <div class="flex-container">
 
-      <div *ngIf="package?.duration"  class="flex-item">
+      <div class="flex-item">
 <span><i class="fas fa-clock icon"></i> Duration</span> 
         <h2 class="h2">{{formatDaysAndNights(package?.duration) }}</h2></div>
         
-<div *ngIf="package?.tour_type" class="flex-item">
-  <span ><i class="fas fa-shoe-prints upward-shoe-prints">     
+<div class="flex-item">
+  <span><i class="fas fa-shoe-prints upward-shoe-prints">     
     </i> Tour Type</span> 
-    <h2 class="h2">{{ package?.tour_type }} Type</h2>
+    <h2 class="h2">{{package?.tour_type}} Type</h2>
 </div>
      
-<div  *ngIf="package?.group_size" class="flex-item">
-  <span>
-  <i class="fas fa-users icon"></i>
-   Group Size</span>
-  <h2 class="h2"> <span>{{ package?.group_size}} Person</span></h2>
-  </div>
+<div class="flex-item">
+  <span><i class="fas fa-users icon"></i>Group Size</span>
+<h2 class="h2"> <span>{{ package?.group_size}} Person</span></h2>
+</div>
 
-  <div   *ngIf="package?.tour_guide"  class="flex-item">
-  <span><i class="fas fa-user-tie icon"></i>    
-    Tour Guide</span> 
+  <div class="flex-item">
+  <span><i class="fas fa-user-tie icon"></i> Tour Guide</span> 
   <h2 class="h2"> <span>{{package?.tour_guide }} Mentor</span></h2>
 </div>
 </div>
@@ -100,11 +97,11 @@
 
 </div>
 
-<div class="img-cont" *ngIf="package?.image">
+<div class="img-cont">
   <img [src]="package?.image" class="img-cont" alt="Tour Image">
 
 
-<div class="location"  *ngIf="package?.country">
+<div class="location">
   <span><i class="fas fa-map-marker-alt icon"></i></span>
   <span>{{package?.country}}</span>
   <hr>
@@ -141,23 +138,23 @@
 <div  class="package-info-container">
   <table class="table package-info-table mb-0">
     <tbody>
-      <tr *ngIf="package?.title">
+      <tr>
         <th>Destination</th>
         <td class="table-item">{{package?.title }}</td>
       </tr>
-      <tr *ngIf="departure">
+      <tr>
         <th>Departure</th>
         <td class="table-item">{{ departure }}</td>
       </tr>
-      <tr *ngIf="departureTime">
+      <tr>
         <th>Departure Time</th>
         <td class="table-item">{{ departureTime }}</td>
       </tr>
-      <tr *ngIf="returnTime">
+      <tr>
         <th>Return Time</th>
         <td class="table-item">{{ returnTime }}</td>
       </tr>
-      <tr *ngIf="activeInclusions?.length">
+      <tr>
         <th>Included</th>
         <td>
           <ul class="included-list table-item">
@@ -167,7 +164,7 @@
           </ul>
         </td>
       </tr>
-      <tr *ngIf="excludedItems?.length">
+      <tr>
         <th>Excluded</th>
         <td>
           <ul class="excluded-list table-item">
@@ -199,11 +196,12 @@
           <div *ngFor="let itinerary of filteredItineraries; let i = index">
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading{{i}}">
+
 <button class="accordion-button" type="button" (click)="toggleCollapse(i)"
 [attr.aria-expanded]="isOpen(i) ? 'true' : 'false'"
 [attr.aria-controls]="'itineraryCollapse' + (i + 1)">
  <div class="plan-index-circle">
-<h4 class="plan-index">{{ itinerary.days}}</h4></div>
+<h4 class="plan-index">{{itinerary.days}}</h4></div>
 <div class="plan-title">
   
   <h5>Day : {{itinerary.days}}  {{ itinerary.title }}</h5>
@@ -225,36 +223,40 @@
     <!--button close2-->    </div>
 
 
-
-
     <div *ngIf="activeButton === 'button3'">
-      <p>{{ buttonData.button3 }}</p>
-      <div class="cont9">
-          <div class="row">
-            <div class="col-6" *ngFor="let image of _galleries.slice(0, 2)">
-              <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
-            </div>
-          </div>
+      <p class="para1">{{package?.title}}</p>
+<div *ngIf="filteredGalleries && filteredGalleries.length >0;else noGallery"> 
+
+<div class="cont9">
+  <div class="row" *ngIf="filteredGalleries.length >= 2">
+    <div class="col-6">
+      <img [src]="filteredGalleries[0].image_url" alt="Gallery Image" class="img2">
+    </div>
+    <div class="col-6">
+      <img [src]="filteredGalleries[1].image_url" alt="Gallery Image" class="img2">
+    </div>
+  </div>
           
-          <div class="row justify-content-end">
-            <div class="col-12">
-              <img *ngIf="_galleries[2]" [src]="_galleries[2].image_url" 
-                   [alt]="'Image ' + _galleries[2].pk_Package_id" class="img3">
-            </div>
-          </div>
+  <div class="row justify-content-center" *ngIf="filteredGalleries.length >= 3">
+    <div class="col-12">
+      <img [src]="filteredGalleries[2].image_url" alt="Gallery Image" class="img3">
+    </div>
+  </div>
           
-          <div class="row">
-            <div class="col-6" *ngFor="let image of _galleries.slice(3, _galleries.length)">
-              <img [src]="image.image_url" [alt]="'Image ' + (image.pk_Package_id)" class="img2">
-            </div>
-          </div>
-        </div>
-      
+  <div class="row" *ngFor="let row of chunkedGalleries(filteredGalleries.slice(3), 2)">
+    <div class="col-6" *ngFor="let gallery of row">
+      <img [src]="gallery?.image_url" alt="Gallery Image" class="img2">
+    </div>
+  </div>
+        </div></div>
+        <ng-template #noGallery>
+          <p>No galleries available for this package.</p>
+        </ng-template>
   <!--btn 3 close--></div>
 
+
   <div *ngIf="activeButton === 'button4'">
-    <h3>Button 4 Content</h3>
-    <p>{{ buttonData.button4 }}</p>
+    <p class="para1">{{package?.title}}</p>
   </div>
  
 <!----></div>

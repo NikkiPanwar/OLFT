@@ -3,7 +3,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from '../service.service';
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import { Package } from '../model/OlftInterface';
+/*
 export interface Package {
   pk_Package_id: number;           // Unique identifier for the package
   title: string;                   // Title of the package
@@ -22,6 +23,7 @@ export interface Package {
   updated_at: string;              // Last updated date (consider using Date type if needed)
 }
 
+*/
 
 
 @Component({
@@ -38,7 +40,7 @@ export class TourComponent implements OnInit {
 
 totalLength:any;
 totalPages:number=0;
-itemsPerPage:number=9;
+itemsPerPage:number=3;
 page:number=1;
 
   _packages:Package[] = []
