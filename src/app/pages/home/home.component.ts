@@ -35,18 +35,7 @@ packageId: number | undefined ;
   }
 
 constructor(private _service:MasterService, private router:Router, private route:ActivatedRoute)
-  {
-    // this.route.params.subscribe(params => {
-    //   this.packageId = +params['id']; 
-    //   console.log(this.packageId,"edd");
-    //   console.log("hello home page package id")
-    // });
-
-    // this.route.params.subscribe((params) => {
-    //   this.country = params['country'];
-    //   console.log('Country:', this.country);
-    // });  
-  }
+  {}
   
 //total no of packages 
   ngOnInit(): void {
@@ -191,19 +180,17 @@ this._service.getDestinations().subscribe({
 
   scrollNext() {
     const container = document.querySelector('.item-container') as HTMLElement;
-    if (this.scrollPosition < container.scrollWidth - container.clientWidth) {
-      this.scrollPosition += this.itemWidth;
-      container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
-    }
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    this.scrollPosition = Math.min(this.scrollPosition + this.itemWidth, maxScroll);
+    container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
   }
-
+  
   scrollPrev() {
     const container = document.querySelector('.item-container') as HTMLElement;
-    if (this.scrollPosition > 0) {
-      this.scrollPosition -= this.itemWidth;
-      container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
-    }
+    this.scrollPosition = Math.max(this.scrollPosition - this.itemWidth, 0);
+    container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
   }
+  
   
   
 
@@ -234,7 +221,5 @@ this._service.getDestinations().subscribe({
       author: 'User'
     }
   ];
-
- 
 
 }

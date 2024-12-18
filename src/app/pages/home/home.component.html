@@ -69,7 +69,8 @@
       <button class="next-btn" (click)="scrollNext()">
        <span class="arrow"><i class="fa fa-arrow-right"></i></span>
       </button>
-      <div #scrollContainer class="item-container">
+      <div #scrollContainer 
+      class="item-container">
           
     
       <div *ngFor="let card of _packages" class="item">
@@ -96,50 +97,43 @@
     <a href="/tour" class="btn btn-warning view-button">View All Offer</a>
     </div>-->
 
-    <!----
+    
     <div class="Packages_Container">
       <p class="up mt-5">Upcoming Tours</p>
-      <p class="up1 mb-4">
-        Unleash the Wanderlust Within You Crafting Dreams into Unforgettable Journeys.
+      <p class="up1  mb-4">
+        Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.
       </p>
-  
-      <div class="container">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-              <button class="prev-btn" (click)="scrollPrev()">
-                  <span class="arrow"><i class="fa fa-arrow-left"></i></span>
-              </button>
-              <button class="next-btn" (click)="scrollNext()">
-                  <span class="arrow"><i class="fa fa-arrow-right"></i></span>
-              </button>
-          </div>
-  
-          <div #scrollContainer class="item-container">
-              <div *ngFor="let card of _packages" class="item col-lg-4 col-md-6 col-sm-12">
-                  <div class="card">
-                      <span class="badge">
-                          <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
-                      </span>
-                      <img [src]="card.image" [alt]="card.title" class="card-img-top">
-                      <div class="card-body">
-                          <h5 class="card-title">{{ card.title }}</h5>
-                          <span>
-                              <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">
-                                  Book Now <span class="arrow">
-                                    <i class="fa fa-arrow-right"></i></span>
-                              </a>
-                          </span>
-                          <span class="startfrom">Starting From</span>
-                          <p class="perperson">per person</p>
-                      </div>
-                  </div>
+    
+      <div class="container position-relative">
+        <!-- Scroll Buttons -->
+        <button class="prev-btn" (click)="scrollPrev()">
+          <span class="arrow"><i class="fa fa-arrow-left"></i></span>
+        </button>
+        <button class="next-btn" (click)="scrollNext()">
+          <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+        </button>
+      
+        <!-- Horizontal Scroll Container -->
+        <div #scrollContainer class="item-container">
+          <div *ngFor="let card of _packages" class="item">
+            <div class="card">
+              <span class="badge">
+                <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
+              </span>
+              <img [src]="card.image" [alt]="card.title" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{ card.title }}</h5>
+        <span>
+         <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
+               <span class="arrow"><i class="fa fa-arrow-right"></i></span>    
+                  </a>
+                </span>
+                <span class="startfrom">Starting From</span>
+                <p class="perperson">per person</p>
               </div>
-          </div>
+              </div>
+            </div>
+        </div>
       </div>
-  
-      <a href="/tour" class="btn btn-warning view-button d-block text-center mt-4">View All Offers</a>
-  </div>
--->  
-    
-    
-
-
+      <a href="/tour" class="btn view-button mt-4 d-block mx-auto"> View All Offers</a>
+    </div>      

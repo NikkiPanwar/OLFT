@@ -107,6 +107,7 @@ background-color: #161616;
 
 
   /*upcoming tour*/
+
 .Packages_Container 
 {
   background-color: #6f6f6f;
@@ -121,33 +122,47 @@ padding-left:122px;
 color:#fff;
 font-family:'Montserrat',sans-serif; 
 }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .item-container {
     display: flex;
-    overflow: hidden;
-    width:auto;
+    overflow-x: auto;
+    width:100%;
     height:auto;
       justify-content: flex-start; 
       scroll-behavior: smooth;
-        display: flex;
+        scrollbar-width: none; 
       }
-  
-  
+
+      .item-container::-webkit-scrollbar {
+        display: none; 
+      }
   .item {
-    flex: 0 0 0; 
     display: flex;
-    width:100%;
+    width:300px;
     margin-right:20px;
-  
+      flex: 0 0 calc(33.333% - 20px);
+      margin-right: 20px; 
+    }
+  @media (min-width: 576px) {
+    .item {
+      width: calc(50% - 20px); 
+    }
   }
- 
+  
+  @media (min-width: 992px) {
+    .item {
+      width: calc(33.333% - 20px); 
+       
+    }
+  }
   .prev-btn, .next-btn {
     background-color:#FECC4E;
     border: none;
@@ -189,11 +204,11 @@ font-family:'Montserrat',sans-serif;
             background-color:#f7f7f7;
             margin-top:40px;
             height:400px;
-            width:350px;
+            width:100%;
             border-radius:10px;
             cursor: pointer;
             font-family: "Montserrat",sans-serif;
-            transition: all 0.3s ease;
+    transition: transform 0.2s ease;
             overflow: hidden;
             position:relative;
    }
@@ -259,7 +274,6 @@ font-family:'Montserrat',sans-serif;
             background-color:#FECC4E;
             border: none;
             font-family: "Montserrat", sans-serif ;
-            padding:6px 10px;
             font-size: 16px;
         }
   
@@ -283,6 +297,12 @@ font-family:'Montserrat',sans-serif;
   font-size:15px;
    width:163px;
   }
+  @media (min-width: 768px) {
+    .prev-btn, .next-btn {
+      bottom: unset;
+      top: 50%;
+    }
+  }
   
   .view-button:hover
   {
@@ -290,5 +310,4 @@ font-family:'Montserrat',sans-serif;
   background-color: black;
   }
   
-  
-  
+ 
