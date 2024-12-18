@@ -1,0 +1,79 @@
+<!-- Footer Section --->
+<div class="foot">
+    <footer class="text-light py-4 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <b>
+              <p class="h4">
+                <img src="assets/images/logo.png" alt="Logo" class="logo">
+              </p>
+              <p class="paragraph">
+                Duis rutrum nisl urna. Maecenas vel libero<br>
+                faucibus nisi venenatis hendrerit a id lectus.<br>
+                Suspendissendt molestie turpis nec lacinia <br>
+                vehicula.
+                <br><br>
+                Working days : Monday-Friday (9AM-5PM)
+              </p>
+              <p class="follow">FOLLOW US ON :</p>
+              <div *ngFor="let contact of _footer">
+                <a *ngIf="contact.insta" [href]="contact.insta" class="social-icon text-light">
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a *ngIf="contact.facebook" [href]="contact.facebook" class="social-icon text-light">
+                  <i class="fa fa-facebook-f"></i>
+                </a>
+                <a *ngIf="contact.twitter" [href]="contact.twitter" class="social-icon text-light">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#/" class="social-icon text-light">
+                  <i class="fa fa-whatsapp"></i>
+                </a>
+                <a href="#/" class="social-icon text-light">
+                  <i class="fa fa-pinterest"></i>
+                </a>
+              </div>
+            </b>
+          </div>
+  
+          <div class="col-md-2">
+            <p class="h5">Quick Links</p>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Guid</a></li>
+              <li><a href="/blog" class="text-light">Blogs</a></li>
+              <li><a href="/contact" class="text-light">Contact Us</a></li>
+              <li><a href="/destination" class="text-light">Destination</a></li>
+              <li><a href="#" class="text-light">FAQ</a></li>
+              <li><a href="#" class="text-light">Gallery</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-md-2">
+            <p class="h5">Tour Type</p>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">City Tour</a></li>
+              <li><a href="#" class="text-light">Hill Town</a></li>
+              <li><a href="#" class="text-light">Family</a></li>
+              <li><a href="#" class="text-light">Adventure</a></li>
+              <li><a href="#" class="text-light">Escorted Tour</a></li>
+              <li><a href="#" class="text-light">Couple</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-md-4" *ngFor="let contact of _footer">
+            <p class="h5">Contact Us</p>
+            <p><i class="fa fa-phone"></i> {{contact.phn_number}}</p>
+            <p><i class="fa fa-envelope"></i> Email: {{contact.email}}</p>
+            <p><i class="fa fa-compass"></i> Address: {{contact.address}}, {{contact.location}}</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  
+  <div class="text-center text-light py-3 end-heading">
+    Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd
+  </div>
+ 

@@ -1,0 +1,80 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f3032;
+  }
+  
+  .logo{height:53.7px; 
+    width:150px;}
+  
+  .navbar-brand {
+    display: flex;
+    flex-direction: column; /* Stack brand text and subtext */
+    align-items: center;
+    font-size:27px;
+    font-weight:800;
+    color:#fff;
+    font-family:"Montserrat", sans-serif;
+  }
+  
+  .search-icon {
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    position: absolute;
+    right:55px; /* Adjust to your preferred distance from the right edge */
+    top:49%; /* Vertically center the icon */
+    transform: translateY(-50%); /* Corrects any minor vertical misalignment */
+  }
+  
+  .circle 
+  {   
+  background-color:transparent;
+  width:50px;
+  height:50px;
+  border-radius: 50%; /* Makes it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover */
+  overflow: hidden; /* Hide any overflow from inside the circle */
+  }
+
+  .circle:hover 
+  {
+    background-color:#fecc4e;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size:14px;
+    font-weight:700;
+    font-family: "Montserrat",sans-serif;
+    color:#ffff;
+    display: block;
+    position:relative;
+  }
+  
+  .navbar-nav .nav-link:hover {
+     /* Hover effect */
+    color:#fecc4e;/* Change text color on hover */
+    
+  }
+    .brand-text
+  {
+    color:#fcb900;
+    font-size: 14px;
+  }
+  .navbar-brand:hover 
+  {
+    color: #fff;
+  }
+  .navbar-toggler{
+    background: white;
+    
+  }
+  .navbar-toggler:hover{
+    background: #fecc4e!important;
+}
+
+  

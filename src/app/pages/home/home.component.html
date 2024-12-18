@@ -1,0 +1,145 @@
+<div class="background">
+    <a href="/tour" class="btn btn-warning center-button">Explore Now
+    </a>
+    </div>
+    <div class="flex-container">
+        <!-- Destination -->
+        <div class="flex-item">
+          <span class="flex-item-color">
+            <i class="fa fa-flag-checkered"></i></span> Destination
+          <select class="flex-country">
+            <option value="" disabled selected>Where Are You Going?</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="China">China</option>
+            <option value="Cuba">Cuba</option>
+            <option value="England">England</option>
+            <option value="Grand Canyon">Grand Canyon</option>
+            <option value="India">India</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Paris">Paris</option>
+            <option value="America">United States of America</option>
+          </select>
+        </div>
+      
+        <div class="flex-item">
+          <span class="flex-item-color">
+            <i class="fa fa-suitcase"></i></span> Travel Type
+          <select class="flex-country">
+            <option value="" disabled selected>All Activity</option>
+            <option value="Adventure">Adventure</option>
+            <option value="City Tour">City Tour</option>
+            <option value="Couple">Couple</option>
+            <option value="Escorted Tour">Escorted Tour</option>
+            <option value="Family">Family</option>
+            <option value="Hill Town">Hill Town</option>
+          </select>
+        </div>
+      
+        <div class="flex-item">
+          <span class="flex-item-color">
+            <i class="fa fa-clock"></i></span> Duration
+          <input type="text" class="form-control" placeholder="Please type duration">
+        </div>
+      
+        <div class="flex-item">
+          <span class="flex-item-color">
+            <i class="fa fa-capslock"></i></span> Journey Date
+          <input type="date" class="form-control">
+        </div>
+      
+        <div class="flex-item">
+          <a href="/destination" class="btn btn-warning find-button">Find Now</a>
+        </div>
+      </div>
+      
+  
+<!--up tour--
+<div class="Packages_Container">
+
+    <p class="up">Upcoming Tours</p>
+    <p class="up1">
+      Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
+ 
+    
+    <div class="container">
+    
+      <button class="prev-btn" (click)="scrollPrev()">
+        <span class="arrow"><i class="fa fa-arrow-left"></i></span></button>
+      <button class="next-btn" (click)="scrollNext()">
+       <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+      </button>
+      <div #scrollContainer class="item-container">
+          
+    
+      <div *ngFor="let card of _packages" class="item">
+        <div class="card">
+          <span class="badge">
+            <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
+          </span>
+          <img [src]="card.image" [alt]="card.title" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+    <span>
+     <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
+           <span class="arrow"><i class="fa fa-arrow-right"></i></span>    
+              </a>
+            </span>
+            <span class="startfrom">Starting From</span>
+            <p class="perperson">per person</p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    <a href="/tour" class="btn btn-warning view-button">View All Offer</a>
+    </div>-->
+
+    <!----
+    <div class="Packages_Container">
+      <p class="up mt-5">Upcoming Tours</p>
+      <p class="up1 mb-4">
+        Unleash the Wanderlust Within You Crafting Dreams into Unforgettable Journeys.
+      </p>
+  
+      <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <button class="prev-btn" (click)="scrollPrev()">
+                  <span class="arrow"><i class="fa fa-arrow-left"></i></span>
+              </button>
+              <button class="next-btn" (click)="scrollNext()">
+                  <span class="arrow"><i class="fa fa-arrow-right"></i></span>
+              </button>
+          </div>
+  
+          <div #scrollContainer class="item-container">
+              <div *ngFor="let card of _packages" class="item col-lg-4 col-md-6 col-sm-12">
+                  <div class="card">
+                      <span class="badge">
+                          <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
+                      </span>
+                      <img [src]="card.image" [alt]="card.title" class="card-img-top">
+                      <div class="card-body">
+                          <h5 class="card-title">{{ card.title }}</h5>
+                          <span>
+                              <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">
+                                  Book Now <span class="arrow">
+                                    <i class="fa fa-arrow-right"></i></span>
+                              </a>
+                          </span>
+                          <span class="startfrom">Starting From</span>
+                          <p class="perperson">per person</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <a href="/tour" class="btn btn-warning view-button d-block text-center mt-4">View All Offers</a>
+  </div>
+-->  
+    
+    
+
+
