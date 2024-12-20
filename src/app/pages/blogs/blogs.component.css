@@ -1,0 +1,146 @@
+.box1
+{
+    height:1200px;
+    width:100%;
+    background-color:#fbfbfb;
+}
+
+.cont1
+{
+    height:300px;
+    width:90%;
+    gap:25px;
+    margin-left:120px;
+    margin-bottom:30px;
+    margin-top:40px;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.card1 {
+  border: none;
+  background-color:#ffffff;
+  height:90px;
+  width:22rem;
+  padding-left:12px;
+  gap:20px;
+  color:#2d373c;
+  cursor: pointer ;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.card2 {
+  border: none;
+  background-color:#fff;
+  height:340px;
+  width:22rem;
+  gap:10px;
+  color:#2d373c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card2-img-top {
+height:200px;
+width:100%;
+transition: transform 0.2s ease;
+  z-index: 1;
+}
+.card2:hover .badge {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card2-body {
+font-size: 20px;
+  padding: 1rem;
+}
+.card2-title {
+  font-size:21px;
+  padding-top:10px;
+  font-weight:600;
+  height:52px;
+  width:304.31px;
+  font-family:"Montserrat",sans-serif;
+}
+
+.card2-title:hover {
+animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+0% {
+color: #0000; /* First color */
+}
+35% {
+color: #fcb900; /* Second color */
+}
+90% {
+color:green; /* Third color */
+}
+100% {
+color: #000; /* Loop back to the first color */
+}
+}
+
+.badge {
+  position: absolute;
+  top:20px;
+  height:40px;
+  width:165px;
+  left: 20px;
+  background-color: #FECC4E;
+  font-size:15px;
+  font-weight:600;
+  color: #fff;
+  font-family: "Montserrat",sans-serif;
+  padding:12px 12px;
+  opacity: 1;  /* Keep it visible */
+  visibility: visible;  /* Ensure it's always visible */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;  /* Keep the badge on top of the image */
+}
+
+.card2:hover .badge {
+  background-color: gray;
+}
+
+.card2-img-top:hover 
+{
+  transition: transform 0.2s ease;
+  transform: scale(1.1);
+}
+
+.f-sm {
+font-size: 0.8rem;}
+
+.user 
+{
+  font-size:15px;
+  font-weight:500;
+  margin-left:10px;
+  color:#696969;
+  height:23.5px;
+  font-family: "Montserrat",sans-serif;
+  width:81.81px
+}
+.i 
+{
+font-size:16px;
+margin-left:15px;
+font-weight: 650;
+color:#FECC4E;
+}
+
+a{
+  color:#212529;
+}
+a:hover {
+  color: #FECC4E;  
+  text-decoration:none; 
+}

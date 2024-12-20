@@ -1,0 +1,158 @@
+.container {
+  height: auto;
+  width: 100%;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 20px;
+}
+
+.cont1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.card {
+  border: none;
+  background-color:#f9f5f5;
+  margin-top:17px;
+  height:350px;
+  width:340px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height:230px;
+  width:100%;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight:600;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fecc4e;
+  font-size:1.02rem;
+  padding: 12px 10px;
+  opacity: 1;  
+  visibility: visible;  
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;  
+}
+.card:hover .badge {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-body {
+  font-size: 18px;
+      padding:10px;
+  }
+  .card-title {
+      font-size:18px;
+      color:#454545;
+      font-weight: 550;
+      font-family:'Montserrat', sans-serif;;
+  }
+.card-title:hover
+{color:#fecc4e;}
+
+  .card-img-top:hover 
+  {
+      transition: transform 0.2s ease;
+      transform: scale(1.04);  /* Zoom in by 10% */
+  }
+
+  a.book-button
+  {
+      color:#161616;
+      font-weight:500;
+      height:40px;
+      width:125px;
+      font-size: 17px;
+      background-color: #fecc4e;
+      margin-top: 10px;
+      border:none;
+      font-family: "Mantserrat",sans-serif;
+      background-color:fecc4e;
+  }
+  a.book-button:hover 
+  {
+      background-color: black;
+      color: #fecc4e;
+  }
+  .start
+  {
+    margin-left:90px;
+    color:#212529;
+    font-weight:400;
+    font-size:15px;
+    font-family: "Mantserrat",sans-serif;
+  }
+  .arrow
+{
+  font-size:0.7rem;
+} 
+.cont2 
+{
+    width:100%;
+    
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  height:45px;
+  width:45px;
+  margin: 10px;
+border-radius:50px;
+  border:none;
+  background-color:#fecc4e;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  background-color: #ddd;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.page-number {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border:1px solid #fecc4e;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-number.active {
+  background-color:#fff;
+  color:#fecc4e;
+  border:1px soild #fecc4e;
+}
+
+.page-number:hover {
+  background-color:#fecc4e;
+  color: white;
+}

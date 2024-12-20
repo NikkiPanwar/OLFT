@@ -14,7 +14,7 @@
 }
 
 .center-button
- {
+ {  
   display: block; /* Makes the button a block element */
   margin:auto;
   border:2px solid transparent;
@@ -103,118 +103,112 @@ background-color: #161616;
       max-width: 100%;
     }
   }
+
+  .card-img-top {
+    height: 230px; 
+    width: 100%; 
+    object-fit: cover; 
+  }
   
-
-
-  /*upcoming tour*/
-
-.Packages_Container 
-{
-  background-color: #6f6f6f;
-  height:879px;
-  width:100%;  
-  font-family:'Montserrat', sans-serif; 
-}
-.up1 
-{
-font-size:16px;
-padding-left:122px;
-color:#fff;
-font-family:'Montserrat',sans-serif; 
-}
-
-.container {
+  .Package-container {
+    background-color: #6f6f6f;
+    height: 879px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 20px;
+  }
+  
+  .up {
+    padding-top:90px;
+    font-size:35px;
+    height:42px;
+    padding-left: 65px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+  
+  .up1 {
+    font-size: 16px;
+    padding-left: 65px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:60px; 
+  }
+  
+  .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
-  }
-
-  .item-container {
-    display: flex;
-    overflow-x: auto;
-    width:100%;
-    height:auto;
-      justify-content: flex-start; 
-      scroll-behavior: smooth;
-        scrollbar-width: none; 
-      }
-
-      .item-container::-webkit-scrollbar {
-        display: none; 
-      }
-  .item {
-    display: flex;
-    width:300px;
-    margin-right:20px;
-      flex: 0 0 calc(33.333% - 20px);
-      margin-right: 20px; 
-    }
-  @media (min-width: 576px) {
-    .item {
-      width: calc(50% - 20px); 
-    }
+    overflow: hidden; 
+    width: 100%;
+    padding: 10px;
   }
   
-  @media (min-width: 992px) {
-    .item {
-      width: calc(33.333% - 20px); 
-       
-    }
+  .item-container {
+    overflow-x: auto; 
+    display: flex;
+    margin-top:40px;
+    scroll-behavior: smooth; 
+    gap: 16px; 
   }
-  .prev-btn, .next-btn {
+  
+  .f-sm {
+    font-size: 0.6rem;
+  }
+  
+
+ 
+.badge {
+  position: absolute;
+  height:42px;
+  font-weight:520;
+  justify-content: center;
+  text-align: center;
+  width:160px;
+  padding: 13px 20px;
+  margin-left:90px;
+  margin-top:210px ;
+  background-color: #FECC4E;;
+  color:#2d373c;
+  font-size:16px;
+  font-family: "Barlow",sans-serif;
+  border-radius:20px;
+  visibility: visible;  /* Ensure it's always visible */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;  /* Keep the badge on top of the image */
+} 
+
+.card-body {
+  padding: 1rem;
+}
+.card-title {
+  font-size:18px;
+  color:#454545;
+  padding-top:20px;
+  font-weight: 600;
+  font-family: 'Montserrat',sans-serif;
+}
+a.book-button
+{ color:#161616;
+    font-weight:550;
     background-color:#FECC4E;
     border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    position: absolute;
-    height:30px;
-    width:30px;
-    border-radius:50%;
-    top:20px;
-    right:20px;
-    transform: translateY(-50%);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .prev-btn {
-  right:105px;
-  }
-  
-  .next-btn {
-    right:50px;
-  }
-  
-  .prev-btn:hover, .next-btn:hover {
-    color: rgba(0, 0, 0, 0.8);
-  }
-  .arrow
-  {
-    font-size:0.7rem;
-  } 
-  
-          .card {
-            border: none;
-            background-color:#f7f7f7;
-            margin-top:40px;
-            height:400px;
-            width:100%;
-            border-radius:10px;
-            cursor: pointer;
-            font-family: "Montserrat",sans-serif;
-    transition: transform 0.2s ease;
-            overflow: hidden;
-            position:relative;
-   }
-  .startfrom
-  {
-    margin-left:80px;
+    font-family: "Montserrat", sans-serif ;
+    padding:10px 11px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+a.book-button:hover
+{
+background-color:#000000 ;
+color:#FECC4E;} 
+
+.start
+{
+    margin-left:50px;
     font-size:16px;
     font-style:'Barlow',sans-serif;
     color: #2d373c;
@@ -228,86 +222,188 @@ font-family:'Montserrat',sans-serif;
     font-style:'Barlow',sans-serif;
     color:#3d474c;
   }
-      .card-img-top {
-            border-top-left-radius:0px;
-            border-top-right-radius: 10px;
-            object-fit: cover;
-            height:250px;
-            width:100%;
-            transition: transform 0.2s ease;
-            z-index: 1;
-        }
-    
-        .card-body {
-            padding: 1rem;
-        }
-        .card-title {
-            font-size:18px;
-            color:#454545;
-            padding-top:20px;
-            font-family: 'Montserrat',sans-serif;
-        }
+
   
-        .badge {
-            position: absolute;
-            height:42px;
-            font-weight:520;
-            justify-content: center;
-            text-align: center;
-            width:170px;
-            padding: 13px 20px;
-            margin-left:90px;
-            margin-top:230px ;
-            background-color: #FECC4E;;
-            color:#2d373c;
-            font-size:16px;
-            font-family: "Barlow",sans-serif;
-            border-radius:20px;
-            visibility: visible; 
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            z-index: 2;  
-        } 
-  
-    a.book-button
-        { color:#2d373c;
-            font-weight:600;
-            background-color:#FECC4E;
-            border: none;
-            font-family: "Montserrat", sans-serif ;
-            font-size: 16px;
-        }
-  
-        a.book-button:hover
-      {
-        background-color:#2d373c ;
-        color:#FECC4E;} 
-  
-  .view-button
+  a.book-button
+      { color:#161616;
+          font-weight:600;
+          background-color:#FECC4E;
+          border: none;
+          font-family: "Montserrat", sans-serif ;
+          padding:6px 10px;
+          font-size: 16px;
+      }
+  a.book-button:hover
   {
-   display: block; 
-   margin:60px 600px;
-   padding:9px 25px;
-   border:none;
-   font-family: "Montserrat", sans-serif ;
-   font-weight: 600;
-   background-color: #FECC4E;;
-   text-align: center;
-  height:42px;
+    background-color:#000000 ;
+    color:#FECC4E;} 
+    .view-button
+{
+ display: block; /* Makes the button a block element */
+ margin:60px 600px;
+ padding:9px 25px;
+ border:none;
+ font-family: "Montserrat", sans-serif ;
+ font-weight: 600;
+ background-color: #FECC4E;;
+ text-align: center;
+height:42px;
+color:#2d373c;
+font-size: 16px;
+ width:162.58px;
+}
+
+.view-button:hover
+{
+color:#fcb900;
+background-color: black;
+}
+.arrow
+{
+  font-size:0.7rem;
+} 
+
+
+.prev-btn, .next-btn {
+  background-color:#FECC4E;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+  top:9px;
+  right:20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+right:105px;
+}
+
+.next-btn {
+  right:50px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*join box*/
+
+.join 
+{
+  height:350px;
+  width:100%;
+  background-color:#6c757d;
+}
+
+.h2{ 
+font-family:"Barlow", Sans-serif;
+font-size:45px;
+font-weight:800;
+height:54px;
+width:639.92;
+color:#ffffff;
+padding-top:100px;
+padding-left:200px;
+}
+.h3 
+{
+  font-family:"Barlow", Sans-serif;
+font-size:16px;
+font-weight: 400;
+color:#ffffff;
+padding-top:50px;
+padding-left:210px;
+}
+/*cont for join now box*/
+.join-now
+{
+ border: none;
+ font-weight: 600;
+ height:46px;
+ justify-content: center;
+ padding-top: 10px;
+ text-align: center;
+ margin-top:120px;
+ width:140px;
+  background-color:#FECC4E;
+  color:#000000;
+  
+}
+.join-now:hover 
+{
+   background-color:#000;
+  color:#FECC4E;
+}
+
+.our{
+  font-size:45px;
+  padding-top:17px;
+  font-family:'Barlow',sans-serif;
+  font-weight:800;
+  color: #2d372d;
+  height:540x;
+  width:820px;
+  margin-left:280px;
+  }
+  .guide
+  {
+    font-size:16px;
+    height:38px;
+    width:820px;
+    font-family:'Montserrat',sans-serif;
+    color:#666666;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-left:290px;
+  }
+  .title2 
+  {
+    height:27.52px;
+    width:340px;
   color:#2d373c;
-  font-size:15px;
-   width:163px;
+  font-size: 23px;
+  font-family: "Montserrat",sans-serif;
   }
-  @media (min-width: 768px) {
-    .prev-btn, .next-btn {
-      bottom: unset;
-      top: 50%;
+  .tg{
+    font-size:18px;
+    color:#666666;
+    font-family: "Montserrat",sans-serif;
+  }
+  
+  .card2-img-top {
+    height:300px;
+    width:100%;
+    transition: transform 0.2s ease;
+      z-index: 1;
+  }
+  /*our*/
+  
+    .box3 
+    {
+    width: 100%;
+    height:550px;
+    text-align: center;
+    background-color:#fef9f9;
+  
     }
-  }
-  
-  .view-button:hover
+    .cont3
   {
-  color:#fcb900;
-  background-color: black;
+  margin-left:40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height:350px;
+    width:100%;
+    gap:30px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
- 

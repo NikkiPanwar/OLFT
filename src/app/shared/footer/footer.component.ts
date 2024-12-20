@@ -17,15 +17,15 @@ constructor(private _service:MasterService)
 ngOnInit(): void {
   
 
-this._service.getFooter().subscribe({
-  next:(data)=>{
-    this._footer=data;
-    console.log("footer data")
-    console.log("contacts",data);
-  },
-  error:(err)=>{
-    console.log(err)}
-});
+// this._service.getFooter().subscribe({
+//   next:(data)=>{
+//     this._footer=data;
+//     console.log("footer data")
+//     console.log("contacts",data);
+//   },
+//   error:(err)=>{
+//     console.log(err)}
+// });
 
 }
 }

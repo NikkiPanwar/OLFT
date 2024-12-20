@@ -4,13 +4,15 @@
     align-items: center;
     background-color: #2f3032;
   }
-  
+  .fs
+  {font-size: 1.2rem;}
+
   .logo{height:53.7px; 
     width:150px;}
   
   .navbar-brand {
     display: flex;
-    flex-direction: column; /* Stack brand text and subtext */
+    flex-direction: column;
     align-items: center;
     font-size:27px;
     font-weight:800;

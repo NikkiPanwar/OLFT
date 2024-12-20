@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OLFT';
+
+
+  new(){
+    console.log("hello this button is being clicked");
+  }
 }

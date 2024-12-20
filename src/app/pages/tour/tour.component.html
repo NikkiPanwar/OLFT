@@ -1,1 +1,39 @@
-<p>tour works!</p>
+<div class="container">
+<div class="cont1">
+    <div class="row gy-3">
+<div class="col-12 col-md-6 col-lg-4" 
+*ngFor="let card of _packages |slice:(activePage-1)*itemsPerPage:(activePage)
+*itemsPerPage">
+  
+        <div class="card">
+          <span class="badge">
+            <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
+          </span>
+          <img [src]="card.image" class="card-img-top" [alt]="card.title">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
+              <span class="arrow">
+                <i class="fas fa-arrow-right"></i></span>    
+                 </a>
+                <span class="start">Starting From</span>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination-container">
+  <button (click)="previousPage()" [disabled]="activePage === 1" class="pagination-btn">
+      <i class="fas fa-angle-double-left"></i></button>
+  
+  <div class="page-numbers">
+    <span *ngFor="let page of visiblePages" (click)="setPage(page)" 
+  [class.active]="activePage === page" class="page-number"> {{ page }} </span>
+    </div>
+  
+    <!-- Next Button -->
+    <button (click)="nextPage()" [disabled]="activePage === totalPages" class="pagination-btn">
+  <i class="fas fa-angle-double-right"></i></button>
+  </div>  

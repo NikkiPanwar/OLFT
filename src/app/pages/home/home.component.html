@@ -44,7 +44,8 @@
       
         <div class="flex-item">
           <span class="flex-item-color">
-            <i class="fa fa-capslock"></i></span> Journey Date
+            <i class="fa fa-map-marker"></i>
+          </span> Journey Date
           <input type="date" class="form-control">
         </div>
       
@@ -52,88 +53,101 @@
           <a href="/destination" class="btn btn-warning find-button">Find Now</a>
         </div>
       </div>
-      
+    
+      <div class="Package-container">
+
+        <p class="up">Upcoming Tours</p>
+<p class="up1">
+  Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
+
+  <div class="container">
+  <button class="prev-btn" (click)="scrollPrev()">
+    <span class="arrow"><i class="fas fa-arrow-left"></i></span></button>
+  <button class="next-btn" (click)="scrollNext()">
+   <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+  </button>
   
-<!--up tour--
-<div class="Packages_Container">
-
-    <p class="up">Upcoming Tours</p>
-    <p class="up1">
-      Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
- 
-    
-    <div class="container">
-    
-      <button class="prev-btn" (click)="scrollPrev()">
-        <span class="arrow"><i class="fa fa-arrow-left"></i></span></button>
-      <button class="next-btn" (click)="scrollNext()">
-       <span class="arrow"><i class="fa fa-arrow-right"></i></span>
-      </button>
-      <div #scrollContainer 
-      class="item-container">
-          
-    
-      <div *ngFor="let card of _packages" class="item">
-        <div class="card">
-          <span class="badge">
-            <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
-          </span>
-          <img [src]="card.image" [alt]="card.title" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ card.title }}</h5>
-    <span>
-     <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
-           <span class="arrow"><i class="fa fa-arrow-right"></i></span>    
-              </a>
-            </span>
-            <span class="startfrom">Starting From</span>
-            <p class="perperson">per person</p>
-          </div>
-        </div>
-      </div>
-    
-    </div>
-    </div>
-    <a href="/tour" class="btn btn-warning view-button">View All Offer</a>
-    </div>-->
-
-    
-    <div class="Packages_Container">
-      <p class="up mt-5">Upcoming Tours</p>
-      <p class="up1  mb-4">
-        Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.
-      </p>
-    
-      <div class="container position-relative">
-        <!-- Scroll Buttons -->
-        <button class="prev-btn" (click)="scrollPrev()">
-          <span class="arrow"><i class="fa fa-arrow-left"></i></span>
-        </button>
-        <button class="next-btn" (click)="scrollNext()">
-          <span class="arrow"><i class="fa fa-arrow-right"></i></span>
-        </button>
-      
-        <!-- Horizontal Scroll Container -->
-        <div #scrollContainer class="item-container">
-          <div *ngFor="let card of _packages" class="item">
+  <div #scrollContainer class="item-container">
+        <div class="row gy-3">
+<div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let card of _packages">
             <div class="card">
               <span class="badge">
                 <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
               </span>
-              <img [src]="card.image" [alt]="card.title" class="card-img-top">
+              <img [src]="card.image" class="card-img-top" [alt]="card.title">
               <div class="card-body">
                 <h5 class="card-title">{{ card.title }}</h5>
-        <span>
-         <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
-               <span class="arrow"><i class="fa fa-arrow-right"></i></span>    
-                  </a>
-                </span>
-                <span class="startfrom">Starting From</span>
-                <p class="perperson">per person</p>
-              </div>
+                <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
+                  <span class="arrow">
+                    <i class="fas fa-arrow-right"></i></span>    
+                     </a>
+                    <span class="start">Starting From</span>
+                    <p class="perperson">per person</p>
               </div>
             </div>
+          </div>
         </div>
       </div>
-      <a href="/tour" class="btn view-button mt-4 d-block mx-auto"> View All Offers</a>
-    </div>      
+      </div>
+      <a href="/tour" class="btn btn-warning view-button">View All Offer
+      </a>
+    </div>
+
+<!--post-->
+
+<div class="box3">
+        <p class="up">Our Sherpas </p>
+<p class="up1">
+  Guiding You Beyond Maps: Your Personal Navigator to Unforgettable Adventures 
+  <div class="cont3">
+        <div class="row gy-3">
+<div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let guide of _tourguides">
+              <img [src]="guide?.image" alt="Image" class="card2-img-top" [alt]="guide.captain">
+              <div class="text-overlay">
+                <div class="social-icons1">
+        <span class="twitter-icon-container ">
+    <a [href]="guide.insta" target="_blank">
+    <i class="fab fa-instagram" aria-label="Instagram"></i></a>
+      </span>
+      <span class="twitter-icon-container">
+       <a [href]="guide.insta" target="_blank">
+      <i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+      </span>
+    <span class="twitter-icon-container">
+     <a [href]="guide.insta" target="_blank">
+    <i class="fab fa-whatsapp" aria-label="WhatsApp"></i></a>
+    </span>
+     <span class="twitter-icon-container">
+    <a [href]="guide.insta" target="_blank">
+    <i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                  </span>
+                </div>
+              </div>
+            
+            <div class="card-body">
+              <h4 class="title2">{{ guide.captain }}</h4>
+              <h4 class="tg">Tour Guide</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+      <!--join b-->
+<div class="join">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-12 d-flex align-items-center">
+      <div>
+ <p class="h2"> JOIN US FOR MORE UPDATE</p>
+ <h6 class="h3">Duis rutrum nisl urna. Maecenas vel libero faucibus nisi 
+ venenatis hendrerit a id lectus.<br>
+ Suspendissendt blandit interdum.</h6></div>
+ <div class="col-md-1"></div>
+ <div class="col-md-2">
+  <a href="#" class="btn btn-warning join-now ms-3 ">Join Now</a>
+</div>
+ </div>
+</div>
+</div>
+
+
