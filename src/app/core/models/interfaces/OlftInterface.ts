@@ -158,3 +158,24 @@ export interface TourGuide {
     insta: string;
     phn_number: string;
   }
+  
+  export interface BlogResponse {
+    success: boolean;
+    data: Blog[];
+  }
+  
+ export interface Blog {
+    id: number;
+    title: string;
+    by_user: string;
+    comment: string;
+    primary_image: string;
+    secondary_image: string;
+    moto1: string;
+    moto2: string;
+    para1: string;
+    para2: string;
+    created_at: string; // ISO 8601 date string
+    updated_at: string; // ISO 8601 date string
+  }
+  

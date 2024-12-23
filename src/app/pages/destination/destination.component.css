@@ -1,0 +1,146 @@
+.container {
+  height: auto;
+  width: 100%;
+   text-align: center;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 20px;
+}
+
+.read
+{
+  color:#fecc4e;
+  padding-top:30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-family: 'satify';
+  font-weight: 800;
+  padding-left: 450px;
+}
+.para1
+{
+    font-weight: 800;
+font-size:45px;
+color:#2d373c;
+padding-left:250px;
+}
+ 
+.para2
+{
+  color:#666666;
+  padding-inline:180px;
+  font-size: 16px;
+  font-family: 'Montserrat',sans-serif;
+  padding-left:190px;
+}
+.cont1 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #Feeeee;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    gap:20px;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .card {
+    position: relative;
+    width: 260px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+     .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  } 
+  .img-destination {
+    object-fit: cover;
+  width:260px;
+  height:300px;
+  border-radius:6px; 
+  }
+  
+  .text-overlay {
+    position: absolute; 
+    top:210px;         
+    left: 50%;          
+    transform: translateX(-50%); 
+    color: #ffffff;      
+      padding: 10px;     
+      border-radius: 5px;
+      width: auto;
+      font-family: "Montserrat",sans-serif;
+      text-align: center;
+      transition: all 0.3s ease; 
+   z-index:10;
+    }
+    .text-overlay:hover {
+      color:#ffffff;
+    transform: translateX(-50%) translateY(-30px); 
+      }
+    
+      .text-overlay:hover .line-number {
+        display: block; 
+      }
+      .text-overlay:hover .line {
+        width: 100%;
+      }
+    
+      .text-overlay:hover .number {
+        display: block;
+        opacity: 1;
+        animation: fadeIn 0.5s forwards; 
+      }
+      
+  
+  .text-overlay:hover .number {
+    display: block; 
+    opacity: 0;
+    animation: fadeIn 100s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity:1;
+    }
+    to {
+      opacity:0;
+    }
+  }
+  .a-package2
+  {
+    text-decoration: none;
+   color:#fff; 
+  } 
+ 
+  .name
+  {
+    font-size:25px;
+    font-weight: 700;
+  font-family: "Montserrat",sans-serif;
+}
+.line-number {
+  margin-top:8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.line {
+  width: 0;
+  height:4px;
+  width:110%;
+  background-color:#FECC4E;
+  margin-bottom:2px;
+  transition: width 0.3s ease; 
+}
+.number {
+  display: none; 
+  color:#fff;
+  font-size:15px;
+  margin-top: 5px;
+}

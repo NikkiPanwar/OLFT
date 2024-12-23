@@ -6,30 +6,30 @@
 <div class="card1">
 <span class="user">
 <i class="fas fa-user-circle i"></i></span>
-<span class="user">By {{ card1.user }}</span>
+<span class="user">By User</span>
 <i class="fas fa-comment i"></i>
-<span class="user">({{ card1.comments }}) Comment</span>
+<span class="user">Comment</span>
 <h2 class="card2-title">
-<a [href]="card1.link">{{ card1.title }}</a>
+<a [href]=""class="a-btn">Hellow World!</a>
 </h2>
 </div>
 
 <!--cards start-->
-<div *ngFor="let card of cards" class="card2">
+<div *ngFor="let blog of _blogs" class="card2">
 <span class="badge">
   <span><i class="fas fa-calendar-alt"></i></span>
-  {{ card.date }} </span>
-<img [src]="card.image" class="card2-img-top" alt="Card image">
+  {{ blog.by_user }} </span>
+<img [src]="blog.primary_image" class="card2-img-top" alt="Card image">
 
 <div class="card2-body">
 <span class="i">
 <i class="fas fa-user-circle"></i></span>
-<span class="user">By {{ card.user }}</span>
+<span class="user">By {{ blog.by_user }}</span>
 <span class="i">
 <i class="fas fa-comment"></i> </span>
-<span class="user">({{ card.comments }}) Comment</span>
+<span class="user">({{ blog.comment }}) Comment</span>
 <h2 class="card2-title">
-<a href="/blogDetails">{{ card.title }}</a></h2>
+<a href="/blogDetails" class="a-btn">{{ blog.title }}</a></h2>
 </div>
 </div>
 </div>

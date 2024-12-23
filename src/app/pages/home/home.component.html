@@ -54,46 +54,50 @@
         </div>
       </div>
     
-      <div class="Package-container">
+      
+<div class="Package-container">
 
-        <p class="up">Upcoming Tours</p>
-<p class="up1">
-  Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
+  <p class="up">Upcoming Tours</p>
+  <p class="up1">
+    Unleash the Wanderlust Within You Crafting Dreams<br> into Unforgettable Journeys.</p>
 
-  <div class="container">
-  <button class="prev-btn" (click)="scrollPrev()">
-    <span class="arrow"><i class="fas fa-arrow-left"></i></span></button>
-  <button class="next-btn" (click)="scrollNext()">
-   <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-  </button>
-  
-  <div #scrollContainer class="item-container">
-        <div class="row gy-3">
-<div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let card of _packages">
-            <div class="card">
-              <span class="badge">
-                <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
-              </span>
-              <img [src]="card.image" class="card-img-top" [alt]="card.title">
-              <div class="card-body">
-                <h5 class="card-title">{{ card.title }}</h5>
-                <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
-                  <span class="arrow">
-                    <i class="fas fa-arrow-right"></i></span>    
-                     </a>
-                    <span class="start">Starting From</span>
+      <div class="container">
+        <button class="prev-btn" (click)="scrollPrev()">
+          <span class="arrow"><i class="fas fa-arrow-left"></i></span></button>
+        <button class="next-btn" (click)="scrollNext()">
+         <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+        </button>
+          
+  <div  class="cont1" #scrollContainer>
+            <div class="row gy-3">
+ <div class="col-12 col-md-6 col-lg-4" *ngFor="let card of _packages ">
+      
+                <div class="card">
+                  <span class="badge">
+                    <i class="fa fa-clock"></i> {{formatDaysAndNights(card?.duration)}}
+                  </span>
+                  <img [src]="card.image" class="card-img-top" [alt]="card.title">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <a (click)="bookNow(card.pk_Package_id)" class="btn btn-warning book-button">Book Now
+                      <span class="arrow">
+                        <i class="fas fa-arrow-right"></i></span>    
+                         </a>
+                        <span class="start">Starting From</span>
                     <p class="perperson">per person</p>
+                      </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      <a href="/tour" class="btn btn-warning view-button">View All Offer
-      </a>
-    </div>
+        <a href="/tour" class="btn btn-warning view-button">View All Offer
+        </a>
+    
 
-<!--post-->
+    </div>
+        
+<!--post--
 
 <div class="box3">
         <p class="up">Our Sherpas </p>
@@ -133,7 +137,7 @@
       </div>
         
 
-      <!--join b-->
+      <!--join b--
 <div class="join">
   <div class="row justify-content-center align-items-center">
     <div class="col-md-12 d-flex align-items-center">
@@ -151,3 +155,4 @@
 </div>
 
 
+-->

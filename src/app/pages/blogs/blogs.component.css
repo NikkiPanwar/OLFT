@@ -1,25 +1,22 @@
-.box1
-{
-    height:1200px;
-    width:100%;
-    background-color:#fbfbfb;
+.box1 {
+  overflow: hidden;
+  padding: 10px;
 }
 
-.cont1
-{
-    height:300px;
-    width:90%;
-    gap:25px;
-    margin-left:120px;
-    margin-bottom:30px;
-    margin-top:40px;
-    display: flex;
-    flex-wrap: wrap; 
+
+.cont1 {
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .card1 {
   border: none;
-  background-color:#ffffff;
+  background-color:#fbfbfb;
   height:90px;
   width:22rem;
   padding-left:12px;
@@ -31,6 +28,7 @@
   position: relative;
   text-decoration: none;
 }
+
 
 .card2 {
   border: none;
@@ -75,16 +73,16 @@ animation: color-change 3s infinite;
 
 @keyframes color-change {
 0% {
-color: #0000; /* First color */
+color: #0000; 
 }
 35% {
-color: #fcb900; /* Second color */
+color: #fcb900;
 }
 90% {
-color:green; /* Third color */
+color:green; 
 }
 100% {
-color: #000; /* Loop back to the first color */
+color: #000; 
 }
 }
 
@@ -100,12 +98,11 @@ color: #000; /* Loop back to the first color */
   color: #fff;
   font-family: "Montserrat",sans-serif;
   padding:12px 12px;
-  opacity: 1;  /* Keep it visible */
-  visibility: visible;  /* Ensure it's always visible */
+  opacity: 1;  
+  visibility: visible; 
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 2;  /* Keep the badge on top of the image */
-}
-
+  z-index: 2;  }
+  
 .card2:hover .badge {
   background-color: gray;
 }
@@ -136,11 +133,12 @@ margin-left:15px;
 font-weight: 650;
 color:#FECC4E;
 }
-
-a{
+.a-btn
+{
   color:#212529;
+text-decoration: none;
 }
-a:hover {
+.a-btn:hover {
   color: #FECC4E;  
   text-decoration:none; 
 }

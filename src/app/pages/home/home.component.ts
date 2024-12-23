@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       next:(data)=>{
         this._packages = data;
         console.log(data)
-      },
+      }, 
       error:(err)=>{
         console.log(err)}
     });
@@ -63,19 +63,20 @@ export class HomeComponent implements OnInit {
   }
 
   scrollNext() {
-    const container = document.querySelector('.item-container') as HTMLElement;
+    const container = document.querySelector('.cont1') as HTMLElement;
     if (this.scrollPosition < container.scrollWidth - container.clientWidth) {
-      this.scrollPosition += this.itemWidth;
+      this.scrollPosition += this.itemWidth; // Adjust this value based on your design
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
     }
   }
-
+  
   scrollPrev() {
-    const container = document.querySelector('.item-container') as HTMLElement;
+    const container = document.querySelector('.cont1') as HTMLElement;
     if (this.scrollPosition > 0) {
-      this.scrollPosition -= this.itemWidth;
+      this.scrollPosition -= this.itemWidth; // Adjust this value based on your design
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
     }
+  } 
   }
 
-}
+
