@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Destination } from '../../core/models/interfaces/OlftInterface';
 import { MasterService } from '../../core/services/master/master.service';
 import { Router } from '@angular/router';
@@ -8,80 +8,35 @@ import { Router } from '@angular/router';
   templateUrl: './destination.component.html',
   styleUrl: './destination.component.css'
 })
-export class DestinationComponent{
+export class DestinationComponent implements OnInit {
 
-//   _destinations:Destination[]=[];
+  @Input() count: number = 0;
 
-//   constructor(private _service : MasterService ,private router:Router){}
+  _destinations:Destination[]=[];
 
-// ngOnInit(): void {
-  
+  constructor(private _service: MasterService, private router:Router ){}
 
-//   this.destination()
-// }
+  ngOnInit(): void {
 
-// destination()
-// {
-//   this._service.getDestinations().subscribe({
-//     next:(data)=>{
-//         this._destinations = data;
-//       console.log("destinations called", this._destinations);
-//     },
-//     error:(err)=>{
-//       console.log(err)}
-//   });
-// }
-// }
+    this.destination();
+}
 
-
-
-cards = [
+  destination ()
   {
-   image: 'assets/images/2.jpg',
-country: 'User',
-place:'india'
-  },
+    this._service.getDestinations().subscribe({
+      next:(data)=>{
+          this._destinations = data;
+        console.log("destinations called", this._destinations);
+      },
+      error:(err)=>{
+        console.log(err)}
+    });
+  }
 
-  {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
-   
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   },
- {
-  image: 'assets/images/2.jpg',
-  country: 'User',
-  place:'india'
- },
-   {
-    image: 'assets/images/2.jpg',
- country: 'User',
- place:'india'
-   }
-]
+  goToDestination(country:string): void {
+    this.router.navigate(['/DestinationDetailPage', country]); 
+  }
+
+
+
 }

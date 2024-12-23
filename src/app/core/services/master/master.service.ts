@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { Blog, BlogResponse, Destination, DestinationDetails, DestinationResponse, GalleryResponse, ItineraryResponse, Package, PackageResponse, PopularPackagesResponseCountry } from '../../models/interfaces/OlftInterface';
-import { BlogsComponent } from '../../../pages/blogs/blogs.component';
+import { BlogResponse, Destination, DestinationDetails, DestinationResponse, GalleryResponse, ItineraryResponse, Package, PackageResponse, PopularPackagesResponseCountry, TourGuide } from '../../models/interfaces/OlftInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +20,8 @@ export class MasterService {
       map((response: PackageResponse) => response.data));
   }
   
-  getTourGuides(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl + 'tourguide_data');
+  getTourGuides(): Observable<TourGuide[]> {
+    return this.http.get<TourGuide[]>(this.apiUrl + 'tourguide_data');
   }
 
 

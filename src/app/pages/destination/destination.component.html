@@ -1,25 +1,21 @@
 <div class="container">
+<h3 class="read mb-0">Get Ready To</h3>
+<p class="para1 mt-0 mb-0">Explore Top Destination</p>
+  <p class="para2 text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old </p>
     <div class="cont1">
-      <h3 class="read">Get Ready To</h3>
-      <h3 class="para1">Explore Top Destination</h3>
-      <h5 class="para2">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."</h5>
-      
-      <div class="row">
-        <div class="col-md-4 col-sm-6 col-12" *ngFor="let Destination of cards">
+      <div class="row gy-3">
+    <div class="col-12 col-md-6 col-lg-3 mb-3" *ngFor="let Destination of _destinations">
           <div class="card">
             <img [src]="Destination.image" [alt]="Destination.country" class="img-destination">
             <div class="text-overlay">
-              <a href="/#" class="a-package2">
-                <h2 class="name">{{ Destination.country }}</h2>
-              </a>
-              <div class="line-number">
-                <div class="line"></div>
-                <div class="number">Places</div>
+               <a (click)="goToDestination(Destination.country)" class="a-package2">
+                    <h2 class="name">{{ Destination.country }}</h2></a>
+                         <div class="line-number">
+                          <div class="line"></div>
+                          <div class="number">Places</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
