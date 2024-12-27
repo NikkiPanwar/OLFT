@@ -87,24 +87,24 @@ export interface Package {
     insta: string;
     twitter: string;
     location: string;
-    address: string; // Corrected from "adrdress"
-    updated_at: string; // Consider changing to Date if needed
-    created_at: string; // Consider changing to Date if needed
+    address: string; 
+    updated_at: string; 
+    created_at: string; 
 }
 export interface DestinationDetails {
-  id: number;                // Unique identifier
-  country: string;           // Country name
-  image: string;             // URL of the destination image
-  about: string;             // Description of the country
-  attraction: string;        // Famous attraction
-  coordinates: string;       // Latitude and longitude
-  created_at: string;        // Creation timestamp
-  updated_at: string;        // Last updated timestamp
+  id: number;               
+  country: string;          
+  image: string;            
+  about: string;             
+  attraction: string;       
+  coordinates: string;      
+  created_at: string;        
+  updated_at: string;        
 }
 
 export interface DestinationResponse {
-  success: boolean;          // Indicates if the request was successful
-  data: Destination[];       // Array of destination objects
+  success: boolean;          
+  data: Destination[];       
 }
 
 export interface Destination {
@@ -134,27 +134,27 @@ export interface PopularPackagesResponseCountry {
 }
 
 export interface PackageCountry {
-  pk_Package_id: number;          // Unique identifier for the package
-  title: string;                  // Title of the package
-  about: string;                  // Detailed description of the package
-  coordinates: string;            // Geographical coordinates of the location
-  country: string;                // Country where the package is located
-  state: string;                  // State where the package is located
-  duration: string;               // Duration of the tour in days
-  group_size: number;             // Maximum group size for the tour
-  image: string;                  // URL for the package image
-  tour_guide: number;             // Indicates if a tour guide is included (e.g., 1 for true)
-  tour_type: string;              // Type of tour (e.g., Hill, Adventure, etc.)
-  travel_with_bus: string;        // Indicates if travel by bus is available (e.g., "1" for true)
-  created_at: string;             // Timestamp when the package was created
-  updated_at: string;             // Timestamp when the package was last updated
+  pk_Package_id: number;         
+  title: string;                 
+  about: string;                  
+  coordinates: string;           
+  country: string;                
+  state: string;                  
+  duration: string;              
+  group_size: number;             
+  image: string;                  
+  tour_guide: number;            
+  tour_type: string;              
+  travel_with_bus: string;        
+  created_at: string;             
+  updated_at: string;             
 }
 export interface TourGuide {
     id: number;
     captain: string;
     image: string;
-    created_at: string; // Consider using Date if you want to handle date objects
-    updated_at: string; // Consider using Date if you want to handle date objects
+    created_at: string; 
+    updated_at: string; 
     insta: string;
     phn_number: string;
   }
@@ -175,7 +175,15 @@ export interface TourGuide {
     moto2: string;
     para1: string;
     para2: string;
-    created_at: string; // ISO 8601 date string
-    updated_at: string; // ISO 8601 date string
+    created_at: string; 
+    updated_at: string; 
+  }
+
+  export interface ClientQuery {
+    package_id?: number;     
+    fullname: string;        
+    email: string;           
+    phone: string;        
+    message: string;         
   }
   

@@ -57,9 +57,8 @@ export class HomeComponent implements OnInit {
     return `${days} days ${nights} nights`;
   }
 
-  
   bookNow(packageId: number) {
-    // this.router.navigate(['/package', packageId]);
+    this.router.navigate(['/packageDetailPage', packageId]);
   }
 
   scrollNext() {

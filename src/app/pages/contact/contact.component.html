@@ -1,1 +1,90 @@
-<p>contact works!</p>
+<div class="container">
+<div class="row">
+    <div class="col-md-6 mt-5">
+        <img src="./assets/images/contact.jpg" class="img-fluid">
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mt-4">
+<div class="contact-info">
+    <h3>Contact Info.</h3>
+    <ul>
+        <li>
+          
+            <h6>Let's Talk</h6>
+            <a href="#" class="a-list">info&#64;example.com</a><br>
+            <a href="#" class="a-list">info&#64;example.com</a><br>
+            <a href="#"class="a-list">+88 0176 1111 456</a>
+         </li>
+
+         <li>
+            <h6>Location. </h6>
+            <a href="#"class="a-list"> 168/170, Ave 01, Streets Suite 666 Mirpur DOHS, Bangladesh</a>
+         </li>
+
+         <li>
+            <h6>Visit Us. </h6>
+            <a href="#"class="a-list">Facebook: https://www.facebook.com/egenslab</a>
+            <a href="#"class="a-list">Twitter: https://www.twitter.com/egenslab</a>
+         </li>
+        </ul>
+</div>
+</div>
+
+</div>
+</div>
+
+    <div class="cont1">
+        <section class="map-section">
+<iframe loading="lazy" src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+title="London Eye, London, United Kingdom" aria-label="London Eye, London, United Kingdom" class="map-iframe">
+</iframe>
+</section>
+</div>
+
+<div class="cont2">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="form-container">
+          <h4>Feel Free to Contact Us</h4>
+          <p>Your email address will not be published. Required fields are marked *</p>
+      
+<form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="fullname" class="input-review" placeholder="Your name" required />
+        <div *ngIf="enquiryForm.get('fullname')?.invalid && enquiryForm.get('fullname')?.touched" class="error">
+          Name is required.
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" class="input-review" placeholder="Your Email" required />
+        <div *ngIf="enquiryForm.get('email')?.invalid && enquiryForm.get('email')?.touched" class="error">
+          Valid email is required.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message" rows="5" class="textarea-review" placeholder="Your message" required></textarea>
+    <div *ngIf="enquiryForm.get('message')?.invalid && enquiryForm.get('message')?.touched" class="error">
+      Please fiil out this field.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <button type="submit" class="submit-button" [disabled]="enquiryForm.invalid">Send Message</button>
+  </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+</div></div>
+
