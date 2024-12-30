@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Package } from '../../core/models/interfaces/OlftInterface';
 import { MasterService } from '../../core/services/master/master.service';
 import {  Router } from '@angular/router';
@@ -8,7 +8,7 @@ import {  Router } from '@angular/router';
   templateUrl: './tour.component.html',
   styleUrl: './tour.component.css'
 })
-export class TourComponent {
+export class TourComponent implements OnInit {
 
   
   @Output() pageChange = new EventEmitter<number>();
@@ -21,8 +21,7 @@ page:number=1;
 
   _packages:Package[] = []
 
-  constructor(private _service:MasterService ,private router:Router) { }
-
+  constructor(private _service:MasterService ,private router:Router){}
 
   ngOnInit(): void {
 
@@ -35,9 +34,8 @@ page:number=1;
   }
 
 
-bookNow(packageId: number) 
-{
-  this.router.navigate(['/package', packageId]);
+bookNow(packageId: number) {
+  this.router.navigate(['/packageDetailPage', packageId]);
 }
 
 formatDaysAndNights(nights: any): string {
@@ -60,7 +58,6 @@ if (page !== this.activePage) {
 
 get visiblePages(): number[] {
   const pages = [];
-  
   if (this.totalPages <= 3) {
     for (let i = 1; i <= this.totalPages; i++) {
       pages.push(i);

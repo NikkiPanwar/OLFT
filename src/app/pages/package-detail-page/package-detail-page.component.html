@@ -1,221 +1,372 @@
-  <div class="container mt-2">
-    <div class="row">
-      <!-- Tour Details -->
-      <div class="col-lg-8">
-        <!-- Detail Boxes -->
-        <div class="row text-center mb-4 mt-2">
-          <div class="col-6 col-md-3 detail-box">
-            <i class="fas fa-clock icon"></i> Duration
-            <p>{{ formatDaysAndNights(package?.duration) }}</p>
-          </div>
-          <div class="col-6 col-md-3 detail-box">
-        <i class="fas fa-shoe-prints upward-shoe-prints"></i>
-            Tour Type
-            <p>{{ package?.tour_type }} Tour</p>
-          </div>
-          <div class="col-6 col-md-3 detail-box">
-            <i class="fas fa-users icon"></i>
-            Group Size
-            <p>{{ package?.group_size }} Person</p>
-          </div>
-          <div class="col-6 col-md-3 detail-box">
-            <i class="fas fa-user-tie icon"></i>
-            Tour Guide
-            <p>{{ package?.tour_guide }} Mentors</p>
-          </div>
-        </div>
-      
-        <!-- Image -->
-        <div class="img-container text-center mb-4">
-          <img [src]="package?.image" alt="Tour Image" class="img-fluid">
-        </div>
-      
-        <!-- Country Info -->
-        <div class="row mb-4">
-          <div class="col-12 d-flex align-items-center">
-            <i class="fas fa-map-marker-alt icon me-2"></i>
-            <span class="loc">{{ package?.country }}</span>
-          </div>
-        </div>
-      
-        <!-- Button Container -->
-        <div class="row">
-          <div class="col-12 button-container text-center">
-            <button class="btn mt-2 me-4 px-4 py-2" (click)="setActiveButton('button1')">
-              <i class="fas fa-info-circle"></i> Information
-            </button>
-            <button class="btn me-4 mt-2 px-4 py-2" (click)="setActiveButton('button2')">
-              <i class="fas fa-spreadsheet"></i> Travel Plan
-            </button>
-            <button class="btn me-4 mt-2  px-4 py-2" (click)="setActiveButton('button3')">
-              <i class="fas fa-image"></i> Tour Gallery
-            </button>
-            <button class="btn me-4 mt-2 px-4 py-2" (click)="setActiveButton('button4')">
-              <i class="fas fa-map-marker-alt"></i> Location
-            </button>
-          </div>
-        </div>
-            
-        <div class="col-12">
-          <div class="content">
-            <!-- Information Section -->
-            <div *ngIf="activeButton === 'button1'" class="mb-4">
-              <h2 class="cap text-start mb-2 mt-5 me-2">{{ package?.title }}</h2>
-              <p class="para text-center mb-2 mt-4">{{ package?.about }}</p>
+<div class="container mt-2">
+  <div class="row">
+    
+    <div class="col-lg-8">
+
   
-              <img src="assets/images/9.jpg" class="img-fluid mb-4 mt-5 d-block mx-auto" style="width: 696px; height: 210px; object-fit: cover;">
+      <div class="row text-center mb-4 mt-2">
+        <div class="col-6 col-md-3 detail-box">
+          <i class="fas fa-clock icon"></i> Duration
+          <p>{{ formatDaysAndNights(package?.duration) }}</p>
+        </div>
+        <div class="col-6 col-md-3 detail-box">
+      <i class="fas fa-shoe-prints upward-shoe-prints"></i>
+          Tour Type
+          <p>{{ package?.tour_type }} Tour</p>
+        </div>
+        <div class="col-6 col-md-3 detail-box">
+          <i class="fas fa-users icon"></i>
+          Group Size
+          <p>{{ package?.group_size }} Person</p>
+        </div>
+        <div class="col-6 col-md-3 detail-box">
+          <i class="fas fa-user-tie icon"></i>
+          Tour Guide
+          <p>{{ package?.tour_guide }} Mentors</p>
+        </div>
+      </div>
+    
+      <div class="img-container text-center mb-4">
+        <img [src]="package?.image" alt="Tour Image" class="img-fluid">
+      </div>
+    
+      <div class="row mb-4">
+        <div class="col-12 d-flex align-items-center">
+          <i class="fas fa-map-marker-alt icon me-2"></i>
+          <span class="loc">{{ package?.country }}</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 button-container text-center">
+          <button class="btn mt-2 me-4 px-4 py-2" (click)="setActiveButton('button1')">
+            <i class="fas fa-info-circle"></i> Information
+          </button>
+          <button class="btn me-4 mt-2 px-4 py-2" (click)="setActiveButton('button2')">
+            <i class="fas fa-spreadsheet"></i> Travel Plan
+          </button>
+          <button class="btn me-4 mt-2  px-4 py-2" (click)="setActiveButton('button3')">
+            <i class="fas fa-image"></i> Tour Gallery
+          </button>
+          <button class="btn me-4 mt-2 px-4 py-2" (click)="setActiveButton('button4')">
+            <i class="fas fa-map-marker-alt"></i> Location
+          </button>
+        </div>
+      </div>
 
 
-              <div class="package-info-container">
-                <table class="table package-info-table mb-0">
-                  <tbody>
-                    <tr>
-                      <th>Destination</th>
-                      <td class="table-item">{{package?.title }}</td>
-                    </tr>
-                    <tr>
-                      <th>Departure</th>
-                      <td class="table-item">{{ departure }}</td>
-                    </tr>
-                    <tr>
-                      <th>Departure Time</th>
-                      <td class="table-item">{{ departureTime }}</td>
-                    </tr>
-                    <tr>
-                      <th>Return Time</th>
-                      <td class="table-item">{{ returnTime }}</td>
-                    </tr>
-                    <tr>
-                      <th>Included</th>
-                      <td>
-                        <ul class="included-list table-item">
-                     <li *ngFor="let item of activeInclusions">
-                            <i class="bi bi-check2"></i> {{ item.include.Name }}
-                     </li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Excluded</th>
-                      <td>
-                        <ul class="excluded-list table-item">
-                          <li *ngFor="let item of excludedItems">
-                            <i class="bi bi-x-lg"></i>{{ item.description }}
-                          </li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <div class="tour-transport d-flex align-items-center justify-content-center">
-                          <span>Travel with Bus: {{ package?.travel_with_bus }}</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-        
-            <!-- Travel Plan Section -->
-            <div *ngIf="activeButton === 'button2'" class="mb-4">
-              <h2 class="detail text-start mt-3 mb-3">Details</h2>
-
-              <div *ngFor="let itinerary of filteredItineraries; let i = index">
-                <div class="accordion" id="accordion">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading{{ i }}">
-                      <button class="accordion-button collapsed" type="button" (click)="toggleCollapse(i)">
-                        <div class="plan-index-circle">
-                          <h4 class="plan-index">{{ itinerary.days }}</h4>
-                        </div>
-                        <div class="plan-title">
-                          <h5>Day {{ itinerary.days }}: {{ itinerary.title }}</h5>
-                          <h6>{{ itinerary.created_at }}</h6>
-                        </div>
-                      </button>
-                    </h2>
-                    <div id="itineraryCollapse{{ i }}" class="accordion-collapse collapse" [class.show]="isOpen(i)">
-                      <div class="accordion-body">
-                        <p>Details: {{ itinerary.description }}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
             
-            <div *ngIf="activeButton === 'button3'">
-              <p class="para1">{{ package?.title }}</p>
-              
-              <div *ngIf="filteredGalleries && filteredGalleries.length > 0; else noGallery"> 
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <img [src]="filteredGalleries[0].image_url" alt="Gallery Image" class="img-fluid img2">
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <img [src]="filteredGalleries[1].image_url" alt="Gallery Image" class="img-fluid img2">
-                  </div>
-                </div>
-                
-                <div class="row justify-content-center">
-                  <div class="col-12 mt-4">
-                    <img [src]="filteredGalleries[2].image_url" alt="Gallery Image" class="img-fluid img3">
-                  </div>
-                </div>
-                
-                <div class="row">
-                    <div class="row" *ngFor="let row of chunkedGalleries(filteredGalleries.slice(3), 2)">
-                      <div class="col-12 col-md-6 mt-4" *ngFor="let gallery of row">
-                        <img [src]="gallery?.image_url" alt="Gallery Image" class="img-fluid img2">
+      <div class="col-12">
+        <div class="content">
+          <div *ngIf="activeButton === 'button1'" class="mb-4">
+            <h2 class="cap text-start mb-2 mt-5 me-2">{{ package?.title }}</h2>
+            <p class="para text-center mb-2 mt-4">{{ package?.about }}</p>
+
+            <img src="assets/images/9.jpg" class="img-fluid mb-4 mt-5 d-block mx-auto" style="width: 696px; height: 210px; object-fit: cover;">
+
+
+            <div class="package-info-container">
+              <table class="table package-info-table mb-0">
+                <tbody>
+                  <tr>
+                    <th>Destination</th>
+                    <td class="table-item">{{package?.title }}</td>
+                  </tr>
+                  <tr>
+                    <th>Departure</th>
+                    <td class="table-item">{{ departure }}</td>
+                  </tr>
+                  <tr>
+                    <th>Departure Time</th>
+                    <td class="table-item">{{ departureTime }}</td>
+                  </tr>
+                  <tr>
+                    <th>Return Time</th>
+                    <td class="table-item">{{ returnTime }}</td>
+                  </tr>
+                  <tr>
+                    <th>Included</th>
+                    <td>
+                      <ul class="included-list table-item">
+                   <li *ngFor="let item of activeInclusions">
+                       <i class="fas fa-check"></i>{{ item.include.Name }}
+                   </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Excluded</th>
+                    <td>
+                      <ul class="excluded-list table-item">
+                        <li *ngFor="let item of excludedItems">
+                          <i class="fas fa-times"></i>{{ item.description }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="tour-transport d-flex align-items-center justify-content-center">
+                        <span>Travel with Bus: {{ package?.travel_with_bus }}</span>
                       </div>
-                    </div>
-                </div>
-              </div>
-              <ng-template #noGallery>
-                <p>No galleries available for this package.</p>
-              </ng-template>
-            </div>
-            
-        
-            <!-- Location Section -->
-            <div *ngIf="activeButton === 'button4'" class="mb-4">
-              <p class="para1 text-center">{{ package?.title }}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
+      
         
- 
+          <div *ngIf="activeButton === 'button2'" class="mb-4">
+            <h2 class="detail text-start mt-3 mb-3">Details</h2>
 
-
-
-      </div>
-
-      <!-- Booking Form -->
-      <div class="col-lg-4">
-        <div class="form-box">
-          <h3 class="text-center">Book the Tour</h3>
-          <form>
-            <div class="mb-3">
-              <label for="fullname" class="form-label">Full Name</label>
-              <input type="text" id="fullname" class="form-control" placeholder="Enter your name">
+            <div *ngFor="let itinerary of filteredItineraries; let i = index">
+              <div class="accordion" id="accordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading{{ i }}">
+                    <button class="accordion-button collapsed" type="button" (click)="toggleCollapse(i)">
+                      <div class="plan-index-circle">
+                        <h4 class="plan-index">{{ itinerary.days }}</h4>
+                      </div>
+                      <div class="plan-title">
+                        <h5>Day {{ itinerary.days }}: {{ itinerary.title }}</h5>
+                        <h6>{{ itinerary.created_at }}</h6>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="itineraryCollapse{{ i }}" class="accordion-collapse collapse" [class.show]="isOpen(i)">
+                    <div class="accordion-body">
+                      <p>Details: {{ itinerary.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" id="email" class="form-control" placeholder="Enter your email">
+          </div>
+      
+          
+          <div *ngIf="activeButton === 'button3'">
+            <p class="para1">{{ package?.title }}</p>
+            
+            <div *ngIf="filteredGalleries && filteredGalleries.length > 0; else noGallery"> 
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <img [src]="filteredGalleries[0].image_url" alt="Gallery Image" class="img-fluid img2">
+                </div>
+                <div class="col-12 col-md-6">
+                  <img [src]="filteredGalleries[1].image_url" alt="Gallery Image" class="img-fluid img2">
+                </div>
+              </div>
+              
+              <div class="row justify-content-center">
+                <div class="col-12 mt-4">
+                  <img [src]="filteredGalleries[2].image_url" alt="Gallery Image" class="img-fluid img3">
+                </div>
+              </div>
+              
+              <div class="row">
+                  <div class="row" *ngFor="let row of chunkedGalleries(filteredGalleries.slice(3), 2)">
+                    <div class="col-12 col-md-6 mt-4" *ngFor="let gallery of row">
+                      <img [src]="gallery?.image_url" alt="Gallery Image" class="img-fluid img2">
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="text" id="phone" class="form-control" placeholder="Enter your phone number">
-            </div>
-            <div class="mb-3">
-              <label for="people" class="form-label">People</label>
-              <input type="number" id="people" class="form-control" placeholder="Number of people">
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-          </form>
+            <ng-template #noGallery>
+              <p>No galleries available for this package.</p>
+            </ng-template>
+          </div>
+          <div *ngIf="activeButton === 'button4'" class="mb-4">
+            <p class="para1 text-center">{{ package?.title }}</p>
+          </div>
         </div>
       </div>
+      
+
+        <h4 class="customer mb-3">Customer Review</h4>
+        <div class="review-box">
+             <h4>No rating found</h4>
+<button class="rating-button" (click)="toggleReviewForm()">Give a Rating</button>
+      
+<div *ngIf="isReviewFormVisible" class="overlay">
+<div   class="form-container">
+  <button class="close-button" (click)="toggleReviewForm()">X</button>
+  <h2 class="review">Write Your Review</h2>
+<form (ngSubmit)="submitReview()"#reviewForm="ngForm">
+
+<div class="row mb-3">
+    <div class="col-md-6">
+<input type="text" id="name"[(ngModel)]="reviewData.name" name="name" placeholder="Your Name" class="input-review"
+required="">
+</div>
+
+<div class="col-md-6">
+<input type="email" id="email" [(ngModel)]="reviewData.email" name="email" 
+class="input-review" placeholder="Your Email Address" required>
+</div>
+</div>
+
+<div class="col-md-12">
+<input type="title" id="title" [(ngModel)]="reviewData.title" name="title" placeholder="Review Title" class="input-review"required>
+</div>
+
+<div class="mb-3">
+<textarea id="message" [(ngModel)]="reviewData.message" name="message" rows="5" placeholder="Review Message"
+class="textarea-review" required>
+</textarea>
+</div>
+
+
+    <ul class="review-item-list">
+      <div *ngFor="let rating of ratings">
+        <li>
+
+          <div class="star-list">
+            <fieldset class="rating">
+              <input type="radio" [id]="rating.name + 'star1'" [name]="rating.name" [value]="1" (change)="onRatingChange(rating.name, 1)">
+              <label [for]="rating.name + 'star1'" title="1 star">★</label>
+              
+              <input type="radio" [id]="rating.name + 'star2'" [name]="rating.name" [value]="2" (change)="onRatingChange(rating.name, 2)">
+              <label [for]="rating.name + 'star2'" title="2 stars">★</label>
+              
+              <input type="radio" [id]="rating.name + 'star3'" [name]="rating.name" [value]="3" (change)="onRatingChange(rating.name, 3)">
+              <label [for]="rating.name + 'star3'" title="3 stars">★</label>
+              
+              <input type="radio" [id]="rating.name + 'star4'" [name]="rating.name" [value]="4" (change)="onRatingChange(rating.name, 4)">
+              <label [for]="rating.name + 'star4'" title="4 stars">★</label>
+              
+              <input type="radio" [id]="rating.name + 'star5'" [name]="rating.name" [value]="5" (change)="onRatingChange(rating.name, 5)">
+              <label [for]="rating.name + 'star5'" title="5 stars">★</label>
+            </fieldset>
+          </div>
+
+          <div class="rating-label">
+            <span>{{ rating.label }}</span>
+          </div>
+        </li>
+      </div>
+    </ul>
+
+    <button type="submit" class="submit-button">Submit Review</button>
+  </form>
+</div>
+</div>
+</div>
+    </div><!--8 end-->
+
+
+    <div class="col-lg-4 mt-3">
+
+      <div class="booking-form-box">
+        <h3 class="book">Book the Tour</h3>
+      
+      <hr class="separate-line">
+      <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+  
+        <div class="search-box-single">
+          <div class="searchbox-icon">
+            <i class="bi bi-pencil-fill"></i>
+          </div>
+          <div class="searchbox-input">
+            <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Full Name*" />
+          </div>
+        </div>
+        <div *ngIf="enquiryForm.get('fullName')?.invalid && enquiryForm.get('fullName')?.touched" class="text-danger">
+          Full Name is required.
+        </div>
+      
+        <div class="search-box-single">
+          <div class="searchbox-icon">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <div class="searchbox-input">
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="E-mail*" />
+          </div>
+        </div>
+        <div *ngIf="enquiryForm.get('email')?.invalid && enquiryForm.get('email')?.touched" class="text-danger">
+          <div *ngIf="enquiryForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="enquiryForm.get('email')?.errors?.['pattern']">Please enter a valid email.</div>
+        </div>
+      
+        <div class="search-box-single destination-box">
+          <div class="searchbox-icon">
+            <i class="bi bi-telephone"></i>
+          </div>
+          <div class="searchbox-input">
+            <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Phone Number*" />
+          </div>
+        </div>
+        <div *ngIf="enquiryForm.get('phone')?.invalid && enquiryForm.get('phone')?.touched" class="text-danger">
+          <div *ngIf="enquiryForm.get('phone')?.errors?.['required']">Phone number is required.</div>
+          <div *ngIf="enquiryForm.get('phone')?.errors?.['pattern']">Phone number must be exactly 16 digits or less.</div>
+        </div>
+      
+       
+        <div class="search-box-single">
+          <div class="searchbox-icon">
+            <i class="bi bi-chat-left-text-fill"></i>
+          </div>
+          <div class="searchbox-input">
+            <textarea class="form-control" id="message" formControlName="message" rows="6" placeholder="Your Enquiry*"></textarea>
+          </div>
+        </div>
+        <div *ngIf="enquiryForm.get('message')?.invalid && enquiryForm.get('message')?.touched" class="text-danger">
+          Message is required.
+        </div>
+      
+       
+        <button type="submit" class="button-fill-primary btn--lg w-100 mt-3" [disabled]="enquiryForm.invalid">
+          Submit Now
+        </button>
+      </form>
+    </div>  
+
+
+<div class="container">
+    <div class="widget-body mt-5">
+    <h2 class="popular text-center ">Popular Package</h2>
+        <div class="row">
+            <div class="col-12 package-sm" *ngFor="let pkg of _packages">
+                <div class="thumb">
+                    <a [href]="pkg.pk_Package_id">
+                      <img width="80" height="80" [src]="pkg.image" class="img-fluid wp-post-image" alt="{{ pkg.title }}" decoding="async"> </a>
+                    </div>
+                <div class="info">
+                    <h6><a [href]="pkg.country" class="info-a">{{ pkg.title }}</a></h6>
+                    <div class="price">
+                        <span>From</span>
+                        <h6> <del>$59.00</del> 
+                          -$49.00 /<span>Per Person</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
+<div class="container col-12 mt-4 bg-light">
+  <div class="tags mb-1 text-center">All Tags</div>
+  <div class="button-container justify-content-center me-3">
+      <button class="button me-2 mt-2" [routerLink]="'/#'">Flying</button>
+      <button class="button me-2 mt-2" [routerLink]="'/#'">Holidays</button>
+      <button class="button me-2 mt-2" [routerLink]="'/feature'">Feature</button>
+      <button class="button me-2 mt-2" [routerLink]="'/family-tour'">Family Tour</button>
+      <button class="button me-2 mt-2" [routerLink]="'/one-travel'">One Travel</button>
+      <button class="button me-2 mt-2" [routerLink]="'/trip'">Trip</button>
+      <button class="button me-2 mt-2" [routerLink]="'/explore'">Explore</button>
+      <button class="button me-2 mt-2" [routerLink]="'/instatravel'">Instatravel</button>
+      <button class="button me-2 mt-2" [routerLink]="'/summer'">Summer</button>
+      <button class="button me-2 mt-2" [routerLink]="'/beach'">Beach</button>
+      <button class="button me-2 mt-2" [routerLink]="'/destination'">Destination</button>
+      <button class="button me-2 mt-2" [routerLink]="'/travelling'">Travelling</button>
+      <button class="button me-2 mt-2" [routerLink]="'/tourcity'">TourCity</button>
+      <button class="button me-2 mt-2" [routerLink]="'/hill-town'">Hill Town</button>
+      <button class="button me-2 mt-2" [routerLink]="'/facebook'">FaceBook</button>
   </div>
+</div>
+
+   
+</div>
+    </div>
+    </div>

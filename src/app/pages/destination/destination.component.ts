@@ -14,7 +14,7 @@ export class DestinationComponent implements OnInit {
 
   _destinations:Destination[]=[];
 
-  constructor(private _service: MasterService, private router:Router ){}
+  constructor(private _service: MasterService, private router:Router){}
 
   ngOnInit(): void {
 
@@ -33,8 +33,8 @@ export class DestinationComponent implements OnInit {
     });
   }
 
-  goToDestination(country:string): void {
-    this.router.navigate(['/DestinationDetailPage', country]); 
+goToDestinationDetailPage(country:string){
+    this.router.navigate(['/destinationDetailPage', country]); 
   }
 
 

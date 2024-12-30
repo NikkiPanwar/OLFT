@@ -34,7 +34,16 @@ getBlogs():Observable<BlogResponse>{
 getDestinations(): Observable<Destination[]> {
   return this.http.get<{ success: boolean; data: Destination[] }>(`${this.apiUrl}destinations/show`)
   .pipe(map(response => response.data) );
-        }
+}
+
+getDestinationsDetails(country:string): Observable<DestinationDetails[]> {
+  return this.http.get<DestinationResponse>(`${this.apiUrl + 'destinations'}/country/${country}`)
+    .pipe(map((response: DestinationResponse) => response.data));
+    }
+
+getPackagesCountry(country:string):Observable<PopularPackagesResponseCountry>{
+  return this.http.get<PopularPackagesResponseCountry>(`${this.apiUrl+'packages'}/country/${country}`);
+}
 
 getItineraries(id:number):Observable<ItineraryResponse>{
  return this.http.get<ItineraryResponse>(`${this.apiUrl+'itineraries'}/package/${id}`).pipe(tap(()=> console.log("itinaries called"))) ;

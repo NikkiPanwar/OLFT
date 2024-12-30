@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first, map } from 'rxjs';
-import { Contact, Destination, Package, PackageCountry, TourGuide } from '../../core/models/interfaces/OlftInterface';
+import {  Destination, Package, PackageCountry, TourGuide } from '../../core/models/interfaces/OlftInterface';
 import { MasterService } from '../../core/services/master/master.service';
 
 @Component({
@@ -12,18 +12,26 @@ import { MasterService } from '../../core/services/master/master.service';
 
 export class HomeComponent implements OnInit {
 
+  private _dataLoaded: boolean = false;
+
   _packages:Package[] = []
   _tourguides:TourGuide[] =[]
+  _destinations:Destination[]=[];
+  _topCountry: PackageCountry[] = [];
 
-  scrollPosition = 0;
+country:string ='India';
+
+scrollPosition = 0;
   itemWidth = 310; // Adjust based on your design
 
-  constructor(private _service:MasterService,private router:Router){}
+  constructor(private _service:MasterService,private router:Router , private route:ActivatedRoute){}
 
   ngOnInit(): void {
    
     this.tourguide();
     this.packages();
+    this.destination();
+    this.getPackageAccordingToCountry();
   }
 
   packages(){
@@ -48,6 +56,57 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+  destination(){
+    this._service.getDestinations().subscribe({
+      next:(data)=>{
+          this._destinations = data;
+        console.log("destinations called", this._destinations);
+      },
+      error:(err)=>{
+        console.log(err)}
+    });
+  }
+ 
+getPackageAccordingToCountry(){
+ this._service.getPackagesCountry(this.country).subscribe({
+    next: (response) => {
+      if (response.success) {
+        this._topCountry = response.data;
+        console.log(response.data,"country list")
+      }
+    },
+    error: (err) => {
+      console.log(err);
+    }
+  });
+}
+
+getcountByCountry(country: string): number {
+  console.log(country);
+if (this._dataLoaded && this._topCountry.length) {
+  return (this._topCountry.length);
+}
+
+this._service.getPackagesCountry(country).pipe(
+  first(), 
+  map(response => {
+    if (response.success) {
+      this._topCountry = response.data; 
+      this._dataLoaded = true; 
+       this._topCountry.length; 
+    }
+    return 0; 
+  })
+).subscribe()
+
+if(this._topCountry.length){
+  return this._topCountry.length
+}
+return this._topCountry.length
+
+}
+
 
   formatDaysAndNights(nights: any): string {
     if (nights < 1) {
@@ -74,8 +133,12 @@ export class HomeComponent implements OnInit {
     if (this.scrollPosition > 0) {
       this.scrollPosition -= this.itemWidth; // Adjust this value based on your design
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
+    }  } 
+
+
+    goToDestinationDetailPage(country:string): void {
+      this.router.navigate(['/destinationDetailPage', country]); 
     }
-  } 
   }
 
 

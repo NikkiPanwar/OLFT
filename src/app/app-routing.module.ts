@@ -9,7 +9,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { PackageDetailPageComponent } from './pages/package-detail-page/package-detail-page.component';
 import { BlogeDetailPageComponent } from './pages/bloge-detail-page/bloge-detail-page.component';
 import { DestinationDetailPageComponent } from './pages/destination-detail-page/destination-detail-page.component';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 const routes: Routes = [
 
@@ -23,7 +22,9 @@ const routes: Routes = [
   {path:'packageDetailPage',component:PackageDetailPageComponent},
   { path: 'packageDetailPage/:id', component:PackageDetailPageComponent},
   {path:'blogDetailPage',component:BlogeDetailPageComponent},
-  {path:'destinationDetailPage',component:DestinationDetailPageComponent}
+  {path:'destinationDetailPage',component:DestinationDetailPageComponent},
+  {path:'destinationDetailPage/:country',component:DestinationDetailPageComponent}
+
 ];
 
 @NgModule({
