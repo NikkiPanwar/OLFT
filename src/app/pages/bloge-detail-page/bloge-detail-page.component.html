@@ -1,1 +1,166 @@
-<p>bloge-detail-page works!</p>
+<div class="container mt-4">
+    <div class="row">
+      
+      <div class="col-lg-8">
+
+  <div class="img-container text-center mb-4">
+  <img src="./assets/images/1.jpg" alt="Tour Image" class="img-cont"/>
+</div>
+
+
+<div class="card-footer">
+  <span class="user me-5">
+    <i class="fas fa-user-circle icon"></i> By User
+  </span>
+  <span class="user me-5">
+    <i class="fas fa-calendar icon"></i> July 15, 2022
+  </span>
+  <span class="user me-5">
+    <i class="fas fa-comment icon"></i> (0) Comment
+  </span>
+</div>
+
+<div class="col-12">
+  <div class="content">
+    <p class="content-details mt-4">
+        Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna. Maecenas vel libero faucibus nisiteden venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente andit consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Maecenas Suspendissendt blandit interdum. libero faucibus nisi venenatis hendrerit a id lectus.
+Suspendissendt blandit interdum. Sed pellentesque at nunc consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc consectetur.Duis rutrum nisl urna.
+    </p>
+
+    <p class="content-bg mt-4">
+      <i class="fas fa-quote-left icon"></i>
+      Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis themex hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna.
+   </p>
+
+   <p class="content-details mt-4">
+    Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna. Maecenas vel libero faucibus nisiteden venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente andit consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Maecenas Suspendissendt blandit interdum.
+</p>
+
+<img src="assets/images/blog.jpg" alt="img" class="img-fluid mt-3">
+
+
+<h2 class="content-head mt-5">Things You Can Do to a vibe</h2>
+<p class="content-details mt-3">
+  Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna. Maecenas vel libero faucibus nisiteden venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente andit consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Maecenas Suspendissendt blandit interdum. libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum.
+</p>
+
+
+<p class="content-bg mt-5">
+  <i class="fas fa-quote-left icon"></i>
+  Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis themex hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna.
+</p>
+
+<p class="content-details mt-4">
+  Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente Duis rutrum nisl urna. Maecenas vel libero faucibus nisiteden venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente andit consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Maecenas Suspendissendt blandit interdum.
+</p>
+</div>
+
+
+<hr>
+
+Summer holidays to the oxolations
+<hr>
+
+<div class="container">
+  <div class="row">
+  <div class="category col-md-6 me-2">
+    <h2 class="cat">Categories:</h2>
+    <ul class="tags-item">
+      <li><a href="#">Adventure Tour</a></li>
+      <li><a href="#">Couple Tour</a></li>
+      <li><a href="#">Family Tour</a></li>
+      <li><a href="#">Group Tour</a></li>
+      <li><a href="#">Holiday Tour</a></li>
+    </ul>
+  </div>
+  <div class="tag col-md-5">
+    <h2 class="tag-name">Tags:</h2>
+    <ul class="tags-item">
+      <li><a href="#">Destination</a></li>
+      <li><a href="#">Flights</a></li>
+      <li><a href="#">Holiday</a></li>
+      <li><a href="#">Hotels</a></li>
+      <li><a href="#">One Travel</a></li>
+      <li><a href="#">Vacation</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="form-cont mt-5 mb-4">
+  <h2 class="comment">Leave a comment</h2>
+  <p>
+   <span class="email-note">
+   Your email address will not be published.</span>
+   <span class="required-mssge">Required fields are marked</span> 
+   <span class="required"> *</span>
+  <br>
+  <label class="mb-2 mt-3">Comment</label>
+  </p>
+
+   <form (ngSubmit)="submitReview()"#reviewForm="ngForm">
+  
+  <div class="mb-2 mt-4">
+  <textarea id="message" [(ngModel)]="reviewData.message"name="message" rows="6" placeholder="share a comment here"
+  class="textarea-review" required></textarea>
+  </div>
+  
+  <div class="col-md-13 mt-4">
+  <label for="name"> Name</label>
+   <input type="text" id="name"[(ngModel)]="reviewData.name" name="name" placeholder="Your Name" class="input-review"required="">
+  </div>
+  
+  <div class="col-md-13 mt-4">
+  <label for="email">Email</label> 
+  <input type="email" id="email" [(ngModel)]="reviewData.email" name="email"  class="input-review" placeholder="Your Email Address" required>
+  </div>
+  
+  <div class="col-md-13 mt-4">
+  <label for="website">Website</label>
+  <input type="title" id="title" [(ngModel)]="reviewData.title" name="title" placeholder="Website (optional)" class="input-review"required>
+  </div>
+  
+  <div class="col-md-13 mt-4">
+  <label for="autoSave">
+  <input type="checkbox" id="autoSave" [(ngModel)]="reviewData.autoSave" (ngModelChange)="onAutoSaveChange()"/>
+   Save my name, email, and website in this browser for the next time I comment.</label>
+    </div>
+  <button type="submit" class="submit-button mt-4">SUBMIT NOW</button>
+  </form>
+  </div>
+  </div>
+  
+</div><!--end of col-8-->
+
+<div class="col-lg-4 mt-4 mb-3">
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+     
+      <div class="month">
+        <p class="month-name"> Archives</p>
+    <h5 class="month-link">
+      <ul>
+        <li><a href="#">January 2024</a></li>
+        <li><a href="#">January 2024</a></li>
+        <li><a href="#">January 2024</a></li>
+        <li><a href="#">July 2022</a></li>
+    </ul></h5>
+    </div>
+    
+        </div>
+    </div>
+  </div>
+
+
+
+</div><!--end-->
+
+
+</div></div><!--end-->
