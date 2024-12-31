@@ -22,6 +22,7 @@ const routes: Routes = [
   {path:'packageDetailPage',component:PackageDetailPageComponent},
   { path: 'packageDetailPage/:id', component:PackageDetailPageComponent},
   {path:'blogDetailPage',component:BlogeDetailPageComponent},
+  {path:'blogDetailPage/:id',component:BlogeDetailPageComponent},
   {path:'destinationDetailPage',component:DestinationDetailPageComponent},
   {path:'destinationDetailPage/:country',component:DestinationDetailPageComponent}
 

@@ -63,4 +63,16 @@ console.log("destinationdetails" , this._destinationsDetails);
   });
 }
 
+bookNow(packageId: number) {
+  this.router.navigate(['/packageDetailPage', packageId]);
+}
+
+
+formatDaysAndNights(days: any): string {
+  if (days < 1) {
+    return '0 days 0 nights';
+  }
+  const nights = days > 1 ? days - 1 : 0; 
+  return `${nights} nights ${days} days`;
+}
 }

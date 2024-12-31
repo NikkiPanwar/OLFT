@@ -1,21 +1,88 @@
-<div class="container mt-2">
+<div class="container">
     <div class="row">
       
       <div class="col-lg-8">
+ <div *ngFor="let destination of _destinationsDetails">
+
+  <div class="img-container text-center mb-4">
+    <img [src]="destination?.image" alt="Tour Image" class="img-cont"/>
+</div>
+
+  <div class="container">
+    <div class="row justify-content-start text-start">
+        <div class=" col-12">
+            <h2 class="content-head mb-4">Tours In {{ destination.country }}</h2>
+            <p class="content-details mb-4">{{ destination.about }}</p>
+            <img src="/assets/images/destination.jpg" alt="Tour Image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+    
+<div class="destination-table mt-5">
+  <h2 class="subtitle text-start mb-4">Overview</h2>
+  <div class="table-responsive">
+      <table class="table table-color table-bordered table-striped table-overview">
+          <tbody>
+              <tr>
+                  <th>Destination</th>
+                  <td>{{ destination.country }}</td>
+              </tr>
+              <tr>
+                  <th>Locations</th>
+                  <td>{{ destination.coordinates }}</td>
+              </tr>
+              <tr>
+                  <th>Tour Duration</th>
+                  <td>8 days</td>
+              </tr>
+              <tr>
+                  <th>Attraction</th>
+                  <td>{{ destination.attraction }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+<div class="destination-map mb-3">
+  <h3>Map</h3>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d773126.3466208713!2d-73.965441!3d40.805449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f63c75af2d65%3A0xf45542f6cb090cc9!2s2880%20Broadway%2C%20New%20York%2C%20NY%2010025!5e0!3m2!1sen!2sus!4v1693316969321!5m2!1sen!2sus" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe> 
+</div>
+</div>
+ </div><!--col-8 end-->
 
 
 
 
+      <div class="col-lg-4 mt-4">
+<div class="container">
+          <h3 class="tour-name text-center mb-2 ">{{ country }} Tour Packages</h3>
+          <div class="row">
+              <div class="col-12 mb-4">
+                  <div class="card mb-4" *ngFor="let PackageCountry of _topCountry">
+         <img [src]="PackageCountry?.image" [alt]="PackageCountry.title" class="card-img-top">
+                      <div class="card-body">
+                          <h5 class="card-title">{{ PackageCountry.title }}</h5>
+                          <span class="badge">
+                              <i class="fas fa-clock"></i> {{ formatDaysAndNights(PackageCountry?.duration) }}
+                          </span>
+                          <a (click)="bookNow(PackageCountry.pk_Package_id)" class="btn btn-warning book-button mt-3">
+                              Book Now
+                              <i class="fas fa-arrow-right fa-sm"></i>
+                          </a>
+                          <span class="start float-end me-4 mt-4">Starting From</span>
 
+                      </div>
+                  </div>
+              </div>
+              
 
-
-
-      </div><!--col-8 end-->
-
-
-
-
-
-
-      <div class="col-lg-4"></div>
+      </div>
       </div></div><!--end-->

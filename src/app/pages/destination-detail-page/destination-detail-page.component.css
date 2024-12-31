@@ -1,0 +1,177 @@
+/* .img-cont {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 740px; 
+    height: auto;
+    object-fit: cover; 
+} */
+
+.img-cont {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 740px; 
+    height: 497px;
+    object-fit: cover; 
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .img-cont {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+.content{
+background: #fefbfb;
+font-family:"Montserrat",sans-serif;
+}
+.content-head{
+    font-size:32px;
+    color:#2d373c;
+    font-weight:650;
+}
+.content-details {
+font-size:16px;
+color:#666666;
+}
+.destination-table{ 
+    font-family: "Montserrat",sans-serif;
+}
+.subtitle {
+     font-size: 28px;
+    font-weight:700;
+    font-family: "Montserrat",sans-serif
+}
+.table-overview{
+vertical-align: middle;
+    font-weight:550;
+    font-size: 18px;
+    font-family: "Montserrat",sans-serif;
+    border-collapse: collapse;
+}
+.table-overview th, .table-overview td {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: middle; 
+  }
+  .table-overview th {
+    color:#2d373c;
+}
+.table-overview td {
+    color:#212529;  
+}
+
+.destination-map {
+    width: 100%;
+    height:100%;
+    border-radius: 8px;
+}
+.destination-map h3 {
+    font-weight:700;
+        font-size: 28px; 
+        color: #333;
+}
+.destination-map iframe {
+width:100%;
+height: 60vh; 
+border: none; 
+border-radius: 8px; 
+}
+.tour-name
+{
+font-size:22px;
+padding:16px;
+border-radius: 10px;
+font-weight: 700;
+width:auto;
+color:#fff;
+background: #333;
+font-family: "Montserrat",sans-serif;
+}
+.card {
+    border: none;
+    background-color:#f9f5f5;
+    margin:auto;
+    height:auto;
+    width:auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    height:250px;
+    width:100%;
+    transition: transform 0.2s ease;
+    z-index: 1;
+  }
+  .card:hover .badge {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .card-body {
+  font-size: 20px;
+    padding: 1rem;
+  }
+  .card-title {
+    font-size:20px;
+    color:#454545;
+    font-weight: 550;
+    font-family:'Montserrat', sans-serif;;
+  }
+  .card-title:hover
+  {color:#fecc4e;}
+  
+  .badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight:600;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fecc4e;
+    font-size:1.02rem;
+    padding: 12px 12px;
+    opacity: 1; 
+    visibility: visible;  
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2;  
+  }
+  .card-img-top:hover 
+  {
+    transition: transform 0.2s ease;
+    transform: scale(1.04);
+  }
+  
+  a.book-button
+  {
+    color:#161616;
+    font-weight:550;
+    height:40px;
+    width:126px;
+    font-size: 17px;
+    background-color: #fecc4e;
+    border:none;
+    font-family: "Mantserrat",sans-serif;
+    background-color:fecc4e;
+  }
+  a.book-button:hover  {
+    background-color: black;
+    color: #fecc4e;
+  } 
+ .fa-sm 
+ {
+    font-size:0.6rem;
+ }
+
+ .start{
+  color:#212529;
+  font-weight:400;
+  font-size:15px;
+  font-family: "Mantserrat",sans-serif;
+}
