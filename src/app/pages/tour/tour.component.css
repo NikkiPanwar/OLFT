@@ -157,3 +157,15 @@ border-radius:50px;
   background-color:#fecc4e;
   color: white;
 }
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Ensures it stays in the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+}

@@ -22,6 +22,7 @@ import { BlogeDetailPageComponent } from './pages/bloge-detail-page/bloge-detail
 import { DestinationDetailPageComponent } from './pages/destination-detail-page/destination-detail-page.component';
 import { FormsModule } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { CommonModule } from '@angular/common';
     FormsModule ,
     CommonModule,
     MatSnackBarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     provideClientHydration(),MasterService,HttpClient,provideHttpClient()

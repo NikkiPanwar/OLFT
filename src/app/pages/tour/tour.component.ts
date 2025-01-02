@@ -14,10 +14,11 @@ export class TourComponent {
   @Output() pageChange = new EventEmitter<number>();
   @Input() activePage: number = 1; // Current active page
 
-totalLength:any;
-totalPages:number=0;
-itemsPerPage:number=5;
-page:number=1;
+  isLoading:boolean = true
+  totalLength: any;
+  totalPages: number = 0;
+  itemsPerPage: number = 5;
+  page: number = 1;
 
   _packages:Package[] = []
 
@@ -27,6 +28,7 @@ page:number=1;
   ngOnInit(): void {
 
     this._service.getPackages().subscribe((result) => {
+      this.isLoading = false
       this._packages = result;
       this.totalLength = result.length;
       this.totalPages = Math.ceil(this.totalLength / this.itemsPerPage); // Calculate total pages

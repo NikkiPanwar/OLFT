@@ -1,3 +1,8 @@
+<div *ngIf="isLoading" class="spinner-container ">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading">
 <div class="container">
 <div class="cont1">
     <div class="row gy-3">
@@ -37,3 +42,5 @@
     <button (click)="nextPage()" [disabled]="activePage === totalPages" class="pagination-btn">
   <i class="fas fa-angle-double-right"></i></button>
   </div>  
+
+</div>  
