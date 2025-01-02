@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>OLFT</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+</style>
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.navbar[_ngcontent-ng-c2228365088] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3032;
+}
+.fs[_ngcontent-ng-c2228365088] {
+  font-size: 1.2rem;
+}
+.logo[_ngcontent-ng-c2228365088] {
+  height: 53.7px;
+  width: 150px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 800;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.search-icon[_ngcontent-ng-c2228365088] {
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  position: absolute;
+  right: 55px;
+  top: 49%;
+  transform: translateY(-50%);
+}
+.circle[_ngcontent-ng-c2228365088] {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+.circle[_ngcontent-ng-c2228365088]:hover {
+  background-color: #fecc4e;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088] {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #ffff;
+  display: block;
+  position: relative;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088]:hover {
+  color: #fecc4e;
+}
+.brand-text[_ngcontent-ng-c2228365088] {
+  color: #fcb900;
+  font-size: 14px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088]:hover {
+  color: #fff;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088] {
+  background: white;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088]:hover {
+  background: #fecc4e !important;
+}
+/*# sourceMappingURL=header.component.css.map */</style><style ng-app-id="ng">
+
+.cont5[_ngcontent-ng-c3170393490] {
+  height: 300px;
+  width: 90%;
+  margin-left: 110px;
+  margin-top: 30px;
+  background-color: #212529;
+}
+.foot[_ngcontent-ng-c3170393490] {
+  background-color: #212529;
+}
+.h4[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.h5[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+}
+.follow[_ngcontent-ng-c3170393490] {
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.paragraph[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.end-heading[_ngcontent-ng-c3170393490] {
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  background-color: #162b32;
+  font-size: 16px;
+  width: 100%;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490] {
+  text-decoration: none;
+  color: #fcb900;
+  position: relative;
+  display: inline-flex;
+  padding-left: 2px;
+  align-items: center;
+  padding-right: 25px;
+  transition: transform 0.4s ease-in-out;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 70%;
+  background-color: #fcb900;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover {
+  color: #fcb900;
+  transform: translateX(10px);
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover::before {
+  opacity: 1;
+  transform: translateX(9px);
+}
+.logo[_ngcontent-ng-c3170393490] {
+  width: 147px;
+  height: 52.67px;
+}
+/*# sourceMappingURL=footer.component.css.map */</style><style ng-app-id="ng">
+
+.container[_ngcontent-ng-c3843339413] {
+  height: auto;
+  width: 100%;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 20px;
+}
+.cont1[_ngcontent-ng-c3843339413] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+.card[_ngcontent-ng-c3843339413] {
+  border: none;
+  background-color: #f9f5f5;
+  margin-top: 17px;
+  height: 350px;
+  width: 340px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+.card-img-top[_ngcontent-ng-c3843339413] {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height: 230px;
+  width: 100%;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.badge[_ngcontent-ng-c3843339413] {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fecc4e;
+  font-size: 1.02rem;
+  padding: 12px 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;
+}
+.card[_ngcontent-ng-c3843339413]:hover   .badge[_ngcontent-ng-c3843339413] {
+  opacity: 1;
+  visibility: visible;
+}
+.card-body[_ngcontent-ng-c3843339413] {
+  font-size: 18px;
+  padding: 10px;
+}
+.card-title[_ngcontent-ng-c3843339413] {
+  font-size: 18px;
+  color: #454545;
+  font-weight: 550;
+  font-family: "Montserrat", sans-serif;
+}
+.card-title[_ngcontent-ng-c3843339413]:hover {
+  color: #fecc4e;
+}
+.card-img-top[_ngcontent-ng-c3843339413]:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.04);
+}
+a.book-button[_ngcontent-ng-c3843339413] {
+  color: #161616;
+  font-weight: 500;
+  height: 40px;
+  width: 125px;
+  font-size: 17px;
+  background-color: #fecc4e;
+  margin-top: 10px;
+  border: none;
+  font-family: "Mantserrat", sans-serif;
+  background-color: fecc4e;
+}
+a.book-button[_ngcontent-ng-c3843339413]:hover {
+  background-color: black;
+  color: #fecc4e;
+}
+.start[_ngcontent-ng-c3843339413] {
+  margin-left: 90px;
+  color: #212529;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "Mantserrat", sans-serif;
+}
+.arrow[_ngcontent-ng-c3843339413] {
+  font-size: 0.7rem;
+}
+.cont2[_ngcontent-ng-c3843339413] {
+  width: 100%;
+}
+.pagination-container[_ngcontent-ng-c3843339413] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination-btn[_ngcontent-ng-c3843339413] {
+  height: 45px;
+  width: 45px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: #fecc4e;
+  color: white;
+  cursor: pointer;
+}
+.pagination-btn[_ngcontent-ng-c3843339413]:disabled {
+  background-color: #ddd;
+}
+.page-numbers[_ngcontent-ng-c3843339413] {
+  display: flex;
+  align-items: center;
+}
+.page-number[_ngcontent-ng-c3843339413] {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #fecc4e;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.page-number.active[_ngcontent-ng-c3843339413] {
+  background-color: #fff;
+  color: #fecc4e;
+  border: 1px soild #fecc4e;
+}
+.page-number[_ngcontent-ng-c3843339413]:hover {
+  background-color: #fecc4e;
+  color: white;
+}
+/*# sourceMappingURL=tour.component.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c3139016077="" ng-version="18.2.12" ngh="3" ng-server-context="ssg"><app-header _ngcontent-ng-c3139016077="" _nghost-ng-c2228365088="" ngh="0"><nav _ngcontent-ng-c2228365088="" class="navbar navbar-expand-lg"><div _ngcontent-ng-c2228365088="" class="container-fluid"><a _ngcontent-ng-c2228365088="" href="#" class="navbar-brand"><img _ngcontent-ng-c2228365088="" src="/assets/images/logo.png" alt="Logo" class="logo" style="height: 40px;"></a><button _ngcontent-ng-c2228365088="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span _ngcontent-ng-c2228365088="" class="navbar-toggler-icon"></span></button><div _ngcontent-ng-c2228365088="" id="navbarNav" class="collapse navbar-collapse justify-content-between"><ul _ngcontent-ng-c2228365088="" class="navbar-nav mx-auto"><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/" class="nav-link active me-4" ng-reflect-router-link="/" href="/">HOME</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/about" class="nav-link me-4" ng-reflect-router-link="/about" href="/about">ABOUT US</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/destination" class="nav-link me-4" ng-reflect-router-link="/destination" href="/destination">DESTINATION</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/tour" class="nav-link me-4" ng-reflect-router-link="/tour" href="/tour">TOUR</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/blogs" class="nav-link me-4" ng-reflect-router-link="/blogs" href="/blogs">BLOGS</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/contact" class="nav-link me-4" ng-reflect-router-link="/contact" href="/contact">CONTACT US</a></li></ul><div _ngcontent-ng-c2228365088="" class="search-icon"><span _ngcontent-ng-c2228365088="" class="circle"><i _ngcontent-ng-c2228365088="" class="fa fa-search fs"></i></span></div></div></div></nav></app-header><router-outlet _ngcontent-ng-c3139016077=""></router-outlet><app-tour _nghost-ng-c3843339413="" ngh="1"><div _ngcontent-ng-c3843339413="" class="container"><div _ngcontent-ng-c3843339413="" class="cont1"><div _ngcontent-ng-c3843339413="" class="row gy-3"><div _ngcontent-ng-c3843339413="" class="col-12 col-md-6 col-lg-4"><div _ngcontent-ng-c3843339413="" class="card"><span _ngcontent-ng-c3843339413="" class="badge"><i _ngcontent-ng-c3843339413="" class="fa fa-clock"></i> 8 days 9 nights </span><img _ngcontent-ng-c3843339413="" class="card-img-top" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/24.jpg" alt="Massoorie"><div _ngcontent-ng-c3843339413="" class="card-body"><h5 _ngcontent-ng-c3843339413="" class="card-title">Massoorie</h5><a _ngcontent-ng-c3843339413="" class="btn btn-warning book-button">Book Now <span _ngcontent-ng-c3843339413="" class="arrow"><i _ngcontent-ng-c3843339413="" class="fas fa-arrow-right"></i></span></a><span _ngcontent-ng-c3843339413="" class="start">Starting From</span></div></div></div><div _ngcontent-ng-c3843339413="" class="col-12 col-md-6 col-lg-4"><div _ngcontent-ng-c3843339413="" class="card"><span _ngcontent-ng-c3843339413="" class="badge"><i _ngcontent-ng-c3843339413="" class="fa fa-clock"></i> 3 days 4 nights </span><img _ngcontent-ng-c3843339413="" class="card-img-top" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/Ladakh." alt="Ladakh"><div _ngcontent-ng-c3843339413="" class="card-body"><h5 _ngcontent-ng-c3843339413="" class="card-title">Ladakh</h5><a _ngcontent-ng-c3843339413="" class="btn btn-warning book-button">Book Now <span _ngcontent-ng-c3843339413="" class="arrow"><i _ngcontent-ng-c3843339413="" class="fas fa-arrow-right"></i></span></a><span _ngcontent-ng-c3843339413="" class="start">Starting From</span></div></div></div><div _ngcontent-ng-c3843339413="" class="col-12 col-md-6 col-lg-4"><div _ngcontent-ng-c3843339413="" class="card"><span _ngcontent-ng-c3843339413="" class="badge"><i _ngcontent-ng-c3843339413="" class="fa fa-clock"></i> 7 days 8 nights </span><img _ngcontent-ng-c3843339413="" class="card-img-top" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/Hawamahal.jpeg" alt="Hawamahal"><div _ngcontent-ng-c3843339413="" class="card-body"><h5 _ngcontent-ng-c3843339413="" class="card-title">Hawamahal</h5><a _ngcontent-ng-c3843339413="" class="btn btn-warning book-button">Book Now <span _ngcontent-ng-c3843339413="" class="arrow"><i _ngcontent-ng-c3843339413="" class="fas fa-arrow-right"></i></span></a><span _ngcontent-ng-c3843339413="" class="start">Starting From</span></div></div></div><div _ngcontent-ng-c3843339413="" class="col-12 col-md-6 col-lg-4"><div _ngcontent-ng-c3843339413="" class="card"><span _ngcontent-ng-c3843339413="" class="badge"><i _ngcontent-ng-c3843339413="" class="fa fa-clock"></i> 7 days 8 nights </span><img _ngcontent-ng-c3843339413="" class="card-img-top" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/35.jpg" alt="Goa"><div _ngcontent-ng-c3843339413="" class="card-body"><h5 _ngcontent-ng-c3843339413="" class="card-title">Goa</h5><a _ngcontent-ng-c3843339413="" class="btn btn-warning book-button">Book Now <span _ngcontent-ng-c3843339413="" class="arrow"><i _ngcontent-ng-c3843339413="" class="fas fa-arrow-right"></i></span></a><span _ngcontent-ng-c3843339413="" class="start">Starting From</span></div></div></div><div _ngcontent-ng-c3843339413="" class="col-12 col-md-6 col-lg-4"><div _ngcontent-ng-c3843339413="" class="card"><span _ngcontent-ng-c3843339413="" class="badge"><i _ngcontent-ng-c3843339413="" class="fa fa-clock"></i> 3 days 4 nights </span><img _ngcontent-ng-c3843339413="" class="card-img-top" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/36.jpg" alt="Dehradun"><div _ngcontent-ng-c3843339413="" class="card-body"><h5 _ngcontent-ng-c3843339413="" class="card-title">Dehradun</h5><a _ngcontent-ng-c3843339413="" class="btn btn-warning book-button">Book Now <span _ngcontent-ng-c3843339413="" class="arrow"><i _ngcontent-ng-c3843339413="" class="fas fa-arrow-right"></i></span></a><span _ngcontent-ng-c3843339413="" class="start">Starting From</span></div></div></div><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div></div></div><div _ngcontent-ng-c3843339413="" class="pagination-container"><button _ngcontent-ng-c3843339413="" class="pagination-btn" disabled=""><i _ngcontent-ng-c3843339413="" class="fas fa-angle-double-left"></i></button><div _ngcontent-ng-c3843339413="" class="page-numbers"><span _ngcontent-ng-c3843339413="" class="page-number active"> 1 </span><span _ngcontent-ng-c3843339413="" class="page-number"> 2 </span><span _ngcontent-ng-c3843339413="" class="page-number"> 3 </span><!--bindings={
+  "ng-reflect-ng-for-of": "1,2,3"
+}--></div><button _ngcontent-ng-c3843339413="" class="pagination-btn"><i _ngcontent-ng-c3843339413="" class="fas fa-angle-double-right"></i></button></div></app-tour><!--container--><app-footer _ngcontent-ng-c3139016077="" _nghost-ng-c3170393490="" ngh="2"><div _ngcontent-ng-c3170393490="" class="foot"><footer _ngcontent-ng-c3170393490="" class="text-light py-4 bg-dark"><div _ngcontent-ng-c3170393490="" class="container"><div _ngcontent-ng-c3170393490="" class="row"><div _ngcontent-ng-c3170393490="" class="col-md-4"><b _ngcontent-ng-c3170393490=""><p _ngcontent-ng-c3170393490="" class="h4"><img _ngcontent-ng-c3170393490="" src="assets/images/logo.png" alt="Logo" class="logo"></p><p _ngcontent-ng-c3170393490="" class="paragraph"> Duis rutrum nisl urna. Maecenas vel libero<br _ngcontent-ng-c3170393490=""> faucibus nisi venenatis hendrerit a id lectus.<br _ngcontent-ng-c3170393490=""> Suspendissendt molestie turpis nec lacinia <br _ngcontent-ng-c3170393490=""> vehicula. <br _ngcontent-ng-c3170393490=""><br _ngcontent-ng-c3170393490=""> Working days : Monday-Friday (9AM-5PM) </p><p _ngcontent-ng-c3170393490="" class="follow">FOLLOW US ON :</p><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></b></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Quick Links</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Guid</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/blog" class="text-light">Blogs</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/contact" class="text-light">Contact Us</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/destination" class="text-light">Destination</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">FAQ</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Gallery</a></li></ul></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Tour Type</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">City Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Hill Town</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Family</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Adventure</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Escorted Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Couple</a></li></ul></div><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></footer></div><div _ngcontent-ng-c3170393490="" class="text-center text-light py-3 end-heading"> Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd </div></app-footer></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite" id="cdk-live-announcer-0"></div><script id="ng-state" type="application/json">{"2217109518":{"b":[{"pk_Package_id":24,"title":"Massoorie","duration":"9","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/24.jpg"},{"pk_Package_id":33,"title":"Ladakh","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Ladakh."},{"pk_Package_id":34,"title":"Hawamahal","duration":"8","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Hawamahal.jpeg"},{"pk_Package_id":35,"title":"Goa","duration":"8","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/35.jpg"},{"pk_Package_id":36,"title":"Dehradun","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/36.jpg"},{"pk_Package_id":37,"title":"haridwar","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/haridwar.jpg"},{"pk_Package_id":38,"title":"Nainital","duration":"5","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Nainital."},{"pk_Package_id":39,"title":"Paro Taktsang","duration":"6","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/39.jpg"},{"pk_Package_id":41,"title":"The National Folk Heritage Museu","duration":"5","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/41.jpg"},{"pk_Package_id":42,"title":"Dubai Aquarium And Underwater Zoo","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/42.jpg"},{"pk_Package_id":56,"title":"TESTING","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/TESTING.jpg"},{"pk_Package_id":57,"title":"test","duration":"6","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/test.jpg"}],"h":{},"s":200,"st":"OK","u":"http://13.233.73.166/api/packages","rt":"json"},"__nghData__":[{},{"t":{"3":"t0","9":"t1"},"c":{"3":[{"i":"t0","r":1,"x":5}],"9":[{"i":"t1","r":1,"x":3}]}},{"t":{"21":"t2","66":"t3"},"c":{"21":[],"66":[]}},{"c":{"1":[{"i":"c3843339413","r":1}]}}]}</script></body></html>

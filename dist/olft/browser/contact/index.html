@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>OLFT</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+</style>
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.navbar[_ngcontent-ng-c2228365088] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3032;
+}
+.fs[_ngcontent-ng-c2228365088] {
+  font-size: 1.2rem;
+}
+.logo[_ngcontent-ng-c2228365088] {
+  height: 53.7px;
+  width: 150px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 800;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.search-icon[_ngcontent-ng-c2228365088] {
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  position: absolute;
+  right: 55px;
+  top: 49%;
+  transform: translateY(-50%);
+}
+.circle[_ngcontent-ng-c2228365088] {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+.circle[_ngcontent-ng-c2228365088]:hover {
+  background-color: #fecc4e;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088] {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #ffff;
+  display: block;
+  position: relative;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088]:hover {
+  color: #fecc4e;
+}
+.brand-text[_ngcontent-ng-c2228365088] {
+  color: #fcb900;
+  font-size: 14px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088]:hover {
+  color: #fff;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088] {
+  background: white;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088]:hover {
+  background: #fecc4e !important;
+}
+/*# sourceMappingURL=header.component.css.map */</style><style ng-app-id="ng">
+
+.cont5[_ngcontent-ng-c3170393490] {
+  height: 300px;
+  width: 90%;
+  margin-left: 110px;
+  margin-top: 30px;
+  background-color: #212529;
+}
+.foot[_ngcontent-ng-c3170393490] {
+  background-color: #212529;
+}
+.h4[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.h5[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+}
+.follow[_ngcontent-ng-c3170393490] {
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.paragraph[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.end-heading[_ngcontent-ng-c3170393490] {
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  background-color: #162b32;
+  font-size: 16px;
+  width: 100%;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490] {
+  text-decoration: none;
+  color: #fcb900;
+  position: relative;
+  display: inline-flex;
+  padding-left: 2px;
+  align-items: center;
+  padding-right: 25px;
+  transition: transform 0.4s ease-in-out;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 70%;
+  background-color: #fcb900;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover {
+  color: #fcb900;
+  transform: translateX(10px);
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover::before {
+  opacity: 1;
+  transform: translateX(9px);
+}
+.logo[_ngcontent-ng-c3170393490] {
+  width: 147px;
+  height: 52.67px;
+}
+/*# sourceMappingURL=footer.component.css.map */</style><style ng-app-id="ng">
+
+.container[_ngcontent-ng-c1433259125] {
+  display: block;
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+.contact-info[_ngcontent-ng-c1433259125] {
+  font-size: 30px;
+  color: #2d373c;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  padding: auto;
+  margin: auto;
+  background-color: #fbfbfbfb;
+}
+.contact-info[_ngcontent-ng-c1433259125]   h3[_ngcontent-ng-c1433259125] {
+  margin: auto;
+  font-size: 30px;
+  color: #2d373c;
+  font-weight: 700;
+}
+.contact-info[_ngcontent-ng-c1433259125]   ul[_ngcontent-ng-c1433259125]   li[_ngcontent-ng-c1433259125] {
+  list-style-type: none;
+  font-size: 25px;
+  background: #ffffff;
+  box-shadow: 3px 5px 35px rgba(86, 68, 169, 0.1);
+  border-radius: 5px;
+  padding: 15px 20px;
+  color: #5c5c5c;
+  margin-top: 30px;
+  border-radius: 5px 35px 5px 5px;
+  border: 1px solid #eeeeee;
+  width: auto;
+  transition: all 0.4s;
+}
+.a-list[_ngcontent-ng-c1433259125] {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5c5c5c;
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 20px;
+  transition: all 0.3s;
+}
+.contact-info[_ngcontent-ng-c1433259125]   ul[_ngcontent-ng-c1433259125]   li[_ngcontent-ng-c1433259125]:hover {
+  background-color: #2d373c;
+  color: #fff;
+}
+.contact-info[_ngcontent-ng-c1433259125]   ul[_ngcontent-ng-c1433259125]   li[_ngcontent-ng-c1433259125]:hover   .a-list[_ngcontent-ng-c1433259125] {
+  color: #fff;
+}
+.cont1[_ngcontent-ng-c1433259125] {
+  height: auto;
+  width: 100%;
+}
+.iframe[_ngcontent-ng-c1433259125] {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+.map-section[_ngcontent-ng-c1433259125] {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.map-iframe[_ngcontent-ng-c1433259125] {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.cont2[_ngcontent-ng-c1433259125] {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.form-container[_ngcontent-ng-c1433259125] {
+  background: white;
+  padding: 20px;
+  height: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-container[_ngcontent-ng-c1433259125]   h4[_ngcontent-ng-c1433259125] {
+  color: #2d373c;
+  font-weight: 700;
+  font-size: 25px;
+}
+.form-container[_ngcontent-ng-c1433259125]   p[_ngcontent-ng-c1433259125] {
+  color: #5c5c5c;
+  font-size: 15px;
+  padding: auto;
+}
+.input-review[_ngcontent-ng-c1433259125] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background-color: #f6fcf9;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: #666666;
+}
+.textarea-review[_ngcontent-ng-c1433259125] {
+  height: 140px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  background-color: #f6fcf9;
+  margin-top: 25px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: #666666;
+}
+.submit-button[_ngcontent-ng-c1433259125] {
+  height: 50px;
+  padding: 10px;
+  width: 190px;
+  background-color: #fecc4e;
+  color: #fff;
+  border: none;
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 50px;
+}
+.submit-button[_ngcontent-ng-c1433259125]:hover {
+  color: #fecc4e;
+  background: #2d373c;
+}
+.input-review[_ngcontent-ng-c1433259125]:focus, 
+.textarea-review[_ngcontent-ng-c1433259125]:focus {
+  border-color: #fecc4e;
+  outline: none;
+}
+.error[_ngcontent-ng-c1433259125] {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.input-review[_ngcontent-ng-c1433259125]::placeholder {
+  font-size: 13px;
+  color: #2d373c;
+  font-family: "Montserrat", sans-serif;
+}
+.textarea-review[_ngcontent-ng-c1433259125]::placeholder {
+  font-size: 13px;
+  color: #2d373c;
+  font-family: "Montserrat", sans-serif;
+}
+/*# sourceMappingURL=contact.component.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c3139016077="" ng-version="18.2.12" ngh="3" ng-server-context="ssg"><app-header _ngcontent-ng-c3139016077="" _nghost-ng-c2228365088="" ngh="0"><nav _ngcontent-ng-c2228365088="" class="navbar navbar-expand-lg"><div _ngcontent-ng-c2228365088="" class="container-fluid"><a _ngcontent-ng-c2228365088="" href="#" class="navbar-brand"><img _ngcontent-ng-c2228365088="" src="/assets/images/logo.png" alt="Logo" class="logo" style="height: 40px;"></a><button _ngcontent-ng-c2228365088="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span _ngcontent-ng-c2228365088="" class="navbar-toggler-icon"></span></button><div _ngcontent-ng-c2228365088="" id="navbarNav" class="collapse navbar-collapse justify-content-between"><ul _ngcontent-ng-c2228365088="" class="navbar-nav mx-auto"><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/" class="nav-link active me-4" ng-reflect-router-link="/" href="/">HOME</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/about" class="nav-link me-4" ng-reflect-router-link="/about" href="/about">ABOUT US</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/destination" class="nav-link me-4" ng-reflect-router-link="/destination" href="/destination">DESTINATION</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/tour" class="nav-link me-4" ng-reflect-router-link="/tour" href="/tour">TOUR</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/blogs" class="nav-link me-4" ng-reflect-router-link="/blogs" href="/blogs">BLOGS</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/contact" class="nav-link me-4" ng-reflect-router-link="/contact" href="/contact">CONTACT US</a></li></ul><div _ngcontent-ng-c2228365088="" class="search-icon"><span _ngcontent-ng-c2228365088="" class="circle"><i _ngcontent-ng-c2228365088="" class="fa fa-search fs"></i></span></div></div></div></nav></app-header><router-outlet _ngcontent-ng-c3139016077=""></router-outlet><app-contact _nghost-ng-c1433259125="" ngh="1"><div _ngcontent-ng-c1433259125="" class="container"><div _ngcontent-ng-c1433259125="" class="row"><div _ngcontent-ng-c1433259125="" class="col-md-6 mt-5"><img _ngcontent-ng-c1433259125="" src="./assets/images/contact.jpg" class="img-fluid"></div><div _ngcontent-ng-c1433259125="" class="col-12 col-md-6 col-lg-4 mt-4"><div _ngcontent-ng-c1433259125="" class="contact-info"><h3 _ngcontent-ng-c1433259125="">Contact Info.</h3><ul _ngcontent-ng-c1433259125=""><li _ngcontent-ng-c1433259125=""><h6 _ngcontent-ng-c1433259125="">Let's Talk</h6><a _ngcontent-ng-c1433259125="" href="#" class="a-list">info@example.com</a><br _ngcontent-ng-c1433259125=""><a _ngcontent-ng-c1433259125="" href="#" class="a-list">info@example.com</a><br _ngcontent-ng-c1433259125=""><a _ngcontent-ng-c1433259125="" href="#" class="a-list">+88 0176 1111 456</a></li><li _ngcontent-ng-c1433259125=""><h6 _ngcontent-ng-c1433259125="">Location. </h6><a _ngcontent-ng-c1433259125="" href="#" class="a-list"> 168/170, Ave 01, Streets Suite 666 Mirpur DOHS, Bangladesh</a></li><li _ngcontent-ng-c1433259125=""><h6 _ngcontent-ng-c1433259125="">Visit Us. </h6><a _ngcontent-ng-c1433259125="" href="#" class="a-list">Facebook: https://www.facebook.com/egenslab</a><a _ngcontent-ng-c1433259125="" href="#" class="a-list">Twitter: https://www.twitter.com/egenslab</a></li></ul></div></div></div></div><div _ngcontent-ng-c1433259125="" class="cont1"><section _ngcontent-ng-c1433259125="" class="map-section"><iframe _ngcontent-ng-c1433259125="" loading="lazy" src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="London Eye, London, United Kingdom" aria-label="London Eye, London, United Kingdom" class="map-iframe"></iframe></section></div><div _ngcontent-ng-c1433259125="" class="cont2"><div _ngcontent-ng-c1433259125="" class="row"><div _ngcontent-ng-c1433259125="" class="col-md-1"></div><div _ngcontent-ng-c1433259125="" class="col-md-10"><div _ngcontent-ng-c1433259125="" class="form-container"><h4 _ngcontent-ng-c1433259125="">Feel Free to Contact Us</h4><p _ngcontent-ng-c1433259125="">Your email address will not be published. Required fields are marked *</p><form _ngcontent-ng-c1433259125="" novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid"><div _ngcontent-ng-c1433259125="" class="row mb-3"><div _ngcontent-ng-c1433259125="" class="col-md-6"><div _ngcontent-ng-c1433259125="" class="form-group"><label _ngcontent-ng-c1433259125="" for="name">Name</label><input _ngcontent-ng-c1433259125="" id="name" type="text" formcontrolname="fullname" placeholder="Your name" required="" class="input-review ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-name="fullname" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><div _ngcontent-ng-c1433259125="" class="col-md-6"><div _ngcontent-ng-c1433259125="" class="form-group"><label _ngcontent-ng-c1433259125="" for="email">Email</label><input _ngcontent-ng-c1433259125="" id="email" type="email" formcontrolname="email" placeholder="Your Email" required="" class="input-review ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-name="email" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div><div _ngcontent-ng-c1433259125="" class="form-group"><label _ngcontent-ng-c1433259125="" for="message">Message</label><textarea _ngcontent-ng-c1433259125="" id="message" formcontrolname="message" rows="5" placeholder="Your message" required="" class="textarea-review ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-name="message"></textarea><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c1433259125="" class="form-group"><button _ngcontent-ng-c1433259125="" type="submit" class="submit-button" disabled="">Send Message</button></div></form></div></div><div _ngcontent-ng-c1433259125="" class="col-md-1"></div></div></div></app-contact><!--container--><app-footer _ngcontent-ng-c3139016077="" _nghost-ng-c3170393490="" ngh="2"><div _ngcontent-ng-c3170393490="" class="foot"><footer _ngcontent-ng-c3170393490="" class="text-light py-4 bg-dark"><div _ngcontent-ng-c3170393490="" class="container"><div _ngcontent-ng-c3170393490="" class="row"><div _ngcontent-ng-c3170393490="" class="col-md-4"><b _ngcontent-ng-c3170393490=""><p _ngcontent-ng-c3170393490="" class="h4"><img _ngcontent-ng-c3170393490="" src="assets/images/logo.png" alt="Logo" class="logo"></p><p _ngcontent-ng-c3170393490="" class="paragraph"> Duis rutrum nisl urna. Maecenas vel libero<br _ngcontent-ng-c3170393490=""> faucibus nisi venenatis hendrerit a id lectus.<br _ngcontent-ng-c3170393490=""> Suspendissendt molestie turpis nec lacinia <br _ngcontent-ng-c3170393490=""> vehicula. <br _ngcontent-ng-c3170393490=""><br _ngcontent-ng-c3170393490=""> Working days : Monday-Friday (9AM-5PM) </p><p _ngcontent-ng-c3170393490="" class="follow">FOLLOW US ON :</p><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></b></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Quick Links</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Guid</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/blog" class="text-light">Blogs</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/contact" class="text-light">Contact Us</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/destination" class="text-light">Destination</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">FAQ</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Gallery</a></li></ul></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Tour Type</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">City Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Hill Town</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Family</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Adventure</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Escorted Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Couple</a></li></ul></div><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></footer></div><div _ngcontent-ng-c3170393490="" class="text-center text-light py-3 end-heading"> Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd </div></app-footer></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite" id="cdk-live-announcer-1"></div><script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"51":"t3","57":"t4","62":"t5"},"c":{"51":[],"57":[],"62":[]}},{"t":{"21":"t1","66":"t2"},"c":{"21":[],"66":[]}},{"c":{"1":[{"i":"c1433259125","r":1}]}}]}</script></body></html>

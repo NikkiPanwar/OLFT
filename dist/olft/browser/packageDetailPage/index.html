@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>OLFT</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+</style>
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.navbar[_ngcontent-ng-c2228365088] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f3032;
+}
+.fs[_ngcontent-ng-c2228365088] {
+  font-size: 1.2rem;
+}
+.logo[_ngcontent-ng-c2228365088] {
+  height: 53.7px;
+  width: 150px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 800;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.search-icon[_ngcontent-ng-c2228365088] {
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  position: absolute;
+  right: 55px;
+  top: 49%;
+  transform: translateY(-50%);
+}
+.circle[_ngcontent-ng-c2228365088] {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+.circle[_ngcontent-ng-c2228365088]:hover {
+  background-color: #fecc4e;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088] {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #ffff;
+  display: block;
+  position: relative;
+}
+.navbar-nav[_ngcontent-ng-c2228365088]   .nav-link[_ngcontent-ng-c2228365088]:hover {
+  color: #fecc4e;
+}
+.brand-text[_ngcontent-ng-c2228365088] {
+  color: #fcb900;
+  font-size: 14px;
+}
+.navbar-brand[_ngcontent-ng-c2228365088]:hover {
+  color: #fff;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088] {
+  background: white;
+}
+.navbar-toggler[_ngcontent-ng-c2228365088]:hover {
+  background: #fecc4e !important;
+}
+/*# sourceMappingURL=header.component.css.map */</style><style ng-app-id="ng">
+
+.cont5[_ngcontent-ng-c3170393490] {
+  height: 300px;
+  width: 90%;
+  margin-left: 110px;
+  margin-top: 30px;
+  background-color: #212529;
+}
+.foot[_ngcontent-ng-c3170393490] {
+  background-color: #212529;
+}
+.h4[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+.h5[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+}
+.follow[_ngcontent-ng-c3170393490] {
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.paragraph[_ngcontent-ng-c3170393490] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.end-heading[_ngcontent-ng-c3170393490] {
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  background-color: #162b32;
+  font-size: 16px;
+  width: 100%;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490] {
+  text-decoration: none;
+  color: #fcb900;
+  position: relative;
+  display: inline-flex;
+  padding-left: 2px;
+  align-items: center;
+  padding-right: 25px;
+  transition: transform 0.4s ease-in-out;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 70%;
+  background-color: #fcb900;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover {
+  color: #fcb900;
+  transform: translateX(10px);
+}
+ul.list-unstyled[_ngcontent-ng-c3170393490]   li[_ngcontent-ng-c3170393490]   a[_ngcontent-ng-c3170393490]:hover::before {
+  opacity: 1;
+  transform: translateX(9px);
+}
+.logo[_ngcontent-ng-c3170393490] {
+  width: 147px;
+  height: 52.67px;
+}
+/*# sourceMappingURL=footer.component.css.map */</style><style ng-app-id="ng">
+
+.icon[_ngcontent-ng-c3205802430] {
+  font-size: 1rem;
+  color: #fecc4e;
+}
+.upward-shoe-prints[_ngcontent-ng-c3205802430] {
+  transform: rotate(270deg);
+  font-size: 20px;
+  color: #fecc4e;
+}
+.detail-box[_ngcontent-ng-c3205802430] {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #162B32;
+  font-family: "Montserrat", sans-serif;
+}
+.detail-box[_ngcontent-ng-c3205802430]   p[_ngcontent-ng-c3205802430] {
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+  font-family: "Montserrat", sans-serif;
+}
+.img-container[_ngcontent-ng-c3205802430] {
+  max-width: 740px;
+  margin: 40px auto 0;
+}
+.img-container[_ngcontent-ng-c3205802430]   img[_ngcontent-ng-c3205802430] {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+  display: block;
+}
+.form-box[_ngcontent-ng-c3205802430] {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+.loc[_ngcontent-ng-c3205802430] {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fecc4e;
+  font-family: "Monsterrat", sans-serif;
+}
+.btn[_ngcontent-ng-c3205802430] {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #fecc4e;
+  border-radius: 150px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn[_ngcontent-ng-c3205802430]:hover {
+  background-color: #fecc4e;
+}
+.content[_ngcontent-ng-c3205802430] {
+  background-color: #fff;
+  color: rgb(102, 102, 102);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+.cap[_ngcontent-ng-c3205802430] {
+  color: #2d373c;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+.table-item[_ngcontent-ng-c3205802430] {
+  color: #666666;
+  font-weight: 600;
+  list-style-type: none;
+}
+.table.package-info-table[_ngcontent-ng-c3205802430] {
+  width: 95%;
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18 px;
+  background-color: #fbfbfb;
+  border-collapse: collapse;
+}
+.table.package-info-table[_ngcontent-ng-c3205802430]   th[_ngcontent-ng-c3205802430], 
+.table.package-info-table[_ngcontent-ng-c3205802430]   td[_ngcontent-ng-c3205802430] {
+  padding: 25px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+.table.package-info-table[_ngcontent-ng-c3205802430]   th[_ngcontent-ng-c3205802430]    + td[_ngcontent-ng-c3205802430] {
+  border-left: 1px solid #ddd;
+}
+.table.package-info-table[_ngcontent-ng-c3205802430]   td[_ngcontent-ng-c3205802430] {
+  text-align: left;
+}
+.table.package-info-table[_ngcontent-ng-c3205802430]   ul[_ngcontent-ng-c3205802430] {
+  margin: 0;
+  padding-left: 20px;
+}
+.included-list[_ngcontent-ng-c3205802430]   i[_ngcontent-ng-c3205802430] {
+  color: #000;
+  margin-right: 8px;
+}
+.excluded-list[_ngcontent-ng-c3205802430]   i[_ngcontent-ng-c3205802430] {
+  color: #fecc4e;
+  margin-right: 8px;
+}
+.detail[_ngcontent-ng-c3205802430] {
+  color: #2d373c;
+  height: auto;
+  margin: auto;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.accordion-item[_ngcontent-ng-c3205802430] {
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+  height: auto;
+  border: none;
+  background: transparent;
+}
+.accordion-button[_ngcontent-ng-c3205802430] {
+  display: flex;
+  margin-bottom: 23px;
+  align-items: center;
+  cursor: pointer;
+  max-height: 70px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 150px !important;
+}
+.accordion-button[_ngcontent-ng-c3205802430]:not(.collapsed) {
+  background-color: #fff;
+  border-radius: 50px;
+  height: 70px;
+}
+.accordion-body[_ngcontent-ng-c3205802430] {
+  padding: 150 300px;
+  margin-bottom: 40px;
+  border: none;
+}
+.accordion-button[_ngcontent-ng-c3205802430]:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+.accordion-collapse[_ngcontent-ng-c3205802430] {
+  height: 80px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.plan-index-circle[_ngcontent-ng-c3205802430] {
+  background-color: #fecc4e;
+  color: white;
+  border-radius: 50%;
+  border: 0.3em solid brown;
+  width: 10vw;
+  height: 10vw;
+  max-width: 68px;
+  max-height: 68px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.plan-index[_ngcontent-ng-c3205802430] {
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: bold;
+  padding: 22px;
+}
+.plan-title[_ngcontent-ng-c3205802430]   h5[_ngcontent-ng-c3205802430] {
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 80px;
+  color: #2d373c;
+}
+.plan-title[_ngcontent-ng-c3205802430]   h6[_ngcontent-ng-c3205802430] {
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 80px;
+  color: #fecc4e;
+}
+@media (max-width: 768px) {
+  .plan-index-circle[_ngcontent-ng-c3205802430] {
+    width: 8vw;
+    height: 8vw;
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .plan-index[_ngcontent-ng-c3205802430] {
+    font-size: clamp(12px, 1.5vw, 17px);
+    padding: 18px;
+  }
+  .plan-title[_ngcontent-ng-c3205802430]   h5[_ngcontent-ng-c3205802430] {
+    font-size: 16px;
+    padding-left: 60px;
+  }
+  .plan-title[_ngcontent-ng-c3205802430]   h6[_ngcontent-ng-c3205802430] {
+    font-size: 12px;
+    padding-left: 60px;
+    color: #fecc4e;
+  }
+}
+@media (max-width: 480px) {
+  .plan-index-circle[_ngcontent-ng-c3205802430] {
+    width: 12vw;
+    height: 12vw;
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .plan-index[_ngcontent-ng-c3205802430] {
+    font-size: clamp(10px, 1.2vw, 15px);
+    padding: 15px;
+  }
+  .plan-title[_ngcontent-ng-c3205802430]   h5[_ngcontent-ng-c3205802430] {
+    font-size: 14px;
+    padding-left: 40px;
+  }
+  .plan-title[_ngcontent-ng-c3205802430]   h6[_ngcontent-ng-c3205802430] {
+    font-size: 10px;
+    color: #fecc4e;
+    padding-left: 40px;
+  }
+}
+.para1[_ngcontent-ng-c3205802430] {
+  color: #2d373c;
+  font-size: 20px;
+  font-weight: 600;
+}
+.img3[_ngcontent-ng-c3205802430], 
+.img2[_ngcontent-ng-c3205802430] {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 0px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+.img2[_ngcontent-ng-c3205802430]:hover, 
+.img3[_ngcontent-ng-c3205802430]:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+.customer[_ngcontent-ng-c3205802430] {
+  height: 70px;
+  font-size: 22px;
+  padding-top: 20px;
+  width: 40%;
+  color: #2d373c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.review-box[_ngcontent-ng-c3205802430] {
+  height: auto;
+  color: #2d373c;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  width: auto;
+  background: #f8f8f8;
+}
+.review-box[_ngcontent-ng-c3205802430]   h4[_ngcontent-ng-c3205802430] {
+  padding: 20px;
+  color: #2d373c;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background: #f8f8f8;
+}
+.rating-button[_ngcontent-ng-c3205802430] {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  font-family: "Monyserrat", sans-serif;
+  color: #162b32;
+  background: #fecc4e;
+}
+.rating-button[_ngcontent-ng-c3205802430]:hover {
+  color: #fecc4e;
+  background: #162b32;
+}
+.close-button[_ngcontent-ng-c3205802430] {
+  position: absolute;
+  top: 30px;
+  right: 190px;
+  font-size: 20px;
+  background: none;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  z-index: 100;
+  border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+  .close-button[_ngcontent-ng-c3205802430] {
+    top: 5px;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+    font-size: 18px;
+  }
+}
+.overlay[_ngcontent-ng-c3205802430] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.review[_ngcontent-ng-c3205802430] {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #2d373c;
+  margin-top: 50px;
+}
+.input-review[_ngcontent-ng-c3205802430] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background-color: #f6fcf9;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: #666666;
+}
+.textarea-review[_ngcontent-ng-c3205802430] {
+  height: 140px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  background-color: #f6fcf9;
+  margin-top: 25px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: #666666;
+}
+.form-container[_ngcontent-ng-c3205802430] {
+  background: white;
+  width: 100%;
+  max-width: 950px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 90%;
+}
+@media (max-width: 768px) {
+  .form-container[_ngcontent-ng-c3205802430] {
+    width: 95%;
+    padding: 15px;
+  }
+}
+.submit-button[_ngcontent-ng-c3205802430] {
+  background-color: #fecc4e;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+  height: 50px;
+  width: 190px;
+}
+.submit-button[_ngcontent-ng-c3205802430]:hover {
+  background: #31ef7a;
+}
+.review-item-list[_ngcontent-ng-c3205802430] {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+.review-item-list[_ngcontent-ng-c3205802430]   li[_ngcontent-ng-c3205802430] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+.star-list[_ngcontent-ng-c3205802430] {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.rating-item[_ngcontent-ng-c3205802430] {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+.rating[_ngcontent-ng-c3205802430] {
+  display: flex;
+  direction: row;
+}
+.rating[_ngcontent-ng-c3205802430]   input[_ngcontent-ng-c3205802430] {
+  display: none;
+}
+.rating[_ngcontent-ng-c3205802430]   label[_ngcontent-ng-c3205802430] {
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-right: 5px;
+}
+.rating[_ngcontent-ng-c3205802430]   input[_ngcontent-ng-c3205802430]:checked    ~ label[_ngcontent-ng-c3205802430] {
+  color: #54a15d;
+}
+.rating[_ngcontent-ng-c3205802430]   label[_ngcontent-ng-c3205802430]:hover, 
+.rating[_ngcontent-ng-c3205802430]   label[_ngcontent-ng-c3205802430]:hover    ~ label[_ngcontent-ng-c3205802430] {
+  color: #54a15d;
+}
+.review-item-list[_ngcontent-ng-c3205802430]   li[_ngcontent-ng-c3205802430] {
+  margin-bottom: 20px;
+}
+fieldset.rating[_ngcontent-ng-c3205802430] {
+  display: flex;
+  flex-direction: row-reverse;
+}
+fieldset.rating[_ngcontent-ng-c3205802430]   input[type=radio][_ngcontent-ng-c3205802430] {
+  display: none;
+}
+fieldset.rating[_ngcontent-ng-c3205802430]   label[_ngcontent-ng-c3205802430] {
+  cursor: pointer;
+  font-size: 1.3em;
+  color: #2d373c;
+}
+.book[_ngcontent-ng-c3205802430] {
+  font-weight: 1.rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #162b32;
+  padding-left: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+.booking-form-box[_ngcontent-ng-c3205802430] {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+.search-box-single[_ngcontent-ng-c3205802430] {
+  position: relative;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+.searchbox-icon[_ngcontent-ng-c3205802430] {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+.searchbox-input[_ngcontent-ng-c3205802430]   input[_ngcontent-ng-c3205802430], 
+.searchbox-input[_ngcontent-ng-c3205802430]   textarea[_ngcontent-ng-c3205802430] {
+  width: 100%;
+  padding: 10px 40px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  appearance: none;
+  box-sizing: border-box;
+}
+.search-box-single[_ngcontent-ng-c3205802430]:hover {
+  border: 1px solid green;
+}
+.search-box-single[_ngcontent-ng-c3205802430]:hover   .searchbox-icon[_ngcontent-ng-c3205802430] {
+  color: green;
+}
+.searchbox-input[_ngcontent-ng-c3205802430]   input[_ngcontent-ng-c3205802430]:focus, 
+.searchbox-input[_ngcontent-ng-c3205802430]   textarea[_ngcontent-ng-c3205802430]:focus {
+  border-color: green;
+  outline: none;
+}
+.searchbox-input[_ngcontent-ng-c3205802430]   input[type=email][_ngcontent-ng-c3205802430] {
+  padding: 10px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.text-danger[_ngcontent-ng-c3205802430] {
+  font-size: 14px;
+  margin-top: 5px;
+  color: red;
+}
+.button-fill-primary[_ngcontent-ng-c3205802430] {
+  background-color: #fecc4e;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button-fill-primary[_ngcontent-ng-c3205802430]:hover {
+  background-color: #000;
+  color: #fecc4e;
+}
+@media (max-width: 768px) {
+  .booking-form-box[_ngcontent-ng-c3205802430] {
+    padding: 15px;
+  }
+  .button-fill-primary[_ngcontent-ng-c3205802430] {
+    font-size: 14px;
+  }
+}
+.widget-body[_ngcontent-ng-c3205802430] {
+  background-color: #f7f7f7;
+  padding: 10px;
+  width: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.popular[_ngcontent-ng-c3205802430] {
+  padding: 12px;
+  border: 2px solid #2d373c;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: #2d373c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.package-sm[_ngcontent-ng-c3205802430] {
+  margin-top: 40px;
+}
+.thumb[_ngcontent-ng-c3205802430] {
+  float: left;
+  margin-right: 20px;
+}
+.thumb[_ngcontent-ng-c3205802430]   img[_ngcontent-ng-c3205802430] {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+.info[_ngcontent-ng-c3205802430] {
+  overflow: hidden;
+}
+.info[_ngcontent-ng-c3205802430]   h6[_ngcontent-ng-c3205802430] {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.price[_ngcontent-ng-c3205802430] {
+  font-size: 14px;
+  color: #fecc4e;
+}
+.price[_ngcontent-ng-c3205802430]   del[_ngcontent-ng-c3205802430] {
+  text-decoration: line-through;
+  color: #fecc4e;
+  font-size: 14px;
+}
+.price[_ngcontent-ng-c3205802430]   span[_ngcontent-ng-c3205802430] {
+  font-size: 14px;
+  color: #2d373c;
+}
+.info-a[_ngcontent-ng-c3205802430] {
+  color: #2d373c;
+  font-size: 15px;
+  text-decoration: none;
+}
+.info[_ngcontent-ng-c3205802430]   a[_ngcontent-ng-c3205802430]:hover {
+  color: #fecc4e;
+  text-decoration: none;
+}
+.tags[_ngcontent-ng-c3205802430] {
+  border: 2px solid #2d373c;
+  border-radius: 7px;
+  font-size: 18px;
+  padding: 10px;
+  color: #f7f7f7;
+  background: #2d373c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.button-container[_ngcontent-ng-c3205802430] {
+  margin-left: 19px;
+}
+.button[_ngcontent-ng-c3205802430] {
+  align-items: center;
+  height: 40px;
+  width: 90px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #666666;
+}
+.button[_ngcontent-ng-c3205802430]:hover {
+  background-color: #fecc4e;
+  color: #fff;
+}
+/*# sourceMappingURL=package-detail-page.component.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c3139016077="" ng-version="18.2.12" ngh="3" ng-server-context="ssg"><app-header _ngcontent-ng-c3139016077="" _nghost-ng-c2228365088="" ngh="0"><nav _ngcontent-ng-c2228365088="" class="navbar navbar-expand-lg"><div _ngcontent-ng-c2228365088="" class="container-fluid"><a _ngcontent-ng-c2228365088="" href="#" class="navbar-brand"><img _ngcontent-ng-c2228365088="" src="/assets/images/logo.png" alt="Logo" class="logo" style="height: 40px;"></a><button _ngcontent-ng-c2228365088="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span _ngcontent-ng-c2228365088="" class="navbar-toggler-icon"></span></button><div _ngcontent-ng-c2228365088="" id="navbarNav" class="collapse navbar-collapse justify-content-between"><ul _ngcontent-ng-c2228365088="" class="navbar-nav mx-auto"><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/" class="nav-link active me-4" ng-reflect-router-link="/" href="/">HOME</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/about" class="nav-link me-4" ng-reflect-router-link="/about" href="/about">ABOUT US</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/destination" class="nav-link me-4" ng-reflect-router-link="/destination" href="/destination">DESTINATION</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/tour" class="nav-link me-4" ng-reflect-router-link="/tour" href="/tour">TOUR</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/blogs" class="nav-link me-4" ng-reflect-router-link="/blogs" href="/blogs">BLOGS</a></li><li _ngcontent-ng-c2228365088="" class="nav-item"><a _ngcontent-ng-c2228365088="" routerlink="/contact" class="nav-link me-4" ng-reflect-router-link="/contact" href="/contact">CONTACT US</a></li></ul><div _ngcontent-ng-c2228365088="" class="search-icon"><span _ngcontent-ng-c2228365088="" class="circle"><i _ngcontent-ng-c2228365088="" class="fa fa-search fs"></i></span></div></div></div></nav></app-header><router-outlet _ngcontent-ng-c3139016077=""></router-outlet><app-package-detail-page _nghost-ng-c3205802430="" ngh="1"><div _ngcontent-ng-c3205802430="" class="container mt-2"><div _ngcontent-ng-c3205802430="" class="row"><div _ngcontent-ng-c3205802430="" class="col-lg-8"><div _ngcontent-ng-c3205802430="" class="row text-center mb-4 mt-2"><div _ngcontent-ng-c3205802430="" class="col-6 col-md-3 detail-box"><i _ngcontent-ng-c3205802430="" class="fas fa-clock icon"></i> Duration <p _ngcontent-ng-c3205802430="">0 days 0 nights</p></div><div _ngcontent-ng-c3205802430="" class="col-6 col-md-3 detail-box"><i _ngcontent-ng-c3205802430="" class="fas fa-shoe-prints upward-shoe-prints"></i> Tour Type <p _ngcontent-ng-c3205802430=""> Tour</p></div><div _ngcontent-ng-c3205802430="" class="col-6 col-md-3 detail-box"><i _ngcontent-ng-c3205802430="" class="fas fa-users icon"></i> Group Size <p _ngcontent-ng-c3205802430=""> Person</p></div><div _ngcontent-ng-c3205802430="" class="col-6 col-md-3 detail-box"><i _ngcontent-ng-c3205802430="" class="fas fa-user-tie icon"></i> Tour Guide <p _ngcontent-ng-c3205802430=""> Mentors</p></div></div><div _ngcontent-ng-c3205802430="" class="img-container text-center mb-4"><img _ngcontent-ng-c3205802430="" alt="Tour Image" class="img-fluid" src=""></div><div _ngcontent-ng-c3205802430="" class="row mb-4"><div _ngcontent-ng-c3205802430="" class="col-12 d-flex align-items-center"><i _ngcontent-ng-c3205802430="" class="fas fa-map-marker-alt icon me-2"></i><span _ngcontent-ng-c3205802430="" class="loc"><!--ngetn--></span></div></div><div _ngcontent-ng-c3205802430="" class="row"><div _ngcontent-ng-c3205802430="" class="col-12 button-container text-center"><button _ngcontent-ng-c3205802430="" class="btn mt-2 me-4 px-4 py-2"><i _ngcontent-ng-c3205802430="" class="fas fa-info-circle"></i> Information </button><button _ngcontent-ng-c3205802430="" class="btn me-4 mt-2 px-4 py-2"><i _ngcontent-ng-c3205802430="" class="fas fa-spreadsheet"></i> Travel Plan </button><button _ngcontent-ng-c3205802430="" class="btn me-4 mt-2 px-4 py-2"><i _ngcontent-ng-c3205802430="" class="fas fa-image"></i> Tour Gallery </button><button _ngcontent-ng-c3205802430="" class="btn me-4 mt-2 px-4 py-2"><i _ngcontent-ng-c3205802430="" class="fas fa-map-marker-alt"></i> Location </button></div></div><div _ngcontent-ng-c3205802430="" class="col-12"><div _ngcontent-ng-c3205802430="" class="content"><div _ngcontent-ng-c3205802430="" class="mb-4"><h2 _ngcontent-ng-c3205802430="" class="cap text-start mb-2 mt-5 me-2"><!--ngetn--></h2><p _ngcontent-ng-c3205802430="" class="para text-center mb-2 mt-4"><!--ngetn--></p><img _ngcontent-ng-c3205802430="" src="assets/images/9.jpg" class="img-fluid mb-4 mt-5 d-block mx-auto" style="width: 696px; height: 210px; object-fit: cover;"><div _ngcontent-ng-c3205802430="" class="package-info-container"><table _ngcontent-ng-c3205802430="" class="table package-info-table mb-0"><tbody _ngcontent-ng-c3205802430=""><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Destination</th><td _ngcontent-ng-c3205802430="" class="table-item"><!--ngetn--></td></tr><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Departure</th><td _ngcontent-ng-c3205802430="" class="table-item">Some Departure</td></tr><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Departure Time</th><td _ngcontent-ng-c3205802430="" class="table-item">10:00 AM</td></tr><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Return Time</th><td _ngcontent-ng-c3205802430="" class="table-item">5:00 PM</td></tr><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Included</th><td _ngcontent-ng-c3205802430=""><ul _ngcontent-ng-c3205802430="" class="included-list table-item"><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></ul></td></tr><tr _ngcontent-ng-c3205802430=""><th _ngcontent-ng-c3205802430="">Excluded</th><td _ngcontent-ng-c3205802430=""><ul _ngcontent-ng-c3205802430="" class="excluded-list table-item"><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></ul></td></tr><tr _ngcontent-ng-c3205802430=""><td _ngcontent-ng-c3205802430="" colspan="2"><div _ngcontent-ng-c3205802430="" class="tour-transport d-flex align-items-center justify-content-center"><span _ngcontent-ng-c3205802430="">Travel with Bus: </span></div></td></tr></tbody></table></div></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><h4 _ngcontent-ng-c3205802430="" class="customer mb-3">Customer Review</h4><div _ngcontent-ng-c3205802430="" class="review-box"><h4 _ngcontent-ng-c3205802430="">No rating found</h4><button _ngcontent-ng-c3205802430="" class="rating-button">Give a Rating</button><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><div _ngcontent-ng-c3205802430="" class="col-lg-4 mt-3"><div _ngcontent-ng-c3205802430="" class="booking-form-box"><h3 _ngcontent-ng-c3205802430="" class="book">Book the Tour</h3><hr _ngcontent-ng-c3205802430="" class="separate-line"><form _ngcontent-ng-c3205802430="" novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid"><div _ngcontent-ng-c3205802430="" class="search-box-single"><div _ngcontent-ng-c3205802430="" class="searchbox-icon"><i _ngcontent-ng-c3205802430="" class="bi bi-pencil-fill"></i></div><div _ngcontent-ng-c3205802430="" class="searchbox-input"><input _ngcontent-ng-c3205802430="" type="text" id="fullName" formcontrolname="fullName" placeholder="Full Name*" class="form-control" ng-reflect-name="fullName"></div></div><!--bindings={
+  "ng-reflect-ng-if": null
+}--><div _ngcontent-ng-c3205802430="" class="search-box-single"><div _ngcontent-ng-c3205802430="" class="searchbox-icon"><i _ngcontent-ng-c3205802430="" class="bi bi-envelope-fill"></i></div><div _ngcontent-ng-c3205802430="" class="searchbox-input"><input _ngcontent-ng-c3205802430="" type="email" id="email" formcontrolname="email" placeholder="E-mail*" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="email" value=""></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-ng-c3205802430="" class="search-box-single destination-box"><div _ngcontent-ng-c3205802430="" class="searchbox-icon"><i _ngcontent-ng-c3205802430="" class="bi bi-telephone"></i></div><div _ngcontent-ng-c3205802430="" class="searchbox-input"><input _ngcontent-ng-c3205802430="" type="text" id="phone" formcontrolname="phone" placeholder="Phone Number*" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="phone" value=""></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-ng-c3205802430="" class="search-box-single"><div _ngcontent-ng-c3205802430="" class="searchbox-icon"><i _ngcontent-ng-c3205802430="" class="bi bi-chat-left-text-fill"></i></div><div _ngcontent-ng-c3205802430="" class="searchbox-input"><textarea _ngcontent-ng-c3205802430="" id="message" formcontrolname="message" rows="6" placeholder="Your Enquiry*" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="message"></textarea></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><button _ngcontent-ng-c3205802430="" type="submit" class="button-fill-primary btn--lg w-100 mt-3" disabled=""> Submit Now </button></form></div><div _ngcontent-ng-c3205802430="" class="container"><div _ngcontent-ng-c3205802430="" class="widget-body mt-5"><h2 _ngcontent-ng-c3205802430="" class="popular text-center">Popular Package</h2><div _ngcontent-ng-c3205802430="" class="row"><div _ngcontent-ng-c3205802430="" class="col-12 package-sm"><div _ngcontent-ng-c3205802430="" class="thumb"><a _ngcontent-ng-c3205802430="" href="24"><img _ngcontent-ng-c3205802430="" width="80" height="80" decoding="async" class="img-fluid wp-post-image" alt="Massoorie" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/24.jpg"></a></div><div _ngcontent-ng-c3205802430="" class="info"><h6 _ngcontent-ng-c3205802430=""><a _ngcontent-ng-c3205802430="" class="info-a" href="">Massoorie</a></h6><div _ngcontent-ng-c3205802430="" class="price"><span _ngcontent-ng-c3205802430="">From</span><h6 _ngcontent-ng-c3205802430=""><del _ngcontent-ng-c3205802430="">$59.00</del> -$49.00 /<span _ngcontent-ng-c3205802430="">Per Person</span></h6></div></div></div><div _ngcontent-ng-c3205802430="" class="col-12 package-sm"><div _ngcontent-ng-c3205802430="" class="thumb"><a _ngcontent-ng-c3205802430="" href="33"><img _ngcontent-ng-c3205802430="" width="80" height="80" decoding="async" class="img-fluid wp-post-image" alt="Ladakh" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/Ladakh."></a></div><div _ngcontent-ng-c3205802430="" class="info"><h6 _ngcontent-ng-c3205802430=""><a _ngcontent-ng-c3205802430="" class="info-a" href="">Ladakh</a></h6><div _ngcontent-ng-c3205802430="" class="price"><span _ngcontent-ng-c3205802430="">From</span><h6 _ngcontent-ng-c3205802430=""><del _ngcontent-ng-c3205802430="">$59.00</del> -$49.00 /<span _ngcontent-ng-c3205802430="">Per Person</span></h6></div></div></div><div _ngcontent-ng-c3205802430="" class="col-12 package-sm"><div _ngcontent-ng-c3205802430="" class="thumb"><a _ngcontent-ng-c3205802430="" href="34"><img _ngcontent-ng-c3205802430="" width="80" height="80" decoding="async" class="img-fluid wp-post-image" alt="Hawamahal" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/Hawamahal.jpeg"></a></div><div _ngcontent-ng-c3205802430="" class="info"><h6 _ngcontent-ng-c3205802430=""><a _ngcontent-ng-c3205802430="" class="info-a" href="">Hawamahal</a></h6><div _ngcontent-ng-c3205802430="" class="price"><span _ngcontent-ng-c3205802430="">From</span><h6 _ngcontent-ng-c3205802430=""><del _ngcontent-ng-c3205802430="">$59.00</del> -$49.00 /<span _ngcontent-ng-c3205802430="">Per Person</span></h6></div></div></div><div _ngcontent-ng-c3205802430="" class="col-12 package-sm"><div _ngcontent-ng-c3205802430="" class="thumb"><a _ngcontent-ng-c3205802430="" href="35"><img _ngcontent-ng-c3205802430="" width="80" height="80" decoding="async" class="img-fluid wp-post-image" alt="Goa" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/35.jpg"></a></div><div _ngcontent-ng-c3205802430="" class="info"><h6 _ngcontent-ng-c3205802430=""><a _ngcontent-ng-c3205802430="" class="info-a" href="">Goa</a></h6><div _ngcontent-ng-c3205802430="" class="price"><span _ngcontent-ng-c3205802430="">From</span><h6 _ngcontent-ng-c3205802430=""><del _ngcontent-ng-c3205802430="">$59.00</del> -$49.00 /<span _ngcontent-ng-c3205802430="">Per Person</span></h6></div></div></div><div _ngcontent-ng-c3205802430="" class="col-12 package-sm"><div _ngcontent-ng-c3205802430="" class="thumb"><a _ngcontent-ng-c3205802430="" href="36"><img _ngcontent-ng-c3205802430="" width="80" height="80" decoding="async" class="img-fluid wp-post-image" alt="Dehradun" src="https://olft.s3.ap-southeast-2.amazonaws.com/packages/36.jpg"></a></div><div _ngcontent-ng-c3205802430="" class="info"><h6 _ngcontent-ng-c3205802430=""><a _ngcontent-ng-c3205802430="" class="info-a" href="">Dehradun</a></h6><div _ngcontent-ng-c3205802430="" class="price"><span _ngcontent-ng-c3205802430="">From</span><h6 _ngcontent-ng-c3205802430=""><del _ngcontent-ng-c3205802430="">$59.00</del> -$49.00 /<span _ngcontent-ng-c3205802430="">Per Person</span></h6></div></div></div><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div></div></div><div _ngcontent-ng-c3205802430="" class="container col-12 mt-4 bg-light"><div _ngcontent-ng-c3205802430="" class="tags mb-1 text-center">All Tags</div><div _ngcontent-ng-c3205802430="" class="button-container justify-content-center me-3"><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/#">Flying</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/#">Holidays</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/feature">Feature</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/family-tour">Family Tour</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/one-travel">One Travel</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/trip">Trip</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/explore">Explore</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/instatravel">Instatravel</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/summer">Summer</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/beach">Beach</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/destination">Destination</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/travelling">Travelling</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/tourcity">TourCity</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/hill-town">Hill Town</button><button _ngcontent-ng-c3205802430="" class="button me-2 mt-2" tabindex="0" ng-reflect-router-link="/facebook">FaceBook</button></div></div></div></div></div></app-package-detail-page><!--container--><app-footer _ngcontent-ng-c3139016077="" _nghost-ng-c3170393490="" ngh="2"><div _ngcontent-ng-c3170393490="" class="foot"><footer _ngcontent-ng-c3170393490="" class="text-light py-4 bg-dark"><div _ngcontent-ng-c3170393490="" class="container"><div _ngcontent-ng-c3170393490="" class="row"><div _ngcontent-ng-c3170393490="" class="col-md-4"><b _ngcontent-ng-c3170393490=""><p _ngcontent-ng-c3170393490="" class="h4"><img _ngcontent-ng-c3170393490="" src="assets/images/logo.png" alt="Logo" class="logo"></p><p _ngcontent-ng-c3170393490="" class="paragraph"> Duis rutrum nisl urna. Maecenas vel libero<br _ngcontent-ng-c3170393490=""> faucibus nisi venenatis hendrerit a id lectus.<br _ngcontent-ng-c3170393490=""> Suspendissendt molestie turpis nec lacinia <br _ngcontent-ng-c3170393490=""> vehicula. <br _ngcontent-ng-c3170393490=""><br _ngcontent-ng-c3170393490=""> Working days : Monday-Friday (9AM-5PM) </p><p _ngcontent-ng-c3170393490="" class="follow">FOLLOW US ON :</p><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></b></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Quick Links</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Guid</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/blog" class="text-light">Blogs</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/contact" class="text-light">Contact Us</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="/destination" class="text-light">Destination</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">FAQ</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Gallery</a></li></ul></div><div _ngcontent-ng-c3170393490="" class="col-md-2"><p _ngcontent-ng-c3170393490="" class="h5">Tour Type</p><ul _ngcontent-ng-c3170393490="" class="list-unstyled"><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">City Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Hill Town</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Family</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Adventure</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Escorted Tour</a></li><li _ngcontent-ng-c3170393490=""><a _ngcontent-ng-c3170393490="" href="#" class="text-light">Couple</a></li></ul></div><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></footer></div><div _ngcontent-ng-c3170393490="" class="text-center text-light py-3 end-heading"> Copyright 2024 Funstay | Design By Acelucid Pvt. Ltd </div></app-footer></app-root>
+<script src="polyfills.js" type="module"></script><script src="scripts.js" defer=""></script><script src="main.js" type="module"></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite" id="cdk-live-announcer-2"></div><script id="ng-state" type="application/json">{"2217109518":{"b":[{"pk_Package_id":24,"title":"Massoorie","duration":"9","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/24.jpg"},{"pk_Package_id":33,"title":"Ladakh","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Ladakh."},{"pk_Package_id":34,"title":"Hawamahal","duration":"8","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Hawamahal.jpeg"},{"pk_Package_id":35,"title":"Goa","duration":"8","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/35.jpg"},{"pk_Package_id":36,"title":"Dehradun","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/36.jpg"},{"pk_Package_id":37,"title":"haridwar","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/haridwar.jpg"},{"pk_Package_id":38,"title":"Nainital","duration":"5","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/Nainital."},{"pk_Package_id":39,"title":"Paro Taktsang","duration":"6","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/39.jpg"},{"pk_Package_id":41,"title":"The National Folk Heritage Museu","duration":"5","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/41.jpg"},{"pk_Package_id":42,"title":"Dubai Aquarium And Underwater Zoo","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/42.jpg"},{"pk_Package_id":56,"title":"TESTING","duration":"4","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/TESTING.jpg"},{"pk_Package_id":57,"title":"test","duration":"6","image":"https://olft.s3.ap-southeast-2.amazonaws.com/packages/test.jpg"}],"h":{},"s":200,"st":"OK","u":"http://13.233.73.166/api/packages","rt":"json"},"__nghData__":[{},{"t":{"47":"t3","48":"t6","49":"t7","50":"t8","58":"t9","70":"t10","76":"t11","82":"t12","88":"t13","96":"t14"},"c":{"47":[{"i":"t3","r":1,"t":{"34":"t4","40":"t5"},"c":{"34":[],"40":[]}}],"48":[],"49":[],"50":[],"58":[],"70":[],"76":[],"82":[],"88":[],"96":[{"i":"t14","r":1,"x":5}]}},{"t":{"21":"t0","66":"t1"},"c":{"21":[],"66":[]}},{"c":{"1":[{"i":"c3205802430","r":1}]}}]}</script></body></html>

@@ -1,0 +1,13 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/blogDetailPage",
+    "/blogs",
+    "/contact",
+    "/destination",
+    "/destinationDetailPage",
+    "/packageDetailPage",
+    "/tour"
+  ]
+}
