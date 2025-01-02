@@ -8,7 +8,8 @@ import { MatSnackBar} from '@angular/material/snack-bar'
   providedIn: 'root'
 })
 export class MasterService {
-  private apiUrl = 'http://localhost:8000/api/';   // Replace with your API endpoint.
+  // private apiUrl = 'http://localhost:8000/api/';   // Replace with your API endpoint.
+  private apiUrl = 'http://13.233.73.166/api/'
 
   constructor(private http: HttpClient, private _snackbar: MatSnackBar ) { }
 
