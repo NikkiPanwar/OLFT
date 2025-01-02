@@ -191,8 +191,7 @@ chunkedGalleries(galleries: Gallery[], chunkSize: number): Gallery[][] {
     console.log(this.enquiryForm.value)
 
 
-    this._service.postFormData(enquiryData).pipe(finalize(()=> this.enquiryForm.reset()) ) .subscribe(
-      {
+    this._service.postFormData(enquiryData).pipe(finalize(()=> this.enquiryForm.reset()) ) .subscribe(  {
       next: (response:any) => {
         console.log('Enquiry submitted successfully', response);
         this.enquiryForm.reset(); 

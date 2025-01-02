@@ -36,7 +36,6 @@ constructor(private _service:MasterService , private router:Router){}
  }
 
  goToBlogDetailPage(packageId:number){
-
   this.router.navigate(['/blogDetailPage',packageId])
  }
 
