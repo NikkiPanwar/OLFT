@@ -1,38 +1,39 @@
 <div class="container mt-4">
   <div class="row">
 
-    <div class="col-lg-8">
-
+    <div class="col-lg-8" *ngIf="blog">
       <div class="img-container text-center mb-4">
-        <img [src]="blog?.secondary_image" alt="Tour Image" class="img-cont" />
+        <img [src]="blog.secondary_image" alt="Tour Image" class="img-cont" />
       </div>
 
 
       <div class="card-footer">
-<span class="user me-5"><i class="fas fa-user-circle icon"></i> By User</span>
-<span class="user me-5"><i class="fas fa-calendar icon"></i> July 15, 2022</span>
-<span class="user me-5"><i class="fas fa-comment icon"></i> (0) Comment </span>
+        <span class="user me-5"><i class="fas fa-user-circle icon"></i> By User</span>
+        <span class="user me-5"><i class="fas fa-calendar icon"></i> July 15, 2022</span>
+        <span class="user me-5"><i class="fas fa-comment icon"></i> (0) Comment </span>
       </div>
 
       <div class="col-12">
         <div class="content">
-          <p class="content-details mt-4"> {{blog?.para1}}</p>
+          <p class="content-details mt-4"> {{blog.para1}}</p>
 
           <p class="content-bg mt-4">
-            <i class="fas fa-quote-left icon"></i> {{blog?.moto1}}</p>
+            <i class="fas fa-quote-left icon"></i> {{blog.moto1}}
+          </p>
 
-          <p class="content-details mt-4"> {{blog?.para2}} </p>
+          <p class="content-details mt-4"> {{blog.para2}} </p>
 
           <img src="assets/images/blog.jpg" alt="img" class="img-fluid mt-3">
 
 
           <h2 class="content-head mt-5">Things You Can Do to a vibe</h2>
-          <p class="content-details mt-3">  {{blog?.para1}}</p>
+          <p class="content-details mt-3"> {{blog.para1}}</p>
 
           <p class="content-bg mt-5">
-            <i class="fas fa-quote-left icon"></i> {{blog?.moto1}}</p>
+            <i class="fas fa-quote-left icon"></i> {{blog.moto1}}
+          </p>
 
-          <p class="content-details mt-4"> {{blog?.para2}} </p>
+          <p class="content-details mt-4"> {{blog.para2}} </p>
         </div>
 
 
@@ -132,9 +133,9 @@
               <h5 class="month-link text-start">
                 <ul class="cat-item">
                   <li class="cat-item2"><a href="#" class="cat-item3">January 2024</a></li>
-                  <li class="cat-item2"><a href="#"class="cat-item3">January 2024</a></li>
                   <li class="cat-item2"><a href="#" class="cat-item3">January 2024</a></li>
-                  <li class="cat-item2"><a href="#"class="cat-item3">July 2022</a></li>
+                  <li class="cat-item2"><a href="#" class="cat-item3">January 2024</a></li>
+                  <li class="cat-item2"><a href="#" class="cat-item3">July 2022</a></li>
                 </ul>
               </h5>
             </div>
@@ -170,101 +171,102 @@
         </div>
       </div>
 
-<div class="container mt-3 mb-2 bg-light">
-  <h1>Search</h1><hr>
-      <div class="search-container ms-2">
-<input type="text" placeholder="Search..." [(ngModel)]="searchQuery" (keyup)="onSearch()"
-    class="search-input"/>
-        <button class="search-button" (click)="onSearch()">Search</button>
-      </div>
-      
-      
-      <div *ngIf="filteredResults.length > 0" class="results">
-        <p *ngFor="let result of filteredResults">{{ result }}</p>
-      </div>
-      <div *ngIf="filteredResults.length === 0 && searchQuery" class="no-results">
-        No results found for "{{ searchQuery }}"
-      </div>
+      <div class="container mt-3 mb-2 bg-light">
+        <h1>Search</h1>
+        <hr>
+        <div class="search-container ms-2">
+          <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" (keyup)="onSearch()"
+            class="search-input" />
+          <button class="search-button" (click)="onSearch()">Search</button>
+        </div>
+
+
+        <div *ngIf="filteredResults.length > 0" class="results">
+          <p *ngFor="let result of filteredResults">{{ result }}</p>
+        </div>
+        <div *ngIf="filteredResults.length === 0 && searchQuery" class="no-results">
+          No results found for "{{ searchQuery }}"
+        </div>
       </div>
 
-     
+
       <div class="container col-12 bg-light mt-4">
         <div class="widget-body">
-            <h4 class="text-start">Latest Posts</h4>
-    
-            <div class="row">
-                <div class="col-12 package-sm" *ngFor="let blog of _blogs">
-                  
-                  <div class="thumb">
-                    <img [src]="blog.primary_image" width="90" height="90" class="img-fluid" alt="{{ blog.title }}" decoding="async" />
-                    <a (click)="goToBlogDetailPage(blog.id)" class="info-a">{{ blog.title }}</a>
-                    </div>
-                    <div class="info">
-                        <i class="fas fa-user-circle i"></i> User
-                        <i class="fas fa-calendar-alt i"></i> 15 Jul 2022
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
+          <h4 class="text-start">Latest Posts</h4>
 
+          <div class="row">
+            <div class="col-12 package-sm" *ngFor="let blog of _blogs">
 
+              <div class="thumb">
+                <img [src]="blog.primary_image" width="90" height="90" class="img-fluid" alt="{{ blog.title }}"
+                  decoding="async" />
+                <a (click)="goToBlogDetailPage(blog.id)" class="info-a">{{ blog.title }}</a>
+              </div>
+              <div class="info">
+                <i class="fas fa-user-circle i"></i> User
+                <i class="fas fa-calendar-alt i"></i> 15 Jul 2022
+              </div>
 
-
-<div class="container col-12 mt-4 bg-light">
-  <div class="tags mb-1 text-start">All Tags</div>
-  <div class="button-container justify-content-center me-3">
-      <button class="button me-2 mt-2" [routerLink]="'/#'">Flying</button>
-      <button class="button me-2 mt-2" [routerLink]="'/#'">Holidays</button>
-      <button class="button me-2 mt-2" [routerLink]="'/feature'">Feature</button>
-      <button class="button me-2 mt-2" [routerLink]="'/family-tour'">Family Tour</button>
-      <button class="button me-2 mt-2" [routerLink]="'/one-travel'">One Travel</button>
-      <button class="button me-2 mt-2" [routerLink]="'/trip'">Trip</button>
-      <button class="button me-2 mt-  2" [routerLink]="'/explore'">Explore</button>
-      <button class="button me-2 mt-2" [routerLink]="'/instatravel'">Instatravel</button>
-      <button class="button me-2 mt-2" [routerLink]="'/summer'">Summer</button>
-      <button class="button me-2 mt-2" [routerLink]="'/beach'">Beach</button>
-      <button class="button me-2 mt-2" [routerLink]="'/destination'">Destination</button>
-      <button class="button me-2 mt-2" [routerLink]="'/travelling'">Travelling</button>
-      <button class="button me-2 mt-2" [routerLink]="'/tourcity'">TourCity</button>
-      <button class="button me-2 mt-2" [routerLink]="'/hill-town'">Hill Town</button>
-      <button class="button me-2 mt-2" [routerLink]="'/facebook'">FaceBook</button>
-  </div>
-</div>
-
-
-<div class="container">
-    <div *ngIf="filteredGalleries && filteredGalleries.length > 0; else noGallery"> 
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img [src]="filteredGalleries[0].image_url" alt="Gallery Image" class="img-fluid img2">
-        </div>
-        <div class="col-12 col-md-6">
-          <img [src]="filteredGalleries[1].image_url" alt="Gallery Image" 
-          class="img-fluid img2">
-        </div>
-      </div>
-      
-      <div class="row justify-content-center">
-        <div class="col-12 mt-4">
-          <img [src]="filteredGalleries[2].image_url" alt="Gallery Image" class="img-fluid img3">
-        </div>
-      </div>
-      
-      <div class="row">
-          <div class="row" *ngFor="let row of chunkedGalleries(filteredGalleries.slice(3), 2)">
-            <div class="col-12 col-md-6 mt-4" *ngFor="let gallery of row">
-              <img [src]="gallery?.image_url" alt="Gallery Image" class="img-fluid img2">
             </div>
           </div>
+        </div>
       </div>
-    </div>
-    <ng-template #noGallery>
-      <p>No galleries available for this package.</p>
-    </ng-template>
-  </div>
+
+
+
+
+
+      <div class="container col-12 mt-4 bg-light">
+        <div class="tags mb-1 text-start">All Tags</div>
+        <div class="button-container justify-content-center me-3">
+          <button class="button me-2 mt-2" [routerLink]="'/#'">Flying</button>
+          <button class="button me-2 mt-2" [routerLink]="'/#'">Holidays</button>
+          <button class="button me-2 mt-2" [routerLink]="'/feature'">Feature</button>
+          <button class="button me-2 mt-2" [routerLink]="'/family-tour'">Family Tour</button>
+          <button class="button me-2 mt-2" [routerLink]="'/one-travel'">One Travel</button>
+          <button class="button me-2 mt-2" [routerLink]="'/trip'">Trip</button>
+          <button class="button me-2 mt-  2" [routerLink]="'/explore'">Explore</button>
+          <button class="button me-2 mt-2" [routerLink]="'/instatravel'">Instatravel</button>
+          <button class="button me-2 mt-2" [routerLink]="'/summer'">Summer</button>
+          <button class="button me-2 mt-2" [routerLink]="'/beach'">Beach</button>
+          <button class="button me-2 mt-2" [routerLink]="'/destination'">Destination</button>
+          <button class="button me-2 mt-2" [routerLink]="'/travelling'">Travelling</button>
+          <button class="button me-2 mt-2" [routerLink]="'/tourcity'">TourCity</button>
+          <button class="button me-2 mt-2" [routerLink]="'/hill-town'">Hill Town</button>
+          <button class="button me-2 mt-2" [routerLink]="'/facebook'">FaceBook</button>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div *ngIf="filteredGalleries && filteredGalleries.length > 0; else noGallery">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img [src]="filteredGalleries[0].image_url" alt="Gallery Image" class="img-fluid img2">
+            </div>
+            <div class="col-12 col-md-6">
+              <img [src]="filteredGalleries[1].image_url" alt="Gallery Image" class="img-fluid img2">
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 mt-4">
+              <img [src]="filteredGalleries[2].image_url" alt="Gallery Image" class="img-fluid img3">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row" *ngFor="let row of chunkedGalleries(filteredGalleries.slice(3), 2)">
+              <div class="col-12 col-md-6 mt-4" *ngFor="let gallery of row">
+                <img [src]="gallery?.image_url" alt="Gallery Image" class="img-fluid img2">
+              </div>
+            </div>
+          </div>
+        </div>
+        <ng-template #noGallery>
+          <p>No galleries available for this package.</p>
+        </ng-template>
+      </div>
 
 
     </div><!--end-->

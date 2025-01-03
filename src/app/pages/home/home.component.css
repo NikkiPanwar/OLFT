@@ -136,17 +136,22 @@ background-color: #161616;
     width: 100%;
     padding:5px;
   }
-.cont1 {    display: flex;
+  .cont1 { 
+    padding: 10px; 
+    gap:5px;
+    width: 100%;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    width: 100%;
-    margin-top: 30px;
-    overflow-x:hidden; 
-    scroll-behavior: smooth; 
+    margin-top: 30px; 
   }
-
+  
+  .card {
+    flex: 0 0 auto;
+    width: 356px; 
+  }
+  
  .card-img-top {
     height: 230px; 
     width: 100%; 
@@ -198,13 +203,11 @@ a.book-button
     margin-top: 10px;
 }
 
-a.book-button:hover
-{
+a.book-button:hover{
 background-color:#000000 ;
 color:#FECC4E;} 
 
-.start
-{
+.start{
     margin-left:100px;
     font-size:16px;
     font-style:'Barlow',sans-serif;
@@ -212,7 +215,7 @@ color:#FECC4E;}
     font-weight:500;
   }
   .perperson
-  {
+{
     margin-left:240px;
     font-size:14px;
     font-weight:500;
@@ -332,3 +335,11 @@ color:#ffffff;
    background-color:#000;
   color:#FECC4E;
 } 
+
+@media (max-width: 599px) {
+  .col-md-6, .col-lg-4 {
+    flex-basis: 100%; 
+    max-width: 100%;
+    margin-bottom: 15px; 
+  }
+}

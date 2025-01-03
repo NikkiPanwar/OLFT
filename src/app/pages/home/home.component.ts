@@ -121,9 +121,11 @@ return this._topCountry.length
   }
 
   scrollNext() {
+    const card = document.getElementById('card') as HTMLElement;
+
     const container = document.querySelector('.cont1') as HTMLElement;
     if (this.scrollPosition < container.scrollWidth - container.clientWidth) {
-      this.scrollPosition += this.itemWidth; // Adjust this value based on your design
+      this.scrollPosition += container.clientWidth; // Adjust this value based on your design
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
     }
   }
@@ -131,7 +133,7 @@ return this._topCountry.length
   scrollPrev() {
     const container = document.querySelector('.cont1') as HTMLElement;
     if (this.scrollPosition > 0) {
-      this.scrollPosition -= this.itemWidth; // Adjust this value based on your design
+      this.scrollPosition -= container.clientWidth; // Adjust this value based on your design
       container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
     }  } 
 

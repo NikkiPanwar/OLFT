@@ -16,7 +16,7 @@ export class TourComponent implements OnInit {
 
 totalLength:any;
 totalPages:number=0;
-itemsPerPage:number=5;
+itemsPerPage:number=6;
 page:number=1;
 
   _packages:Package[] = []
