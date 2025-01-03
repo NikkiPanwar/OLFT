@@ -9,7 +9,7 @@ import { response } from 'express';
   providedIn: 'root'
 })
 export class MasterService {
-  private apiUrl = 'http://localhost:8000/api/';   // Replace with your API endpoint.
+  private apiUrl = 'http://13.233.73.166/api/';   // Replace with your API endpoint.
 
   constructor(private http: HttpClient, private _snackbar: MatSnackBar ) { }
 
@@ -23,16 +23,16 @@ export class MasterService {
   }
   
   getTourGuides(): Observable<TourGuide[]> {
-    return this.http.get<TourGuide[]>(this.apiUrl + 'tourguide-data');//
+    return this.http.get<TourGuide[]>(this.apiUrl + 'tourguide-data');
   }
 
 
 getBlogs():Observable<BlogResponse>{
-  return this.http.get<BlogResponse>(this.apiUrl+ 'blogs');//
+  return this.http.get<BlogResponse>(this.apiUrl+ 'blogs');
 }
 
 getBlogDetails(id: number): Observable<Blog> {
-  return this.http.get<Blog>(`${this.apiUrl+'blogs/'}${id}`);//
+  return this.http.get<Blog>(`${this.apiUrl+'blogs/'}${id}`);
 }
 
 getDestinations(): Observable<Destination[]> {
@@ -41,21 +41,21 @@ getDestinations(): Observable<Destination[]> {
 }
 
 getDestinationsDetails(country:string): Observable<DestinationDetails[]> {
-  return this.http.get<DestinationResponse>(`${this.apiUrl + 'destinations'}/country/${country}`)//
+  return this.http.get<DestinationResponse>(`${this.apiUrl + 'destinations'}/country/${country}`)
     .pipe(map((response: DestinationResponse) => response.data));
     }
 
 getPackagesCountry(country:string):Observable<PopularPackagesResponseCountry>{
   return this.http.get<PopularPackagesResponseCountry>(`${this.apiUrl+'packages'}/country/${country}`);
-}//
+}
 
 getItineraries(id:number):Observable<ItineraryResponse>{
- return this.http.get<ItineraryResponse>(`${this.apiUrl+'itineraries'}/package/${id}`).pipe(tap(()=> console.log("itinaries called"))) ;
+ return this.http.get<ItineraryResponse>(`${this.apiUrl+'itineraries'}/${id}`).pipe(tap(()=> console.log("itinaries called"))) ;
 }
 
 getGallery(id: number): Observable<GalleryResponse> {
   return this.http.get<GalleryResponse>(`${this.apiUrl + 'galleries/'}${id}`).pipe(tap(()=> console.log("itinaries called"))) ;
- }//
+ }
 
  postFormData(data:ClientQuery):Observable<any> {
   const headers = new HttpHeaders({

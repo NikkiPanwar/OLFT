@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first, map } from 'rxjs';
 import {  Destination, Package, PackageCountry, TourGuide } from '../../core/models/interfaces/OlftInterface';
@@ -11,6 +11,17 @@ import { MasterService } from '../../core/services/master/master.service';
 })
 
 export class HomeComponent implements OnInit {
+
+ 
+  @Output() pageChange = new EventEmitter<number>();
+  @Input() activePage: number = 1; // Current active page
+ 
+  totalLength:any;
+  totalPages:number=0;
+  itemsPerPage:number=3;
+  page:number=1;
+  
+
 
   private _dataLoaded: boolean = false;
 
@@ -32,6 +43,13 @@ scrollPosition = 0;
     this.packages();
     this.destination();
     this.getPackageAccordingToCountry();
+
+    this._service.getPackages().subscribe((result) => {
+      this._packages = result;
+      this.totalLength = result.length;
+      this.totalPages = Math.ceil(this.totalLength / this.itemsPerPage); // Calculate total pages
+      console.log(this._packages);
+    });
   }
 
   packages(){
@@ -120,27 +138,70 @@ return this._topCountry.length
     this.router.navigate(['/packageDetailPage', packageId]);
   }
 
-  scrollNext() {
-    const card = document.getElementById('card') as HTMLElement;
+  // scrollNext() {
+  //   const card = document.getElementById('card') as HTMLElement;
 
-    const container = document.querySelector('.cont1') as HTMLElement;
-    if (this.scrollPosition < container.scrollWidth - container.clientWidth) {
-      this.scrollPosition += container.clientWidth; // Adjust this value based on your design
-      container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
-    }
-  }
+  //   const container = document.querySelector('.cont1') as HTMLElement;
+  //   if (this.scrollPosition < container.scrollWidth - container.clientWidth) {
+  //     this.scrollPosition += container.clientWidth; // Adjust this value based on your design
+  //     container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
+  //   }
+  // }
   
-  scrollPrev() {
-    const container = document.querySelector('.cont1') as HTMLElement;
-    if (this.scrollPosition > 0) {
-      this.scrollPosition -= container.clientWidth; // Adjust this value based on your design
-      container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
-    }  } 
+  // scrollPrev() {
+  //   const container = document.querySelector('.cont1') as HTMLElement;
+  //   if (this.scrollPosition > 0) {
+  //     this.scrollPosition -= container.clientWidth; // Adjust this value based on your design
+  //     container.scrollTo({ left: this.scrollPosition, behavior: 'smooth' });
+  //   }  } 
 
 
     goToDestinationDetailPage(country:string): void {
       this.router.navigate(['/destinationDetailPage', country]); 
     }
+
+    
+setPage(page: number): void {
+  if (page !== this.activePage) {
+    this.activePage = page;
+    this.pageChange.emit(this.activePage); 
+  }
+  }
+  
+  
+  get visiblePages(): number[] {
+    const pages = [];
+    if (this.totalPages <= 3) {
+      for (let i = 1; i <= this.totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (this.activePage <= 2) {
+        pages.push(1, 2, 3);
+      } else if (this.activePage >= this.totalPages - 1) {
+        pages.push(this.totalPages - 2, this.totalPages - 1, this.totalPages);
+      } else {
+        pages.push(this.activePage - 1, this.activePage, this.activePage + 1);
+      }
+    }
+  
+    return pages;
+  }
+  
+  
+  nextPage(): void {
+    if (this.activePage < this.totalPages) {
+      this.activePage += 1;
+    }
+  }
+  
+  previousPage(): void {
+    if (this.activePage > 1) {
+      this.activePage -= 1;
+    }
+  }
+  
+  
   }
 
 
