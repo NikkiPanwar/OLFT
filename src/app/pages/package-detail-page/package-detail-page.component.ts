@@ -37,7 +37,7 @@ export class PackageDetailPageComponent implements OnInit {
  
 constructor(private _service:MasterService,private route:ActivatedRoute, private formBuilder:FormBuilder)
    {
-this.enquiryForm  
+// this.enquiryForm  
 this.enquiryForm = this.formBuilder.group({
   fullname: ['', Validators.required],
   email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$/)]],
