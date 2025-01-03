@@ -46,6 +46,7 @@ ngOnInit(): void {
     }
 }
 
+
 Blogs() {
   this._service.getBlogs().subscribe({
     next:(response:BlogResponse)=>{

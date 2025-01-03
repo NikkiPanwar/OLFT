@@ -268,10 +268,10 @@ class="textarea-review" required>
             <i class="bi bi-pencil-fill"></i>
           </div>
           <div class="searchbox-input">
-            <input type="text" class="form-control" id="fullName" formControlName="fullName" placeholder="Full Name*" />
+            <input type="text" class="form-control" id="fullname" formControlName="fullname" placeholder="Full Name*" />
           </div>
         </div>
-        <div *ngIf="enquiryForm.get('fullName')?.invalid && enquiryForm.get('fullName')?.touched" class="text-danger">
+        <div *ngIf="enquiryForm.get('fullname')?.invalid && enquiryForm.get('fullname')?.touched" class="text-danger">
           Full Name is required.
         </div>
       
