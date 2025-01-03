@@ -51,7 +51,7 @@ getPackagesCountry(country:string):Observable<PopularPackagesResponseCountry>{
 }//
 
 getItineraries(id:number):Observable<ItineraryResponse>{
- return this.http.get<ItineraryResponse>(`${this.apiUrl+'itineraries'}/package/${id}`).pipe(tap(()=> console.log("itinaries called"))) ;
+ return this.http.get<ItineraryResponse>(`${this.apiUrl+'itineraries'}/${id}`).pipe(tap(()=> console.log("itinaries called"))) ;
 }
 
 getGallery(id: number): Observable<GalleryResponse> {
